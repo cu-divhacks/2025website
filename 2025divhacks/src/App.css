@@ -5,6 +5,22 @@ html, body, #root {
   height: 100%;
 }
 
+
+
+#mlh-trust-badge {
+      display: block;
+      position: fixed;
+      left: 10vw;
+      top: 0;
+      width: 10%; 
+      z-index: 99999;
+}
+
+#mlh-trust-badge img{
+  width: 100%;
+  height: auto;
+}
+
 /* navbar styling - construction tape */
 .navbar {
   background: repeating-linear-gradient(
@@ -54,11 +70,12 @@ html, body, #root {
   height: 100vh;                          /* full viewport height */
   background: url('./assets/bg.png')      /* ensure path matches */
               center/cover no-repeat;     /* scale & crop to fill */
+  z-index: 1;
 }
 
 /* center text & button */
 .overlay {
-  position: absolute;
+  position: relative;
   top: 35%; /* Center vertically */
   left: 80%; /* Center horizontally */
   transform: translate(-50%, -50%); /* Center the text */
@@ -137,4 +154,54 @@ html, body, #root {
   opacity: 0.8;
   text-transform: uppercase;
   letter-spacing: 1px;
+}
+
+/* Footer styling */
+.footer {
+  background-color: rgba(42, 117, 197, 0.8);
+  color: white;
+  padding: 1rem 2rem;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+  width: 100%;
+}
+
+#footer-text {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+#footer-text:hover {
+  text-decoration: underline;
+}
+
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.footer-icons a {
+  transition: transform 0.2s ease;
+}
+
+.footer-icons a:hover {
+  transform: scale(1.1);
+}
+
+#contact-icon {
+  width: 30px;
+  height: 30px;
+  filter: brightness(0) invert(1);
+  transition: filter 0.2s ease;
+}
+
+#contact-icon:hover {
+  filter: brightness(0) invert(0.8);
 }
