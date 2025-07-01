@@ -52,6 +52,18 @@ const Navbar = () => {
             FAQs
           </button>
           <Link 
+            className={`nav-link-custom ${location.pathname === '/schedule' ? 'active' : ''}`} 
+            to="/schedule"
+          >
+            SCHEDULE
+          </Link>
+          <Link 
+            className={`nav-link-custom ${location.pathname === '/map' ? 'active' : ''}`} 
+            to="/map"
+          >
+            MAP
+          </Link>
+          <Link 
             className={`nav-link-custom ${location.pathname === '/team' ? 'active' : ''}`} 
             to="/team"
           >

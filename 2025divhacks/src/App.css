@@ -3,6 +3,7 @@ html, body, #root {
   margin: 0;
   padding: 0;
   height: 100%;
+  background-color: #2A5DA5;
 }
 
 #mlh-trust-badge {
@@ -101,7 +102,7 @@ html, body, #root {
   position: absolute; /* Change from absolute to relative */
   width: 100%;
   height: 700vh; /* Adjust height to cover all images */
-  background-color: blue;
+  background-color: #2A5DA5;
   background-repeat: repeat;
   display: flex;
   flex-direction: column;
