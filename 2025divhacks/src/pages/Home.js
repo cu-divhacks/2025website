@@ -29,6 +29,10 @@ export default function Home() {
   const containerRef = useRef(null);
   const aboutSectionRef = useRef(null);
   const [aboutCardVisible, setAboutCardVisible] = useState(false);
+  const trainImages = [train, train, train]; // Replace with actual images if you have more
+  const [currentTrain, setCurrentTrain] = useState(0);
+  const [nextTrain, setNextTrain] = useState(null); // index of the next train
+  const [isAnimating, setIsAnimating] = useState(false);
 
   useEffect(() => {
     const targetDate = new Date('2025-10-04T00:00:00');
@@ -101,6 +105,20 @@ export default function Home() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const nextIdx = (currentTrain + 1) % trainImages.length;
+      setNextTrain(nextIdx);
+      setIsAnimating(true);
+      setTimeout(() => {
+        setCurrentTrain(nextIdx);
+        setNextTrain(null);
+        setIsAnimating(false);
+      }, 1500); // Duration matches the CSS animation (1.5s)
+    }, 4000);
+    return () => clearInterval(interval);
+  }, [currentTrain, trainImages.length]);
+
   return (
     <div>
       <a
@@ -146,7 +164,30 @@ export default function Home() {
         <img className="skuline" src= {skuline} alt ="Skuline" ref={skylineRef} />
         <img className="sponsors" src= {sponsors} alt ="Sponsors" />
         <img className="tracks" src= {tracks} alt ="Tracks" />
-        <img className="train" src= {train} alt ="Train" />
+        {/* Train carousel animation: show both trains during transition */}
+        {isAnimating ? (
+          <>
+            <img
+              className="train slide-out"
+              src={trainImages[currentTrain]}
+              alt="Train Carousel Out"
+              style={{ pointerEvents: 'none' }}
+            />
+            <img
+              className="train slide-in"
+              src={trainImages[nextTrain]}
+              alt="Train Carousel In"
+              style={{ pointerEvents: 'none' }}
+            />
+          </>
+        ) : (
+          <img
+            className="train"
+            src={trainImages[currentTrain]}
+            alt="Train Carousel"
+            style={{ pointerEvents: 'none' }}
+          />
+        )}
         <Footer />
       </div>
     </div>

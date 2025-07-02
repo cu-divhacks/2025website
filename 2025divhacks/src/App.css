@@ -151,8 +151,26 @@ html, body, #root {
 
 .image-container1 .train {
   top: 0%;
-  left: 0%;
+  left: 3.5vw; /* so that it's centered */
   transform: translate(0, 360%);
+}
+
+@keyframes train-slide-in {
+  from { transform: translateX(100vw) translateY(360%); opacity: 0; }
+  to { transform: translateX(0) translateY(360%); opacity: 1; }
+}
+@keyframes train-slide-out {
+  from { transform: translateX(0) translateY(360%); opacity: 1; }
+  to { transform: translateX(-100vw) translateY(360%); opacity: 0; }
+}
+
+.train.slide-in {
+  animation: train-slide-in 1.5s forwards;
+  z-index: 2;
+}
+.train.slide-out {
+  animation: train-slide-out 1.5s forwards;
+  z-index: 2;
 }
 
 /* about section */
@@ -162,7 +180,6 @@ html, body, #root {
   top: 0;
   left: 0;
   transform: translate(0, 700%);
-  width: 100vw;
   display: flex;
   align-items: center;
   justify-content: space-between;
