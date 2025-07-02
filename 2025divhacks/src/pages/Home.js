@@ -14,6 +14,7 @@ import skuline from '../assets/skyline.png';
 import sponsors from '../assets/sponsors.png';
 import tracks from '../assets/tracks.png';
 import train from '../assets/train.png';
+import aboutCard from '../assets/aboutcard.png';
 
 export default function Home() {
   const [timeLeft, setTimeLeft] = useState({
@@ -26,6 +27,8 @@ export default function Home() {
   const [containerHeight, setContainerHeight] = useState('700vh');
   const skylineRef = useRef(null);
   const containerRef = useRef(null);
+  const aboutSectionRef = useRef(null);
+  const [aboutCardVisible, setAboutCardVisible] = useState(false);
 
   useEffect(() => {
     const targetDate = new Date('2025-10-04T00:00:00');
@@ -81,6 +84,23 @@ export default function Home() {
     };
   }, []);
 
+  useEffect(() => {
+    function handleScroll() {
+      if (!aboutSectionRef.current) return;
+      const rect = aboutSectionRef.current.getBoundingClientRect();
+      const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+      // Show when top of about section is within 50% of viewport and not scrolled past
+      if (rect.top < windowHeight * 0.5 && rect.bottom > windowHeight * 0.5) {
+        setAboutCardVisible(true);
+      } else {
+        setAboutCardVisible(false);
+      }
+    }
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Initial check
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <div>
       <a
@@ -112,6 +132,15 @@ export default function Home() {
             <button className="cta">Apply Now</button>
           </a>
         </div>
+        
+        {/* About section */}
+        <div className="about-section" ref={aboutSectionRef}>
+          <img className={`about-card${aboutCardVisible ? ' slide-in' : ' slide-out'}`} src={aboutCard} alt="About DivHacks" />
+          <div className="about-text">
+            <p>DivHacks, founded in 2017, is Columbia University's premier student-led annual diversity hackathon. Over the past seven years, DivHacks has welcomed attendees from all over the tri-state area. We strive to create an empowering and inspirational space for students who are historically underrepresented in the tech industry. Our goal is an experience that not only reimagines what diversity should look like in the tech industry but gives students the tools to use technology to implement change.</p>
+          </div>
+        </div>
+        
         <img className="low" src= {low} alt ="Background" />
         <img className="station" src= {station} alt ="Background" />
         <img className="skuline" src= {skuline} alt ="Skuline" ref={skylineRef} />
