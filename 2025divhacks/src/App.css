@@ -150,8 +150,8 @@ html, body, #root {
 }
 
 .image-container1 .train {
-  top: 0%;
-  left: 3.5vw; /* so that it's centered */
+  top: 21%;
+  width: 80%;
   transform: translate(0, 360%);
 }
 
@@ -419,4 +419,16 @@ html, body, #root {
     max-width: 95vw; /* More width on mobile */
     text-align: right; /* Center text on mobile */
   }
+}
+
+.speakers-header {
+  transform: translate(0, 490vh);
+  width: 100%;
+  text-align: center;
+  font-size: 5vw;
+  font-weight: 900;
+  color: #fff;
+  margin-top: 2vw;
+  margin-bottom: 1vw;
+  z-index: 20;
 }

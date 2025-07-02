@@ -164,6 +164,8 @@ export default function Home() {
         <img className="skuline" src= {skuline} alt ="Skuline" ref={skylineRef} />
         <img className="sponsors" src= {sponsors} alt ="Sponsors" />
         <img className="tracks" src= {tracks} alt ="Tracks" />
+        {/* Speakers and Judges header */}
+        <div className="speakers-header">Judges & Speakers</div>
         {/* Train carousel animation: show both trains during transition */}
         {isAnimating ? (
           <>
