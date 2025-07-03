@@ -115,7 +115,13 @@ export default function Home() {
         <img className="low" src= {low} alt ="Background" />
         <img className="station" src= {station} alt ="Background" />
         <img className="skuline" src= {skuline} alt ="Skuline" ref={skylineRef} />
-        <img className="sponsors" src= {sponsors} alt ="Sponsors" />
+        {/* Sponsors Coming Soon */}
+        <div className="sponsors-section">
+          <img className="sponsors" src= {sponsors} alt ="Sponsors" />
+          <div className="coming-soon-text">
+            <h2>Coming Soon</h2>
+          </div>
+        </div>
         <img className="tracks" src= {tracks} alt ="Tracks" />
         <img className="train" src= {train} alt ="Train" />
         <Footer />

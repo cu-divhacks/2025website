@@ -336,3 +336,41 @@ html, body, #root {
     text-align: right; /* Center text on mobile */
   }
 }
+
+/* Sponsors Section */
+.sponsors-section {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100vw; /* or a fixed width if you want */
+  height: auto; 
+  transform: translate(0, 460%); /* match the sponsors sign vertical position */
+  z-index: 2;
+  pointer-events: none; /* so it doesn't block anything */
+}
+
+.sponsors-section .sponsors {
+  top: 0%;
+  left: 0%;
+  height: auto;
+  width: 100%;
+}
+
+.sponsors-section .coming-soon-text {
+  position: absolute;
+  top: 0%;
+  left: 10%;
+  transform: translate(10vw, 340vw);
+  z-index: 2;
+  text-align: left;
+  width: 100%;
+}
+
+.sponsors-section .coming-soon-text h2 {
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  margin: 0;
+  padding: 2rem 0 2rem 0.5rem;
+}
