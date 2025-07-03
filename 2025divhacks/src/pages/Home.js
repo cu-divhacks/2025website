@@ -136,6 +136,39 @@ export default function Home() {
         </div>
         <img className="low" src= {low} alt ="Background" />
         <img className="station" src= {station} alt ="Background" />
+        {/*Stats Section */}
+        <div className="stats-section">
+          <h2>
+            <b>STATS FROM 2024</b>
+          </h2>
+          <div className="stats-grid">
+            <div className="stat-item">
+              <div className="stat-number">750+</div>
+              <div className="stat-label">Applications</div>
+            </div>
+            <div className="stat-item">
+              <div className="stat-number">295</div>
+              <div className="stat-label">Hackers</div>
+            </div>
+            <div className="stat-item">
+              <div className="stat-number">14</div>
+              <div className="stat-label">Countries Represented</div>
+            </div>
+            <div className="stat-item">
+              <div className="stat-number">54</div>
+              <div className="stat-label">Institutions</div>
+            </div>
+            <div className="stat-item">
+              <div className="stat-number">48.4%</div>
+              <div className="stat-label">Female/Non-binary</div>
+            </div>
+            <div className="stat-item">
+              <div className="stat-number">58.6%</div>
+              <div className="stat-label">Beginner Hackers</div>
+            </div>
+          </div>
+        </div>
+
         <img className="skuline" src= {skuline} alt ="Skuline" ref={skylineRef} />
         {/* Sponsors Coming Soon */}
         <div className="sponsors-section">
@@ -146,7 +179,6 @@ export default function Home() {
         </div>
         {/*/Tracks Section*/}
         <img className="tracks" src= {tracks} alt ="Tracks" />
-        {/* Interactive Track Images Section */}
         <div className="tracks-image-section">
           {[track1img, track2img, track3img, track4img].map((imgSrc, idx) => (
             <div

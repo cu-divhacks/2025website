@@ -473,37 +473,23 @@ html, body, #root {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: #2A5DA5; /* match home page blue */
+}
+
+.team-hero {
   padding: 4rem 2rem;
-  background-color: #000;
-}
-
-#team h2 {
-  font-family: 'Archivo Black', sans-serif;
-  font-size: 3rem;
-  text-align: center;
-  margin-bottom: 2rem;
+  background-color: #2A5DA5;
   color: #fff;
-}
+  justify-content: center;
 
-#team p {
-  text-align: center;
-  font-size: 1.2rem;
-  color: #fff;
-  opacity: 0.8;
-}
 
-#team-hero {
-  padding: 4rem 2rem;
-  background-color: #000;
-  color: #fff;
 }
 
 #team-hero .card {
-  background-color: rgba(255, 255, 255, 0.1);
   border-radius: 20px;
   padding: 3rem;
   text-align: center;
-  max-width: 1200px;
+  max-width: 1000px;
   width: 100%;
   margin: 0 auto;
 }
@@ -512,14 +498,13 @@ html, body, #root {
   font-family: 'Archivo Black', sans-serif;
   font-size: 3rem;
   text-align: center;
-  margin-bottom: 2rem;
-  color: #fff;
+  color: #ffffff;
 }
 
 #team-hero p {
   text-align: center;
   font-size: 1.2rem;
-  color: #fff;
+  color: #ffffff;
   opacity: 0.9;
   max-width: 800px;
   margin: 0 auto;
@@ -530,20 +515,22 @@ html, body, #root {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
-  margin-top: 2rem;
   padding: 1rem;
+  margin-top: 2rem;
 }
 
 .team-member {
   text-align: center;
   padding: 2rem;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: #e6edff;
   border-radius: 15px;
   transition: transform 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0,38,255,0.08);
 }
 
 .team-member:hover {
   transform: translateY(-5px);
+  background-color: #d1ddff;
 }
 
 .team-member img {
@@ -552,44 +539,101 @@ html, body, #root {
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 1.5rem;
-  border: 3px solid rgba(255, 215, 0, 0.3);
+  border: 3px solid #2A5DA5;
   transition: all 0.3s ease;
+  background: #fff;
 }
 
 .team-member:hover img {
-  border-color: rgba(255, 215, 0, 0.8);
+  border-color: #2A5DA5;
   transform: scale(1.05);
 }
 
 .team-name {
   font-family: 'Archivo Black', sans-serif;
   font-size: 1.4rem;
-  color: #fff;
+  color: #2A5DA5;
   margin-bottom: 0.5rem;
+  font-weight: 500
 }
 
 .team-role {
   font-size: 1.1rem;
-  color: #ffd700;
+  color: #000000;
   margin-bottom: 1rem;
   font-weight: 600;
 }
 
 .team-email {
   font-size: 0.95rem;
-  color: #fff;
+  color: #2A5DA5;
   text-decoration: none;
   opacity: 0.8;
   transition: all 0.3s ease;
   padding: 0.5rem 1rem;
   border-radius: 25px;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: #fff;
   display: inline-block;
+  border: 1px solid #2A5DA5;
 }
 
 .team-email:hover {
   opacity: 1;
-  color: #ffd700;
-  background-color: rgba(255, 215, 0, 0.2);
+  color: #fff;
+  background-color: #2A5DA5;
+  border: 1px solid #2A5DA5;
   transform: scale(1.05);
 }
+/*Stats Section*/
+.stats-section {
+  background: #2A5DA5;
+  padding: 1.5rem 0 2rem 0;
+  text-align: center;
+  margin-top: 130rem; /* Increase this value to push it lower */
+}
+
+.stats-section h2 {
+  color: #fff;
+  font-size: 2rem;
+  font-family: 'Archivo Black', Impact, sans-serif;
+  letter-spacing: 0.05em;
+  margin-bottom: 1.5rem;
+  text-shadow: 2px 2px 0 #222;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.stat-item {
+  background: #2A5DA5;
+  border-radius: 12px;
+  padding: 1.2rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+  min-width: 100px;
+}
+
+.stat-number {
+  color: #fff;
+  font-size: 1.3rem;
+  font-family: 'Archivo Black', Impact, sans-serif;
+  font-weight: bold;
+  margin-bottom: 0.2rem;
+  letter-spacing: 0.01em;
+}
+
+.stat-label {
+  color: #bdbdbd;
+  font-size: 0.9rem;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 500;
+  margin-top: 0.2rem;
+}
+

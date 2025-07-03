@@ -62,6 +62,7 @@ const Team = () => {
             Meet the passionate organizers behind DivHacks 2025! Our team is dedicated to creating an empowering and inspirational space for students who are historically underrepresented in tech. We work together to bring you an unforgettable hackathon experience.
           </p>
         </div>
+        
         <div className="card">
           <div className="team-grid">
             {teamMembers.map((member, index) => (
@@ -76,6 +77,7 @@ const Team = () => {
             ))}
           </div>
         </div>
+        
       </div>
     </div>
   );
