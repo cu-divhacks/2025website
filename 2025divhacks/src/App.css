@@ -374,3 +374,95 @@ html, body, #root {
   margin: 0;
   padding: 2rem 0 2rem 0.5rem;
 }
+/*Track Section*/
+.tracks-card-section {
+  transform: translate(0, 260%);
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.track-card {
+  background: white;
+  border-radius: 6px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+  padding: 1rem;          /* smaller padding */
+  max-width: 300px;       /* cap the width so text wraps nicely */
+  width: 90%;             /* or use width: 100% in a responsive container */
+  text-align: left;
+  margin: 0 auto;         /* center it under the thumbnails */
+  transition: transform 0.2s, box-shadow 0.2s;
+  
+}
+
+.track-card h3 {
+  margin-top: 0;
+  color: #2b6fc9;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.track-card p {
+  color: #333;
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+
+.track-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 8px 24px rgba(43,111,201,0.15);
+}
+
+.tracks-image-section {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 100rem;
+  margin-bottom: 1.5rem;
+  flex-direction: row;  
+  align-items: center;      /* Center vertically (optional) */
+  /* This makes the children line up in a row */
+}
+
+.track-image {
+  position: relative;
+  width: 100px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  overflow: visible;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+  background: transparent;
+}
+
+.track-image img {
+  width: 150px;
+  height: auto;       /* let height adjust to keep proportions */
+} 
+
+.track-image.selected,
+.track-image:hover,
+.track-image:focus {
+  background: #174080;
+  transform: scale(1.08);
+  box-shadow: 0 4px 16px rgba(43,111,201,0.15);
+  outline: none;
+}
+
+.track-card-reveal {
+  margin: 2rem auto;
+  max-width: 350px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+  padding: 2rem 1.5rem;
+  text-align: left;
+}

@@ -14,6 +14,10 @@ import skuline from '../assets/skyline.png';
 import sponsors from '../assets/sponsors.png';
 import tracks from '../assets/tracks.png';
 import train from '../assets/train.png';
+import track1img from '../assets/track1.png';
+import track2img from '../assets/track2.png';
+import track3img from '../assets/track3.png';
+import track4img from '../assets/track4.png';
 
 export default function Home() {
   const [timeLeft, setTimeLeft] = useState({
@@ -26,7 +30,25 @@ export default function Home() {
   const [containerHeight, setContainerHeight] = useState('700vh');
   const skylineRef = useRef(null);
   const containerRef = useRef(null);
-
+  const [hoveredTrack, setHoveredTrack] = useState(null);
+  const track = [
+    {
+      title: 'Productivity',
+      description: 'Build tools that help people work smarter, live healthier, and learn better in school, the workplace, and everyday life. Empower people to do more in less time.'
+    },
+    {
+      title: 'Sustainability',
+      description: 'Develop solutions for a greener future, from fighting climate change to improving public health. Think global impact, local action, and tech that drives real social good.'
+    },
+    {
+      title: 'Entertainment',
+      description: 'Create the next generation of fun—whether it\'s games, social platforms, or immersive experiences. Redefine how people play, connect, and express themselves.'
+    },
+    {
+      title: 'Emerging Tech',
+      description: 'Experiment with cutting-edge technology like AI/ML, autonomous systems, spatial computing, XR (VR/AR). Build the unexpected and shape what\'s next.'
+    }
+  ];
   useEffect(() => {
     const targetDate = new Date('2025-10-04T00:00:00');
 
@@ -122,7 +144,30 @@ export default function Home() {
             <h2>Coming Soon</h2>
           </div>
         </div>
+        {/*/Tracks Section*/}
         <img className="tracks" src= {tracks} alt ="Tracks" />
+        {/* Interactive Track Images Section */}
+        <div className="tracks-image-section">
+          {[track1img, track2img, track3img, track4img].map((imgSrc, idx) => (
+            <div
+              key={idx}
+              className="track-image"
+              onMouseEnter={() => setHoveredTrack(idx)}
+              onMouseLeave={() => setHoveredTrack(null)}
+              tabIndex={0}
+              style={{ cursor: 'pointer' }}
+            >
+              <img src={imgSrc} alt={`Track ${idx + 1}`} />
+              {hoveredTrack === idx && (
+                <div className="track-card track-card-reveal" style={{position: 'absolute', top: '110%', left: '50%', transform: 'translateX(-50%)', zIndex: 10}}>
+                  <h3>{track[idx].title}</h3>
+                  <p>{track[idx].description}</p>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+        
         <img className="train" src= {train} alt ="Train" />
         <Footer />
       </div>
