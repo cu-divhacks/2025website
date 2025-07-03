@@ -3,6 +3,7 @@ html, body, #root {
   margin: 0;
   padding: 0;
   height: 100%;
+  background-color: #2A5DA5;
 }
 
 #mlh-trust-badge {
@@ -101,7 +102,7 @@ html, body, #root {
   position: absolute; /* Change from absolute to relative */
   width: 100%;
   height: 700vh; /* Adjust height to cover all images */
-  background-color: blue;
+  background-color: #2A5DA5;
   background-repeat: repeat;
   display: flex;
   flex-direction: column;
@@ -149,10 +150,93 @@ html, body, #root {
 }
 
 .image-container1 .train {
-  top: 0%;
-  left: 0%;
+  top: 21%;
+  width: 80%;
   transform: translate(0, 360%);
 }
+
+@keyframes train-slide-in {
+  from { transform: translateX(100vw) translateY(360%); opacity: 0; }
+  to { transform: translateX(0) translateY(360%); opacity: 1; }
+}
+@keyframes train-slide-out {
+  from { transform: translateX(0) translateY(360%); opacity: 1; }
+  to { transform: translateX(-100vw) translateY(360%); opacity: 0; }
+}
+
+.train.slide-in {
+  animation: train-slide-in 1.5s forwards;
+  z-index: 2;
+}
+.train.slide-out {
+  animation: train-slide-out 1.5s forwards;
+  z-index: 2;
+}
+
+/* about section */
+
+.about-section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(0, 700%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4rem;
+  z-index: 2;
+}
+
+.about-card {
+  height: auto;
+  object-fit: contain;
+  width: 30vw;
+  transition: transform 0.7s cubic-bezier(0.77, 0, 0.175, 1), opacity 0.7s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.about-card.slide-in {
+  transform: translate(0, 0) !important;
+  opacity: 1;
+}
+
+.about-card.slide-out {
+  transform: translate(-100vw, 0) !important;
+  opacity: 0;
+}
+
+.about-text {
+  transform: translate(40vw, 0);
+  width: 50vw;
+  color: white;
+  font-size: 1.5vw;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.about-text p {
+  margin: 0;
+  font-weight: 400;
+}
+
+/* responsive mobile design for about section
+@media (max-width: 768px) {
+  .about-section {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0 2rem;
+    transform: translate(0, 1000%);
+  }
+  
+  .about-card {
+    max-width: 90%;
+  }
+  
+  .about-text {
+    width: 50%;
+    font-size: 1rem;
+    text-align: justify;
+  }
+} */
 
 /* not used anymore*/
 .image-container img {
@@ -335,4 +419,16 @@ html, body, #root {
     max-width: 95vw; /* More width on mobile */
     text-align: right; /* Center text on mobile */
   }
+}
+
+.speakers-header {
+  transform: translate(0, 490vh);
+  width: 100%;
+  text-align: center;
+  font-size: 5vw;
+  font-weight: 900;
+  color: #fff;
+  margin-top: 2vw;
+  margin-bottom: 1vw;
+  z-index: 20;
 }
