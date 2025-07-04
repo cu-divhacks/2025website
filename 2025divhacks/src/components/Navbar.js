@@ -7,21 +7,6 @@ const Navbar = () => {
   const [isHomeDropdownOpen, setIsHomeDropdownOpen] = useState(false);
   const timeoutRef = useRef(null);
 
-  const scrollToSection = (sectionId) => {
-    // If we're not on the home page, navigate there first
-    if (location.pathname !== '/') {
-      // Navigate to home page and then scroll to section
-      window.location.href = `/#${sectionId}`;
-      return;
-    }
-
-    // If we're already on the home page, just scroll to section
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
     <nav className="navbar navbar-custom">
       <div className="nav-container-custom">
@@ -61,36 +46,21 @@ const Navbar = () => {
                   }, 100);
                 }}
               >
-                <button 
-                  className="dropdown-item" 
-                  onClick={() => scrollToSection('about')}
-                >
+                <div className="dropdown-item">
                   About
-                </button>
-                <button 
-                  className="dropdown-item" 
-                  onClick={() => scrollToSection('tracks')}
-                >
+                </div>
+                <div className="dropdown-item">
                   Tracks
-                </button>
-                <button 
-                  className="dropdown-item" 
-                  onClick={() => scrollToSection('judges-speakers')}
-                >
+                </div>
+                <div className="dropdown-item">
                   Judges & Speakers
-                </button>
-                <button 
-                  className="dropdown-item" 
-                  onClick={() => scrollToSection('sponsors')}
-                >
+                </div>
+                <div className="dropdown-item">
                   Sponsors
-                </button>
-                <button 
-                  className="dropdown-item" 
-                  onClick={() => scrollToSection('faq')}
-                >
+                </div>
+                <div className="dropdown-item">
                   FAQ
-                </button>
+                </div>
               </div>
             )}
           </div>

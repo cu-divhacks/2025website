@@ -130,9 +130,10 @@ html, body, #root {
   text-align: left;
   color: #2b6fc9;
   font-weight: 500;
-  cursor: pointer;
+  cursor: default;
   transition: background-color 0.2s ease;
   font-size: 0.9rem;
+  box-sizing: border-box;
 }
 
 .dropdown-item:hover {
