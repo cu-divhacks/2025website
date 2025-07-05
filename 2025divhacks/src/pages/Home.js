@@ -133,7 +133,7 @@ export default function Home() {
       </a>
       
       <div className="image-container1" ref={containerRef} style={{ height: containerHeight }}>
-        <div className="text-overlay">
+        <div className="title-text">
           <h1>DIVHACKS 2025</h1>
           <p>OCTOBER 4-5TH</p>
           <div className="countdown-container">
