@@ -162,10 +162,14 @@ export default function Home() {
         <img className="low" src= {low} alt ="Background" />
         <img className="station" src= {station} alt ="Background" />
         <img className="skuline" src= {skuline} alt ="Skuline" ref={skylineRef} />
-        <img className="sponsors" src= {sponsors} alt ="Sponsors" />
-        <img className="tracks" src= {tracks} alt ="Tracks" />
+        <div id="sponsors">
+          <img className="sponsors" src= {sponsors} alt ="Sponsors" />
+        </div>
+        <div id="tracks">
+          <img className="tracks" src= {tracks} alt ="Tracks" />
+        </div>
         {/* Speakers and Judges header */}
-        <div className="speakers-header">Judges & Speakers</div>
+        <div id="judges-speakers" className="speakers-header">Judges & Speakers</div>
         {/* Train carousel animation: show both trains during transition */}
         {isAnimating ? (
           <>
@@ -190,6 +194,9 @@ export default function Home() {
             style={{ pointerEvents: 'none' }}
           />
         )}
+        <div id="faq">
+          {/* FAQ section goes here, placehold for the dropdown */}
+        </div>
         <Footer />
       </div>
     </div>
