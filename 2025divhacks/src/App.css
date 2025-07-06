@@ -187,7 +187,7 @@ html, body, #root {
 .image-container1 .skuline {
   top: 0%;
   left: 0%;
-  transform: translate(0, 552%);
+  transform: translate(0, 580%);
 }
 
 .image-container1 .sponsors {
@@ -310,8 +310,8 @@ html, body, #root {
   text-align: right;
   right: 0%; 
   top: 0%;
-  transform: translate(-10vw,30vh);
-  z-index: 1; /* Ensure text is above image */
+  transform: translate(-10vw,15vw);
+  z-index: 100; /* Ensure text is above image */
   font-size: 2vw; 
   max-width: 90vw; /* Prevent text from going off screen */
   padding: 1rem; /* Add some padding */
@@ -342,6 +342,9 @@ html, body, #root {
   border-radius: 4vw;
   cursor: pointer;
   transition: background-color 0.2s ease;
+  z-index: 200;
+  position: relative;
+  pointer-events: auto;
 }
 .cta:hover {
   background-color: #d1ddff;
@@ -350,9 +353,9 @@ html, body, #root {
 
 #clock-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 2vh 2vw;
+  justify-content: right;
+  align-items: right;
+  padding: 2vw 0vw;
 }
 
 #clock-container ul {
@@ -366,9 +369,8 @@ html, body, #root {
 #clock-container li {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding: 1vh 1vw;
-  min-width: 8vw;
+  align-items: left;
+  min-width: 2vw;
 }
 
 #clock-container span {
@@ -377,15 +379,15 @@ html, body, #root {
 }
 
 #clock-container span:first-child {
-  font-size: clamp(1.5rem, 4vw, 3rem);
+  font-size: 3.5vw;
   margin-bottom: 0.5vh;
 }
 
 #clock-container .label {
-  font-size: clamp(0.7rem, 1.5vw, 1.2rem);
+  font-size: 1.2vw;
   opacity: 0.8;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0.2vw;
 }
 
 /* Footer styling */
@@ -479,3 +481,109 @@ html, body, #root {
   margin-bottom: 1vw;
   z-index: 20;
 }
+
+/* Collapsible Text Component Styles */
+.collapsible-container {
+  margin: 0.5vw 0;
+  overflow: hidden;
+}
+
+.collapsible-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1vw 1vw;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  user-select: none;
+}
+
+.collapsible-header:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.collapsible-title {
+  color: #fff;
+  margin: 0;
+  font-size: 1.3vw;
+  font-weight: 600;
+  letter-spacing: 0.1vw;
+}
+
+.chevron {
+  color: #fff;
+  font-size: 0.8rem;
+  transition: transform 0.3s ease;
+  transform: rotate(0deg);
+}
+
+.chevron.expanded {
+  transform: rotate(180deg);
+}
+
+.collapsible-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.collapsible-content.expanded {
+  max-height: 500px; /* Adjust based on your content */
+}
+
+.collapsible-inner {
+  padding: 0 1.5rem 1rem 1.5rem;
+  color: #fff;
+  line-height: 1.6;
+  font-size: 0.9rem;
+}
+
+/* FAQ Section Styles */
+.faq-section {
+  position: absolute;
+  text-align: left;
+  top: 0%;
+  left: 0%;
+  transform: translate(0, 375vw);
+  width: calc(100% - 2vw);
+  padding: 0 1vw 6vw 1vw;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.faq-categories-container {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.faq-header {
+  text-align: center;
+  color: #fff;
+  font-size: 2.5vw;
+  font-weight: 900;
+  margin-bottom: 3vw;
+  text-transform: uppercase;
+  letter-spacing: 0.5vw;
+}
+
+.faq-category {
+  margin-bottom: 1vw;
+  flex: 1;
+  min-width: 0;
+}
+
+.faq-category-title {
+  color: #fff;
+  font-size: 1.5vw;
+  font-weight: 700;
+  margin-bottom: 1.5vw;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+  padding-bottom: 0.5vw;
+}
+
+
