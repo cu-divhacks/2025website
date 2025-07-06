@@ -10,6 +10,10 @@ import skuline from '../assets/skyline.png';
 import sponsors from '../assets/sponsors.png';
 import tracks from '../assets/tracks.png';
 import train from '../assets/train.png';
+import track1img from '../assets/track1.png';
+import track2img from '../assets/track2.png';
+import track3img from '../assets/track3.png';
+import track4img from '../assets/track4.png';
 import aboutCard from '../assets/aboutcard.png';
 
 export default function Home() {
@@ -23,12 +27,32 @@ export default function Home() {
   const [containerHeight, setContainerHeight] = useState('700vh');
   const skylineRef = useRef(null);
   const containerRef = useRef(null);
+  const [hoveredTrack, setHoveredTrack] = useState(null);
+  const track = [
+    {
+      title: 'Productivity',
+      description: 'Build tools that help people work smarter, live healthier, and learn better in school, the workplace, and everyday life. Empower people to do more in less time.'
+    },
+    {
+      title: 'Sustainability',
+      description: 'Develop solutions for a greener future, from fighting climate change to improving public health. Think global impact, local action, and tech that drives real social good.'
+    },
+    {
+      title: 'Entertainment',
+      description: 'Create the next generation of fun—whether it\'s games, social platforms, or immersive experiences. Redefine how people play, connect, and express themselves.'
+    },
+    {
+      title: 'Emerging Tech',
+      description: 'Experiment with cutting-edge technology like AI/ML, autonomous systems, spatial computing, XR (VR/AR). Build the unexpected and shape what\'s next.'
+    }
+  ];
   const aboutSectionRef = useRef(null);
   const [aboutCardVisible, setAboutCardVisible] = useState(false);
   const trainImages = [train, train, train]; // Replace with actual images if you have more
   const [currentTrain, setCurrentTrain] = useState(0);
   const [nextTrain, setNextTrain] = useState(null); // index of the next train
   const [isAnimating, setIsAnimating] = useState(false);
+
 
   useEffect(() => {
     const targetDate = new Date('2025-10-04T00:00:00');
@@ -157,7 +181,71 @@ export default function Home() {
         
         <img className="low" src= {low} alt ="Background" />
         <img className="station" src= {station} alt ="Background" />
+        {/*Stats Section */}
+        <div className="stats-section">
+          <h2>
+            <b>STATS FROM 2024</b>
+          </h2>
+          <div className="stats-grid">
+            <div className="stat-item">
+              <div className="stat-number">750+</div>
+              <div className="stat-label">Applications</div>
+            </div>
+            <div className="stat-item">
+              <div className="stat-number">295</div>
+              <div className="stat-label">Hackers</div>
+            </div>
+            <div className="stat-item">
+              <div className="stat-number">14</div>
+              <div className="stat-label">Countries Represented</div>
+            </div>
+            <div className="stat-item">
+              <div className="stat-number">54</div>
+              <div className="stat-label">Institutions</div>
+            </div>
+            <div className="stat-item">
+              <div className="stat-number">48.4%</div>
+              <div className="stat-label">Female/Non-binary</div>
+            </div>
+            <div className="stat-item">
+              <div className="stat-number">58.6%</div>
+              <div className="stat-label">Beginner Hackers</div>
+            </div>
+          </div>
+        </div>
+
         <img className="skuline" src= {skuline} alt ="Skuline" ref={skylineRef} />
+        {/* Sponsors Coming Soon */}
+        <div className="sponsors-section">
+          <img className="sponsors" src= {sponsors} alt ="Sponsors" />
+          <div className="coming-soon-text">
+            <h2>Coming Soon</h2>
+          </div>
+        </div>
+        {/*/Tracks Section*/}
+        <img className="tracks" src= {tracks} alt ="Tracks" />
+        <div className="tracks-image-section">
+          {[track1img, track2img, track3img, track4img].map((imgSrc, idx) => (
+            <div
+              key={idx}
+              className="track-image"
+              onMouseEnter={() => setHoveredTrack(idx)}
+              onMouseLeave={() => setHoveredTrack(null)}
+              tabIndex={0}
+              style={{ cursor: 'pointer' }}
+            >
+              <img src={imgSrc} alt={`Track ${idx + 1}`} />
+              {hoveredTrack === idx && (
+                <div className="track-card track-card-reveal" style={{position: 'absolute', top: '110%', left: '50%', transform: 'translateX(-50%)', zIndex: 10}}>
+                  <h3>{track[idx].title}</h3>
+                  <p>{track[idx].description}</p>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+        
+        <img className="train" src= {train} alt ="Train" />
         <div id="sponsors">
           <img className="sponsors" src= {sponsors} alt ="Sponsors" />
         </div>

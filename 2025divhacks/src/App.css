@@ -482,6 +482,306 @@ html, body, #root {
   z-index: 20;
 }
 
+/* Sponsors Section */
+.sponsors-section {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100vw; /* or a fixed width if you want */
+  height: auto; 
+  transform: translate(0, 460%); /* match the sponsors sign vertical position */
+  z-index: 2;
+  pointer-events: none; /* so it doesn't block anything */
+}
+
+.sponsors-section .sponsors {
+  top: 0%;
+  left: 0%;
+  height: auto;
+  width: 100%;
+}
+
+.sponsors-section .coming-soon-text {
+  position: absolute;
+  top: 0%;
+  left: 10%;
+  transform: translate(10vw, 340vw);
+  z-index: 2;
+  text-align: left;
+  width: 100%;
+}
+
+.sponsors-section .coming-soon-text h2 {
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  margin: 0;
+  padding: 2rem 0 2rem 0.5rem;
+}
+/*Track Section*/
+.tracks-card-section {
+  transform: translate(0, 260%);
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.track-card {
+  background: white;
+  border-radius: 6px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+  padding: 1rem;          /* smaller padding */
+  max-width: 300px;       /* cap the width so text wraps nicely */
+  width: 90%;             /* or use width: 100% in a responsive container */
+  text-align: left;
+  margin: 0 auto;         /* center it under the thumbnails */
+  transition: transform 0.2s, box-shadow 0.2s;
+  
+}
+
+.track-card h3 {
+  margin-top: 0;
+  color: #2b6fc9;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.track-card p {
+  color: #333;
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+
+.track-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 8px 24px rgba(43,111,201,0.15);
+}
+
+.tracks-image-section {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 100rem;
+  margin-bottom: 1.5rem;
+  flex-direction: row;  
+  align-items: center;      /* Center vertically (optional) */
+  /* This makes the children line up in a row */
+}
+
+.track-image {
+  position: relative;
+  width: 100px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  overflow: visible;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+  background: transparent;
+}
+
+.track-image img {
+  width: 150px;
+  height: auto;       /* let height adjust to keep proportions */
+} 
+
+.track-image.selected,
+.track-image:hover,
+.track-image:focus {
+  background: #174080;
+  transform: scale(1.08);
+  box-shadow: 0 4px 16px rgba(43,111,201,0.15);
+  outline: none;
+}
+
+.track-card-reveal {
+  margin: 2rem auto;
+  max-width: 350px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+  padding: 2rem 1.5rem;
+  text-align: left;
+}
+
+/*Team Page CSS*/
+#team {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #2A5DA5; /* match home page blue */
+}
+
+.team-hero {
+  padding: 4rem 2rem;
+  background-color: #2A5DA5;
+  color: #fff;
+  justify-content: center;
+
+
+}
+
+#team-hero .card {
+  border-radius: 20px;
+  padding: 3rem;
+  text-align: center;
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+#team-hero h2 {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 3rem;
+  text-align: center;
+  color: #ffffff;
+}
+
+#team-hero p {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #ffffff;
+  opacity: 0.9;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+.team-member {
+  text-align: center;
+  padding: 2rem;
+  background-color: #e6edff;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0,38,255,0.08);
+}
+
+.team-member:hover {
+  transform: translateY(-5px);
+  background-color: #d1ddff;
+}
+
+.team-member img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1.5rem;
+  border: 3px solid #2A5DA5;
+  transition: all 0.3s ease;
+  background: #fff;
+}
+
+.team-member:hover img {
+  border-color: #2A5DA5;
+  transform: scale(1.05);
+}
+
+.team-name {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 1.4rem;
+  color: #2A5DA5;
+  margin-bottom: 0.5rem;
+  font-weight: 500
+}
+
+.team-role {
+  font-size: 1.1rem;
+  color: #000000;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.team-email {
+  font-size: 0.95rem;
+  color: #2A5DA5;
+  text-decoration: none;
+  opacity: 0.8;
+  transition: all 0.3s ease;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  background-color: #fff;
+  display: inline-block;
+  border: 1px solid #2A5DA5;
+}
+
+.team-email:hover {
+  opacity: 1;
+  color: #fff;
+  background-color: #2A5DA5;
+  border: 1px solid #2A5DA5;
+  transform: scale(1.05);
+}
+/*Stats Section*/
+.stats-section {
+  background: #2A5DA5;
+  padding: 1.5rem 0 2rem 0;
+  text-align: center;
+  margin-top: 130rem; /* Increase this value to push it lower */
+}
+
+.stats-section h2 {
+  color: #fff;
+  font-size: 2rem;
+  font-family: 'Archivo Black', Impact, sans-serif;
+  letter-spacing: 0.05em;
+  margin-bottom: 1.5rem;
+  text-shadow: 2px 2px 0 #222;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.stat-item {
+  background: #2A5DA5;
+  border-radius: 12px;
+  padding: 1.2rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+  min-width: 100px;
+}
+
+.stat-number {
+  color: #fff;
+  font-size: 1.3rem;
+  font-family: 'Archivo Black', Impact, sans-serif;
+  font-weight: bold;
+  margin-bottom: 0.2rem;
+  letter-spacing: 0.01em;
+}
+
+.stat-label {
+  color: #bdbdbd;
+  font-size: 0.9rem;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 500;
+  margin-top: 0.2rem;
+}
+
 /* Collapsible Text Component Styles */
 .collapsible-container {
   margin: 0.5vw 0;
