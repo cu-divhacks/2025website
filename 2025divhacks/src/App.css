@@ -539,9 +539,9 @@ html, body, #root {
   border-radius: 6px;
   box-shadow: 0 4px 16px rgba(0,0,0,0.10);
   padding: 1rem;          /* smaller padding */
-  max-width: 300px;       /* cap the width so text wraps nicely */
-  width: 90%;             /* or use width: 100% in a responsive container */
-  text-align: left;
+  max-width: auto;       /* cap the width so text wraps nicely */
+  width: 100%;             /* or use width: 100% in a responsive container */
+  text-align: center;
   margin: 0 auto;         /* center it under the thumbnails */
   transition: transform 0.2s, box-shadow 0.2s;
   
@@ -552,6 +552,7 @@ html, body, #root {
   color: #2b6fc9;
   font-size: 1.3rem;
   margin-bottom: 0.5rem;
+  font-weight: 900;
 }
 
 .track-card p {
@@ -566,20 +567,25 @@ html, body, #root {
 }
 
 .tracks-image-section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(0, 215vw); /* Adjust this value as needed */
+  width: 100vw;
   display: flex;
   justify-content: center;
   gap: 1rem;
-  margin-top: 100rem;
+  margin-top: 0;
   margin-bottom: 1.5rem;
-  flex-direction: row;  
-  align-items: center;      /* Center vertically (optional) */
-  /* This makes the children line up in a row */
+  flex-direction: row;
+  align-items: center;
+  z-index: 1;
 }
 
 .track-image {
   position: relative;
-  width: 100px;
-  height: 60px;
+  width: 15vw;
+  height: 15vw;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -591,9 +597,11 @@ html, body, #root {
 }
 
 .track-image img {
-  width: 150px;
-  height: auto;       /* let height adjust to keep proportions */
-} 
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+}
 
 .track-image.selected,
 .track-image:hover,
