@@ -245,7 +245,6 @@ export default function Home() {
           ))}
         </div>
         
-        <img className="train" src= {train} alt ="Train" />
         <div id="sponsors">
           <img className="sponsors" src= {sponsors} alt ="Sponsors" />
         </div>

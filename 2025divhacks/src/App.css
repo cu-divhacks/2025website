@@ -394,12 +394,14 @@ html, body, #root {
 .footer {
   background-color: rgba(0, 0, 0, 0.8);
   color: white;
-  padding: 1rem 2rem;
+  padding: 2rem 2rem;
   width: 100%;
   text-align: center;
-  position: relative;
+  position: absolute;
+  bottom: 0;
+  left: 0;
   z-index: 10;
-  margin-top: auto;
+  box-sizing: border-box;
 }
 
 #footer-text {
@@ -418,27 +420,32 @@ html, body, #root {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1.5rem;
-  margin-top: 1rem;
+  gap: 5vw;
+  padding: 2vw 0vw;
+  flex-wrap: wrap;
 }
 
 .footer-icons a {
-  transition: transform 0.2s ease;
+  transition: transform 0.3s ease;
+  display: inline-block;
 }
 
 .footer-icons a:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 #contact-icon {
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
   filter: brightness(0) invert(1);
-  transition: filter 0.2s ease;
+  transition: all 0.3s ease;
+  margin: 0 0.5rem;
+  display: block;
 }
 
 #contact-icon:hover {
   filter: brightness(0) invert(0.8);
+  transform: scale(1.05);
 }
 
 .team-page {
@@ -732,46 +739,42 @@ html, body, #root {
 /*Stats Section*/
 .stats-section {
   background: #2A5DA5;
-  padding: 1.5rem 0 2rem 0;
   text-align: center;
-  margin-top: 130rem; /* Increase this value to push it lower */
+  left: 0%; 
+  top: 0%;
+  transform: translate(0, 80vw);
 }
 
 .stats-section h2 {
   color: #fff;
-  font-size: 2rem;
+  font-size: 4vw;
   font-family: 'Archivo Black', Impact, sans-serif;
   letter-spacing: 0.05em;
-  margin-bottom: 1.5rem;
-  text-shadow: 2px 2px 0 #222;
+  margin-bottom: 1.5vw;
 }
 
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1rem 1.2rem;
-  max-width: 600px;
+  gap: 1vw 1.2vw;
   margin: 0 auto;
 }
 
 .stat-item {
   background: #2A5DA5;
-  border-radius: 12px;
-  padding: 1.2rem 0.5rem;
+  border-radius: 12vw;
+  padding: 1.2vw 0.5vw;
   display: flex;
   flex-direction: column;
   align-items: center;
   box-shadow: 0 2px 12px rgba(0,0,0,0.18);
-  min-width: 100px;
 }
 
 .stat-number {
   color: #fff;
-  font-size: 1.3rem;
+  font-size: 3.5vw;
   font-family: 'Archivo Black', Impact, sans-serif;
   font-weight: bold;
-  margin-bottom: 0.2rem;
-  letter-spacing: 0.01em;
 }
 
 .stat-label {
