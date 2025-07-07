@@ -521,8 +521,10 @@ html, body, #root {
 }
 /*Track Section*/
 .tracks-card-section {
-  transform: translate(0, 260%);
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(0, 200vw);
   z-index: 2;
   display: flex;
   flex-wrap: wrap;
@@ -731,52 +733,59 @@ html, body, #root {
 }
 /*Stats Section*/
 .stats-section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(0, 150vw);
+  width: 100vw;
   background: #2A5DA5;
-  padding: 1.5rem 0 2rem 0;
+  padding: 2vw 2vw 3vw 2vw;
+  box-sizing: border-box;
   text-align: center;
-  margin-top: 130rem; /* Increase this value to push it lower */
+  z-index: 1;
 }
 
 .stats-section h2 {
   color: #fff;
-  font-size: 2rem;
+  font-size: 3vw;
   font-family: 'Archivo Black', Impact, sans-serif;
   letter-spacing: 0.05em;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2vw;
   text-shadow: 2px 2px 0 #222;
 }
 
 .stats-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem 1.2rem;
-  max-width: 600px;
+  grid-template-columns: repeat(3, minmax(180px, 1fr));
+  gap: 2vw;
+  max-width: 900px;
   margin: 0 auto;
+  width: 100%;
 }
 
 .stat-item {
   background: #2A5DA5;
-  border-radius: 12px;
-  padding: 1.2rem 0.5rem;
+  border-radius: 1.2vw;
+  padding: 2vw 1vw;
   display: flex;
   flex-direction: column;
   align-items: center;
   box-shadow: 0 2px 12px rgba(0,0,0,0.18);
-  min-width: 100px;
+  min-width: 0;
 }
 
 .stat-number {
   color: #fff;
-  font-size: 1.3rem;
+  font-size: 2.5vw;
   font-family: 'Archivo Black', Impact, sans-serif;
   font-weight: bold;
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.5vw;
   letter-spacing: 0.01em;
 }
 
 .stat-label {
   color: #bdbdbd;
-  font-size: 0.9rem;
+  font-size: 1.1vw;
   font-family: 'Montserrat', Arial, sans-serif;
   font-weight: 500;
   margin-top: 0.2rem;
