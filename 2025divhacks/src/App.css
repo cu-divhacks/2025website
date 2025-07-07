@@ -520,45 +520,41 @@ html, body, #root {
   padding: 2rem 0 2rem 0.5rem;
 }
 /*Track Section*/
-.tracks-card-section {
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform: translate(0, 200vw);
-  z-index: 2;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+.track-card,
+.track-card-reveal {
+  background: white;
+  border-radius: 1vw;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+  padding: 1.5vw 1.5vw;
+  max-width: 28vw;
+  min-width: 220px;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.track-card {
-  background: white;
-  border-radius: 6px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.10);
-  padding: 1rem;          /* smaller padding */
-  max-width: auto;       /* cap the width so text wraps nicely */
-  width: 100%;             /* or use width: 100% in a responsive container */
-  text-align: center;
-  margin: 0 auto;         /* center it under the thumbnails */
-  transition: transform 0.2s, box-shadow 0.2s;
-  
+.track-card-reveal {
+  position: absolute;
+  top: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
 }
 
 .track-card h3 {
   margin-top: 0;
-  color: #2b6fc9;
-  font-size: 1.3rem;
-  margin-bottom: 0.5rem;
+  color: #2A5DA5;
+  font-size: 2vw;
+  margin-bottom: 0.3vw;
   font-weight: 900;
 }
 
 .track-card p {
   color: #333;
-  font-size: 1rem;
+  font-size: 1.7vw;
   margin-bottom: 0;
+  font-weight: 400;
 }
 
 .track-card:hover {
@@ -579,7 +575,7 @@ html, body, #root {
   margin-bottom: 1.5rem;
   flex-direction: row;
   align-items: center;
-  z-index: 1;
+  z-index: 3;
 }
 
 .track-image {
@@ -610,16 +606,6 @@ html, body, #root {
   transform: scale(1.08);
   box-shadow: 0 4px 16px rgba(43,111,201,0.15);
   outline: none;
-}
-
-.track-card-reveal {
-  margin: 2rem auto;
-  max-width: 350px;
-  background: #fff;
-  border-radius: 16px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.10);
-  padding: 2rem 1.5rem;
-  text-align: left;
 }
 
 /*Team Page CSS*/
