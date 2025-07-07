@@ -350,6 +350,15 @@ html, body, #root {
   background-color: #d1ddff;
 }
 
+.deadline-text {
+  color: #fff;
+  font-size: 1.2vw;
+  margin-top: 0.8vw;
+  opacity: 0.8;
+  text-align: right;
+  letter-spacing: 0.5px;
+}
+
 
 #clock-container {
   display: flex;
@@ -426,26 +435,23 @@ html, body, #root {
 }
 
 .footer-icons a {
-  transition: transform 0.3s ease;
   display: inline-block;
-}
-
-.footer-icons a:hover {
-  transform: scale(1.05);
+  cursor: pointer;
+  text-decoration: none;
 }
 
 #contact-icon {
   width: 35px;
   height: 35px;
   filter: brightness(0) invert(1);
-  transition: all 0.3s ease;
+  transition: filter 0.2s ease;
   margin: 0 0.5rem;
   display: block;
+  pointer-events: auto;
 }
 
 #contact-icon:hover {
   filter: brightness(0) invert(0.8);
-  transform: scale(1.05);
 }
 
 .team-page {
