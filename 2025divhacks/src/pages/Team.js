@@ -1,4 +1,5 @@
 import React from 'react';
+import '../App.css';
 import anita_raj from '../assets/anita_raj.png';
 import jadyn_park from '../assets/jadyn_park.png';
 import lauren_song from '../assets/lauren_song.png';
@@ -47,37 +48,32 @@ const Team = () => {
     },
     {
       name: 'Grace Xu',
-      role: 'Technical Development Lead',
+      role: 'Technical Dev Lead',
       email: 'gx2168@columbia.edu',
       image: grace_xu
     }
   ];
 
   return (
-    <div id="team">
-      <div id="team-hero">
-        <div className="card">
-          <h2><b>ABOUT THE TEAM</b></h2>
-          <p>
-            Meet the passionate organizers behind DivHacks 2025! Our team is dedicated to creating an empowering and inspirational space for students who are historically underrepresented in tech. We work together to bring you an unforgettable hackathon experience.
-          </p>
+    <div>
+      <div className="team-section">
+        <div className="team-header">
+          <h1>MEET THE TEAM</h1>
+          <p>Meet the passionate organizers behind DivHacks 2025! Our team is dedicated to creating an empowering and inspirational space for students who are historically underrepresented in tech. We work together to bring you an unforgettable hackathon experience.</p>
         </div>
         
-        <div className="card">
-          <div className="team-grid">
-            {teamMembers.map((member, index) => (
-              <div className="team-member" key={index}>
-                <img src={member.image} alt={member.name} />
-                <div className="team-name">{member.name}</div>
-                <div className="team-role">{member.role}</div>
-                <a className="team-email" href={`mailto:${member.email}`}>
-                  {member.email}
-                </a>
-              </div>
-            ))}
-          </div>
+        <div className="team-grid">
+          {teamMembers.map((member, index) => (
+            <div className="team-member" key={index}>
+              <img src={member.image} alt={member.name} />
+              <div className="team-name">{member.name}</div>
+              <div className="team-role">{member.role}</div>
+              <a className="team-email" href={`mailto:${member.email}`}>
+                {member.email}
+              </a>
+            </div>
+          ))}
         </div>
-        
       </div>
     </div>
   );

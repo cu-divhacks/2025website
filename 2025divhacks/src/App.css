@@ -232,7 +232,7 @@ html, body, #root {
   position: absolute;
   top: 0;
   left: 0;
-  transform: translate(0, 700%);
+  transform: translate(0, 115vw);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -526,9 +526,8 @@ html, body, #root {
 
 .sponsors-section .coming-soon-text h2 {
   color: white;
-  font-size: 3rem;
+  font-size: 4vw;
   font-weight: bold;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
   margin: 0;
   padding: 2rem 0 2rem 0.5rem;
 }
@@ -579,13 +578,12 @@ html, body, #root {
   position: absolute;
   top: 0;
   left: 0;
-  transform: translate(0, 215vw); /* Adjust this value as needed */
+  transform: translate(0, 205vw); /* Adjust this value as needed */
   width: 100vw;
   display: flex;
   justify-content: center;
-  gap: 1rem;
+  gap: 1vw;
   margin-top: 0;
-  margin-bottom: 1.5rem;
   flex-direction: row;
   align-items: center;
   z-index: 3;
@@ -622,137 +620,168 @@ html, body, #root {
 }
 
 /*Team Page CSS*/
-#team {
-  min-height: 100vh;
-  width: 100vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #2A5DA5;
-  margin: 0;
-  padding: 0;
-}
-
-#team-hero {
+.team-section {
+  margin-top: 7vw;
+  top: 0;
+  left: 0;
   width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  padding: 4rem 2rem;
+  z-index: 2;
+  padding: 3vw;
+  box-sizing: border-box;
 }
 
-#team-hero .card {
-  border-radius: 20px;
-  padding: 1rem;
+.team-header {
   text-align: center;
-  max-width: 1000px;
-  width: 100%;
-  margin: 0 auto;
+  color: #fff;
+  margin-bottom: 3vw;
+}
+
+.team-header h1 {
+  font-size: 4vw;
+  font-weight: 900;
+  margin-bottom: 2vw;
+  letter-spacing: 2px;
+}
+
+.team-header p {
+  font-size: 1.5vw;
+  line-height: 1.6;
+  opacity: 0.9;
+  margin: 0;
 }
 
 #team-hero h2 {
   font-family: 'Archivo Black', sans-serif;
-  font-size: 3rem;
+  font-size: 3vw;
   text-align: center;
   color: #ffffff;
 }
 
 #team-hero p {
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1.2vw;
   color: #ffffff;
   opacity: 0.9;
-  max-width: 800px;
   margin: 0 auto;
-  line-height: 1.6;
 }
 
 .team-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1rem;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-  margin-top: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   width: 100%;
-  margin-left: auto;
-  margin-right: auto;
   justify-items: center;
+  gap: 2vw;
+  padding: 0 2vw;
+  box-sizing: border-box;
 }
 
 .team-member {
-  padding: 1.5rem 1rem;
+  padding: 2vw 1.5vw;
   text-align: center;
-  background-color: #e6edff;
-  border-radius: 15px;
-  transition: transform 0.3s ease;
-  box-shadow: 0 2px 8px rgba(0,38,255,0.08);
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 .team-member:hover {
-  transform: translateY(-5px);
-  background-color: #d1ddff;
+  transform: translateY(-8px);
+  background-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
 }
 
 .team-member img {
-  width: 140px;
-  height: 140px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 1.5rem;
-  border: 3px solid #2A5DA5;
+  margin-bottom: 1.5;
+  border: 3px solid rgba(255, 255, 255, 0.3);
   transition: all 0.3s ease;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .team-member:hover img {
-  border-color: #2A5DA5;
+  border-color: rgba(255, 255, 255, 0.5);
   transform: scale(1.05);
 }
 
 .team-name {
-  font-family: 'Archivo Black', sans-serif;
-  font-size: 1.4rem;
-  color: #2A5DA5;
+  font-size: 2vw;
+  color: #fff;
   margin-bottom: 0.5rem;
-  font-weight: 500
+  font-weight: 600;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 .team-role {
-  font-size: 1.1rem;
-  color: #000000;
-  margin-bottom: 1rem;
-  font-weight: 600;
+  font-size: 1.2vw;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 1vw;
 }
 
 .team-email {
-  font-size: 0.95rem;
-  color: #2A5DA5;
+  font-size: 1vw;
+  color: #fff;
   text-decoration: none;
   opacity: 0.8;
   transition: all 0.3s ease;
-  padding: 0.5rem 1rem;
-  border-radius: 25px;
-  background-color: #fff;
+  padding: 0.2vw 0.5vw;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
   display: inline-block;
-  border: 1px solid #2A5DA5;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  word-break: break-word;
+  max-width: 100%;
+  overflow-wrap: break-word;
 }
 
 .team-email:hover {
   opacity: 1;
-  color: #fff;
-  background-color: #2A5DA5;
-  border: 1px solid #2A5DA5;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.5);
   transform: scale(1.05);
+}
+
+/* Responsive grid for team section */
+@media (max-width: 1200px) {
+  .team-grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 2.5vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .team-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 3vw;
+    padding: 0 3vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .team-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 4vw;
+    padding: 0 4vw;
+  }
 }
 /*Stats Section*/
 .stats-section {
   position: absolute;
   top: 0;
   left: 0;
-  transform: translate(0, 150vw);
+  transform: translate(0, 144vw);
   width: 100vw;
   background: #2A5DA5;
   padding: 2vw 2vw 3vw 2vw;
