@@ -533,42 +533,41 @@ html, body, #root {
   padding: 2rem 0 2rem 0.5rem;
 }
 /*Track Section*/
-.tracks-card-section {
-  transform: translate(0, 260%);
-  position: relative;
-  z-index: 2;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+.track-card,
+.track-card-reveal {
+  background: white;
+  border-radius: 1vw;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+  padding: 1.5vw 1.5vw;
+  max-width: 28vw;
+  min-width: 220px;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.track-card {
-  background: white;
-  border-radius: 6px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.10);
-  padding: 1rem;          /* smaller padding */
-  max-width: 300px;       /* cap the width so text wraps nicely */
-  width: 90%;             /* or use width: 100% in a responsive container */
-  text-align: left;
-  margin: 0 auto;         /* center it under the thumbnails */
-  transition: transform 0.2s, box-shadow 0.2s;
-  
+.track-card-reveal {
+  position: absolute;
+  top: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
 }
 
 .track-card h3 {
   margin-top: 0;
-  color: #2b6fc9;
-  font-size: 1.3rem;
-  margin-bottom: 0.5rem;
+  color: #2A5DA5;
+  font-size: 2vw;
+  margin-bottom: 0.3vw;
+  font-weight: 900;
 }
 
 .track-card p {
   color: #333;
-  font-size: 1rem;
+  font-size: 1.7vw;
   margin-bottom: 0;
+  font-weight: 400;
 }
 
 .track-card:hover {
@@ -577,20 +576,25 @@ html, body, #root {
 }
 
 .tracks-image-section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(0, 215vw); /* Adjust this value as needed */
+  width: 100vw;
   display: flex;
   justify-content: center;
   gap: 1rem;
-  margin-top: 100rem;
+  margin-top: 0;
   margin-bottom: 1.5rem;
-  flex-direction: row;  
-  align-items: center;      /* Center vertically (optional) */
-  /* This makes the children line up in a row */
+  flex-direction: row;
+  align-items: center;
+  z-index: 3;
 }
 
 .track-image {
   position: relative;
-  width: 100px;
-  height: 60px;
+  width: 15vw;
+  height: 15vw;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -602,9 +606,11 @@ html, body, #root {
 }
 
 .track-image img {
-  width: 150px;
-  height: auto;       /* let height adjust to keep proportions */
-} 
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+}
 
 .track-image.selected,
 .track-image:hover,
@@ -615,37 +621,31 @@ html, body, #root {
   outline: none;
 }
 
-.track-card-reveal {
-  margin: 2rem auto;
-  max-width: 350px;
-  background: #fff;
-  border-radius: 16px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.10);
-  padding: 2rem 1.5rem;
-  text-align: left;
-}
-
 /*Team Page CSS*/
 #team {
   min-height: 100vh;
+  width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #2A5DA5; /* match home page blue */
+  background-color: #2A5DA5;
+  margin: 0;
+  padding: 0;
 }
 
-.team-hero {
+#team-hero {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 4rem 2rem;
-  background-color: #2A5DA5;
-  color: #fff;
-  justify-content: center;
-
-
 }
 
 #team-hero .card {
   border-radius: 20px;
-  padding: 3rem;
+  padding: 1rem;
   text-align: center;
   max-width: 1000px;
   width: 100%;
@@ -671,15 +671,20 @@ html, body, #root {
 
 .team-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  padding: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   margin-top: 2rem;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  justify-items: center;
 }
 
 .team-member {
+  padding: 1.5rem 1rem;
   text-align: center;
-  padding: 2rem;
   background-color: #e6edff;
   border-radius: 15px;
   transition: transform 0.3s ease;
@@ -744,48 +749,57 @@ html, body, #root {
 }
 /*Stats Section*/
 .stats-section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(0, 150vw);
+  width: 100vw;
   background: #2A5DA5;
+  padding: 2vw 2vw 3vw 2vw;
+  box-sizing: border-box;
   text-align: center;
-  left: 0%; 
-  top: 0%;
-  transform: translate(0, 80vw);
+  z-index: 1;
 }
 
 .stats-section h2 {
   color: #fff;
-  font-size: 4vw;
+  font-size: 3vw;
   font-family: 'Archivo Black', Impact, sans-serif;
   letter-spacing: 0.05em;
-  margin-bottom: 1.5vw;
+  margin-bottom: 2vw;
 }
 
 .stats-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1vw 1.2vw;
+  grid-template-columns: repeat(3, minmax(180px, 1fr));
+  gap: 2vw;
   margin: 0 auto;
+  width: 100%;
 }
 
 .stat-item {
   background: #2A5DA5;
-  border-radius: 12vw;
-  padding: 1.2vw 0.5vw;
+  border-radius: 1.2vw;
+  padding: 2vw 1vw;
   display: flex;
   flex-direction: column;
   align-items: center;
   box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+  min-width: 0;
 }
 
 .stat-number {
   color: #fff;
-  font-size: 3.5vw;
+  font-size: 2.5vw;
   font-family: 'Archivo Black', Impact, sans-serif;
   font-weight: bold;
+  margin-bottom: 0.5vw;
+  letter-spacing: 0.01em;
 }
 
 .stat-label {
   color: #bdbdbd;
-  font-size: 0.9rem;
+  font-size: 1.1vw;
   font-family: 'Montserrat', Arial, sans-serif;
   font-weight: 500;
   margin-top: 0.2rem;

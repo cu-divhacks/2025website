@@ -179,9 +179,6 @@ export default function Home() {
             <p>DivHacks, founded in 2017, is Columbia University's premier student-led annual diversity hackathon. Over the past seven years, DivHacks has welcomed attendees from all over the tri-state area. We strive to create an empowering and inspirational space for students who are historically underrepresented in the tech industry. Our goal is an experience that not only reimagines what diversity should look like in the tech industry but gives students the tools to use technology to implement change.</p>
           </div>
         </div>
-        
-        <img className="low" src= {low} alt ="Background" />
-        <img className="station" src= {station} alt ="Background" />
         {/*Stats Section */}
         <div className="stats-section">
           <h2>
@@ -214,6 +211,10 @@ export default function Home() {
             </div>
           </div>
         </div>
+
+        <img className="low" src= {low} alt ="Background" />
+        <img className="station" src= {station} alt ="Background" />
+
 
         <img className="skuline" src= {skuline} alt ="Skuline" ref={skylineRef} />
         {/* Sponsors Coming Soon */}
