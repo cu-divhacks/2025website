@@ -350,6 +350,15 @@ html, body, #root {
   background-color: #d1ddff;
 }
 
+.deadline-text {
+  color: #fff;
+  font-size: 1.2vw;
+  margin-top: 0.8vw;
+  opacity: 0.8;
+  text-align: right;
+  letter-spacing: 0.5px;
+}
+
 
 #clock-container {
   display: flex;
@@ -394,12 +403,14 @@ html, body, #root {
 .footer {
   background-color: rgba(0, 0, 0, 0.8);
   color: white;
-  padding: 1rem 2rem;
+  padding: 2rem 2rem;
   width: 100%;
   text-align: center;
-  position: relative;
+  position: absolute;
+  bottom: 0;
+  left: 0;
   z-index: 10;
-  margin-top: auto;
+  box-sizing: border-box;
 }
 
 #footer-text {
@@ -418,23 +429,25 @@ html, body, #root {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1.5rem;
-  margin-top: 1rem;
+  gap: 5vw;
+  padding: 2vw 0vw;
+  flex-wrap: wrap;
 }
 
 .footer-icons a {
-  transition: transform 0.2s ease;
-}
-
-.footer-icons a:hover {
-  transform: scale(1.1);
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 #contact-icon {
-  width: 30px;
-  height: 30px;
+  width: 3vw;
+  height: 3vw;
   filter: brightness(0) invert(1);
   transition: filter 0.2s ease;
+  margin: 0 0.5rem;
+  display: block;
+  pointer-events: auto;
 }
 
 #contact-icon:hover {
@@ -754,14 +767,12 @@ html, body, #root {
   font-family: 'Archivo Black', Impact, sans-serif;
   letter-spacing: 0.05em;
   margin-bottom: 2vw;
-  text-shadow: 2px 2px 0 #222;
 }
 
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(180px, 1fr));
   gap: 2vw;
-  max-width: 900px;
   margin: 0 auto;
   width: 100%;
 }

@@ -169,6 +169,7 @@ export default function Home() {
           <a href="https://docs.google.com/forms/d/e/1FAIpQLSccOAZWWRA-xYgHwT3dKArwrR5gktoSJJlt7yGfaIG9QTRNPA/viewform?usp=dialog" target="_blank" rel="noopener noreferrer">
             <button className="cta">Apply Now</button>
           </a>
+          <p className="deadline-text">Priority Deadline: July 31st</p>
         </div>
         
         {/* About section */}
@@ -246,7 +247,6 @@ export default function Home() {
           ))}
         </div>
         
-        <img className="train" src= {train} alt ="Train" />
         <div id="sponsors">
           <img className="sponsors" src= {sponsors} alt ="Sponsors" />
         </div>
