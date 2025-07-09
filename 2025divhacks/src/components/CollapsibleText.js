@@ -1,18 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import '../App.css';
 
-const CollapsibleText = ({ title, children, isOpen = false }) => {
-  const [isExpanded, setIsExpanded] = useState(isOpen);
-
-  const toggleExpanded = () => {
-    setIsExpanded(!isExpanded);
-  };
-
+const CollapsibleText = ({ title, children, isExpanded = false, onToggle }) => {
   return (
     <div className="collapsible-container">
       <div 
         className="collapsible-header" 
-        onClick={toggleExpanded}
+        onClick={onToggle}
       >
         <h3 className="collapsible-title">{title}</h3>
         <span className={`chevron ${isExpanded ? 'expanded' : ''}`}>
