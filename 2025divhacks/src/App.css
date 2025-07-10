@@ -538,8 +538,8 @@ html, body, #root {
   border-radius: 1vw;
   box-shadow: 0 4px 16px rgba(0,0,0,0.10);
   padding: 1.5vw 1.5vw;
-  max-width: 28vw;
-  min-width: 220px;
+  max-width: 60vw;
+  min-width: 320px;
   width: 100%;
   text-align: center;
   margin: 0 auto;
@@ -557,7 +557,7 @@ html, body, #root {
 .track-card h3 {
   margin-top: 0;
   color: #2A5DA5;
-  font-size: 2vw;
+  font-size: 3vw;
   margin-bottom: 0.3vw;
   font-weight: 900;
 }
@@ -566,7 +566,7 @@ html, body, #root {
   color: #333;
   font-size: 1.7vw;
   margin-bottom: 0;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .track-card:hover {
@@ -617,6 +617,18 @@ html, body, #root {
   transform: scale(1.08);
   box-shadow: 0 4px 16px rgba(43,111,201,0.15);
   outline: none;
+}
+
+.track-card-below-row {
+  position: static !important;
+  transform: none !important;
+  left: auto !important;
+  margin: -11vw auto 0 auto;
+  display: block;
+  text-align: center;
+  max-width: 58vw;
+  min-width: 320px;
+  width: 100%;
 }
 
 /*Team Page CSS*/
