@@ -352,15 +352,7 @@ export default function Home() {
               isExpanded={openFaqItem === "I'm a beginner hacker. Can I still join?"}
               onToggle={() => handleFaqToggle("I'm a beginner hacker. Can I still join?")}
             >
-              <p>Absolutely! You are not required to have prior experience or even be a CS major to apply. DivHacks welcomes people of all skill levels and educational experience. During the hackathon, there will be workshops, help sessions, and mentors available to assist you with your projects. Additionally, in the week leading up to DivHacks, there will be workshops to help prepare you for coding over the weekend.</p>
-            </CollapsibleText>
-            
-            <CollapsibleText 
-              title="Where and when is DivHacks?"
-              isExpanded={openFaqItem === "Where and when is DivHacks?"}
-              onToggle={() => handleFaqToggle("Where and when is DivHacks?")}
-            >
-              <p>DivHacks will take place in person at Columbia University's campus in New York City, primarily in Alfred J. Lerner Hall, on October 4-5.</p>
+              <p>Absolutely! You are not required to have prior experience or even be a CS major to apply. During the hackathon, there will be workshops, help sessions, and mentors available to assist you with your projects. Additionally, in the week leading up to DivHacks, there will be workshops to help prepare you for coding over the weekend.</p>
             </CollapsibleText>
             
             <CollapsibleText 
@@ -376,7 +368,7 @@ export default function Home() {
               isExpanded={openFaqItem === "What can I win?"}
               onToggle={() => handleFaqToggle("What can I win?")}
             >
-              <p>Prizes are given for the overall top 3 projects. There are also prizes for top submissions in each of the 4 tracks, as well as other categories such as Best Beginner Hack. Hackers also have the opportunity to win prizes from sponsor challenges– there is no limit to how many prizes a team can win. Stay tuned for our official list of prizes, which will be revealed closer to the weekend!</p>
+              <p>Prizes are given for the overall top 3 projects. There are also prizes for top submissions in each of the 4 tracks, as well as other categories such as Best Beginner Hack. Hackers also have the opportunity to win prizes from sponsor challenges– there is no limit to how many prizes a team can win. Stay tuned for our official list of prizes!</p>
             </CollapsibleText>
             
             <CollapsibleText 
@@ -384,7 +376,7 @@ export default function Home() {
               isExpanded={openFaqItem === "If everyone is welcome, why do I have to submit an application?"}
               onToggle={() => handleFaqToggle("If everyone is welcome, why do I have to submit an application?")}
             >
-              <p>We would love to host everyone and anyone interested in attending DivHacks. Unfortunately, we can only host a limited number of hackers due to venue size and budget limitations. We place this limit as we want to ensure all our guests have the best experience possible.</p>
+              <p>We would love to host everyone interested in attending DivHacks, but we are limited by venue size and budget limitations. </p>
             </CollapsibleText>
             
             <CollapsibleText 
@@ -403,7 +395,7 @@ export default function Home() {
               isExpanded={openFaqItem === "Who can apply?"}
               onToggle={() => handleFaqToggle("Who can apply?")}
             >
-              <p>Any college student (undergraduate or graduate) is welcome to apply! DivHacks prides itself on bringing together innovative leaders from diverse gender, socioeconomic, and educational backgrounds to problem-solve, inspire, and code. We provide a safe and empowering space for students who identify as part of an underrepresented group in tech, and welcome anyone who feels they would benefit from this type of space!</p>
+              <p>Any college student (undergraduate or graduate) is welcome to apply!</p>
             </CollapsibleText>
             
             <CollapsibleText 
@@ -419,7 +411,7 @@ export default function Home() {
               isExpanded={openFaqItem === "How do I apply?"}
               onToggle={() => handleFaqToggle("How do I apply?")}
             >
-              <p>Applications open late June. Priority applications are due July 31st, and regular applications are due August 31st. Just fill out the application before the deadline!</p>
+              <p>Priority applications are due July 31st, and regular applications are due August 31st. Just fill out the application before the deadline!</p>
             </CollapsibleText>
             
             <CollapsibleText 
@@ -481,7 +473,7 @@ export default function Home() {
               isExpanded={openFaqItem === "What are hackathon tracks and how do they work?"}
               onToggle={() => handleFaqToggle("What are hackathon tracks and how do they work?")}
             >
-              <p>DivHacks projects are required to fall under 1 of 4 distinct "tracks", thematic focus areas intended to broadly guide your project. This year, our tracks are productivity, sustainability, entertainment, and immersive technology. During submission, you will be prompted to select 1 track that best fits your project. You can find further descriptions of each of our tracks on our website.</p>
+              <p>DivHacks projects are required to fall under 1 of 4 distinct "tracks", thematic focus areas intended to broadly guide your project. This year, our tracks are productivity, sustainability, entertainment, and immersive technology. During submission, you will be prompted to select 1 track that best fits your project. You can find further descriptions of each of our tracks above.</p>
             </CollapsibleText>
             
             <CollapsibleText 
