@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import Team from './pages/Team';
 import Map from './pages/Map';
 import Schedule from './pages/Schedule';
+import Resources from './pages/Resources';
 import Navbar from './components/Navbar';
 
 export default function App() {
@@ -16,6 +17,7 @@ export default function App() {
           <Route path="/team" element={<Team />} />
           <Route path="/map" element={<Map />} />
           <Route path="/schedule" element={<Schedule />} />
+          <Route path="/resources" element={<Resources />} />
         </Routes>
       </div>
     </Router>
