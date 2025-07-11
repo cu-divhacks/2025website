@@ -9,7 +9,12 @@ import station from '../assets/station.png';
 import skuline from '../assets/skyline.png';
 import sponsors from '../assets/sponsors.png';
 import tracks from '../assets/tracks.png';
-import train from '../assets/train.png';
+import train1 from '../assets/train1.png';
+import train2 from '../assets/train2.png';
+import train3 from '../assets/train3.png';
+import train4 from '../assets/train4.png';
+import train5 from '../assets/train5.png';
+import train6 from '../assets/train6.png';
 import track1img from '../assets/track1.png';
 import track2img from '../assets/track2.png';
 import track3img from '../assets/track3.png';
@@ -49,11 +54,16 @@ export default function Home() {
   ];
   const aboutSectionRef = useRef(null);
   const [aboutCardVisible, setAboutCardVisible] = useState(false);
-  const trainImages = [train, train, train]; // Replace with actual images if you have more
+  const judgesTrains = [train1, train2, train3];
+  const speakersTrains = [train4, train5, train6]; // Different order to make it obvious when switching
+  const [currentTrainSet, setCurrentTrainSet] = useState('judges'); // 'judges' or 'speakers'
   const [currentTrain, setCurrentTrain] = useState(0);
-  const [nextTrain, setNextTrain] = useState(null); // index of the next train
+  const [nextTrain, setNextTrain] = useState(null);
   const [isAnimating, setIsAnimating] = useState(false);
-
+  const [slideDirection, setSlideDirection] = useState('');
+  
+  const trainImages = currentTrainSet === 'judges' ? judgesTrains : speakersTrains;
+  
 
   useEffect(() => {
     const targetDate = new Date('2025-10-04T00:00:00');
@@ -126,19 +136,45 @@ export default function Home() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      const nextIdx = (currentTrain + 1) % trainImages.length;
-      setNextTrain(nextIdx);
-      setIsAnimating(true);
-      setTimeout(() => {
-        setCurrentTrain(nextIdx);
-        setNextTrain(null);
-        setIsAnimating(false);
-      }, 1500); // Duration matches the CSS animation (1.5s)
-    }, 4000);
-    return () => clearInterval(interval);
-  }, [currentTrain, trainImages.length]);
+  const handlePrevTrain = () => {
+    if (isAnimating) return;
+    const nextIndex = (currentTrain - 1 + trainImages.length) % trainImages.length;
+    console.log('Prev: current=', currentTrain, 'next=', nextIndex, 'direction=slide-left');
+    setNextTrain(nextIndex);
+    setIsAnimating(true);
+    setSlideDirection('slide-left');
+    setTimeout(() => {
+      setCurrentTrain(nextIndex);
+      setNextTrain(null);
+      setSlideDirection('');
+      setIsAnimating(false);
+    }, 600);
+  };
+
+  const handleNextTrain = () => {
+    if (isAnimating) return;
+    const nextIndex = (currentTrain + 1) % trainImages.length;
+    console.log('Next: current=', currentTrain, 'next=', nextIndex, 'direction=slide-right');
+    setNextTrain(nextIndex);
+    setIsAnimating(true);
+    setSlideDirection('slide-right');
+    setTimeout(() => {
+      setCurrentTrain(nextIndex);
+      setNextTrain(null);
+      setSlideDirection('');
+      setIsAnimating(false);
+    }, 600);
+  };
+
+  const handleTrainSetChange = (newSet) => {
+    if (newSet === currentTrainSet) return;
+    console.log('Switching from', currentTrainSet, 'to', newSet);
+    setCurrentTrainSet(newSet);
+    setCurrentTrain(0); // Reset to first train in new set
+    setNextTrain(null); // Clear any pending animations
+    setIsAnimating(false); // Stop any ongoing animations
+    setSlideDirection(''); // Clear any slide direction
+  };
 
   const handleFaqToggle = (faqTitle) => {
     setOpenFaqItem(openFaqItem === faqTitle ? null : faqTitle);
@@ -259,31 +295,45 @@ export default function Home() {
           <img className="tracks" src= {tracks} alt ="Tracks" />
         </div>
         {/* Speakers and Judges header */}
-        <div id="judges-speakers" className="speakers-header">Judges & Speakers</div>
-        {/* Train carousel animation: show both trains during transition */}
-        {isAnimating ? (
-          <>
+        <div id="judges-speakers" className="speakers-header">
+          <span 
+            className={`header-clickable ${currentTrainSet === 'judges' ? 'active' : ''}`}
+            onClick={() => handleTrainSetChange('judges')}
+          >
+            Judges
+          </span>
+          <span className="header-separator"> & </span>
+          <span 
+            className={`header-clickable ${currentTrainSet === 'speakers' ? 'active' : ''}`}
+            onClick={() => handleTrainSetChange('speakers')}
+          >
+            Speakers
+          </span>
+        </div>
+        {/* Train carousel with navigation */}
+        <div className="train-carousel-container">
+          <button className="carousel-arrow carousel-arrow-left" onClick={handlePrevTrain}>
+            ‹
+          </button>
+          <div className="train-slide-container">
             <img
-              className="train slide-out"
+              className={`train ${isAnimating && slideDirection === 'slide-left' ? 'slide-out-left' : isAnimating && slideDirection === 'slide-right' ? 'slide-out-right' : ''}`}
               src={trainImages[currentTrain]}
-              alt="Train Carousel Out"
-              style={{ pointerEvents: 'none' }}
+              alt={`${currentTrainSet} Train ${currentTrain + 1}`}
             />
-            <img
-              className="train slide-in"
-              src={trainImages[nextTrain]}
-              alt="Train Carousel In"
-              style={{ pointerEvents: 'none' }}
-            />
-          </>
-        ) : (
-          <img
-            className="train"
-            src={trainImages[currentTrain]}
-            alt="Train Carousel"
-            style={{ pointerEvents: 'none' }}
-          />
-        )}
+            {isAnimating && nextTrain !== null && (
+              <img
+                className={`train ${slideDirection === 'slide-left' ? 'slide-in-left' : 'slide-in-right'}`}
+                src={trainImages[nextTrain]}
+                alt={`${currentTrainSet} Train ${nextTrain + 1}`}
+                style={{ zIndex: 2 }}
+              />
+            )}
+          </div>
+          <button className="carousel-arrow carousel-arrow-right" onClick={handleNextTrain}>
+            ›
+          </button>
+        </div>
         <div id="faq" className="faq-section">
           <h2 className="faq-header">Frequently Asked Questions</h2>
           
