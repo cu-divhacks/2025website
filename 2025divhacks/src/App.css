@@ -821,7 +821,7 @@ html, body, #root {
 
 .header-clickable {
   cursor: pointer;
-  /* transition: all 0.3s ease; */
+  transition: all 0.3s ease;
   padding: 1vw 1vw;
   border-radius: 1vw;
   user-select: none;
