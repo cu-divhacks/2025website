@@ -22,7 +22,7 @@ const Map = () => {
         fontWeight: '700',
         textTransform: 'uppercase'
       }}>
-        Map
+        CAMPUS
       </h1>
       <img 
         src={mapImg} 

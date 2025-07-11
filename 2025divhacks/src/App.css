@@ -4,6 +4,7 @@ html, body, #root {
   padding: 0;
   height: 100%;
   background-color: #2A5DA5;
+  overflow-x: hidden;
 }
 
 #mlh-trust-badge {
@@ -950,4 +951,64 @@ html, body, #root {
   padding-bottom: 0.5vw;
 }
 
+/*Resources Page*/
+.resources-page {
+  padding: 4rem 1rem;
+  background-color: #2A5DA5;
+  min-height: 80vh;
+  color: #fff;
+  text-align: center;
+}
+.resources-title {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  font-family: 'Archivo Black', sans-serif;
+}
+.resources-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.resource-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.1);
+  text-align: left;
+  color: #333;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.resource-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+}
+.card-title {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+  font-family: 'Bebas Neue', cursive;
+  color: #2A5DA5;
+}
+.card-content {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+.card-links {
+  list-style: none;
+  padding: 0;
+}
+.card-links li {
+  margin-bottom: 0.5rem;
+}
+.card-links a {
+  color: #2A5DA5;
+  text-decoration: none;
+  font-weight: 500;
+}
+.card-links a:hover {
+  text-decoration: underline;
+}
 
