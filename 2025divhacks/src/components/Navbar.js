@@ -6,15 +6,16 @@ const Navbar = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const [isHomeDropdownOpen, setIsHomeDropdownOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const timeoutRef = useRef(null);
 
   // config obj for scroll positions as percentages of page height
   const scrollPositions = {
     about: 24,         
-    tracks: 44,  
-    judgesSpeakers: 61, 
-    sponsors: 79, 
-    faq: 92     
+    tracks: 42,  
+    judgesSpeakers: 59, 
+    sponsors: 75, 
+    faq: 88     
   };
 
   // Function to scroll to a specific position
@@ -65,8 +66,19 @@ const Navbar = () => {
     }
   }, [location.pathname, location.search, navigate]);
 
+  // Handle scroll effect for navbar
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      setIsScrolled(scrollTop > 50);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <nav className="navbar navbar-custom">
+    <nav className={`navbar navbar-custom ${isScrolled ? 'scrolled' : ''}`}>
       <div className="nav-container-custom">
         <div className="navbar-nav">
           <div 
@@ -84,7 +96,7 @@ const Navbar = () => {
             }}
           >
             <Link 
-              className={`nav-link-custom ${location.pathname === '/' ? 'active' : ''}`} 
+              className="nav-link-custom" 
               to="/"
               onClick={() => {
                 if (location.pathname === '/') {
@@ -97,9 +109,9 @@ const Navbar = () => {
             >
               HOME
             </Link>
-            {isHomeDropdownOpen && (
+                        {isHomeDropdownOpen && (
               <div 
-                className="dropdown-menu"
+                className={`dropdown-menu ${isHomeDropdownOpen ? 'show' : ''}`}
                 onMouseEnter={() => {
                   if (timeoutRef.current) {
                     clearTimeout(timeoutRef.current);
@@ -109,7 +121,7 @@ const Navbar = () => {
                 onMouseLeave={() => {
                   timeoutRef.current = setTimeout(() => {
                     setIsHomeDropdownOpen(false);
-                  }, 100);
+                  }, 150);
                 }}
               >
                 <div 
