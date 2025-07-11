@@ -124,7 +124,6 @@ export default function Home() {
       if (!aboutSectionRef.current) return;
       const rect = aboutSectionRef.current.getBoundingClientRect();
       const windowHeight = window.innerHeight || document.documentElement.clientHeight;
-      // Show when top of about section is within 50% of viewport and not scrolled past
       if (rect.top < windowHeight * 0.5 && rect.bottom > windowHeight * 0.5) {
         setAboutCardVisible(true);
       } else {
