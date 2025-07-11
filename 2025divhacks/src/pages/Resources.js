@@ -34,7 +34,6 @@ const resourcesData = [
 export default function Resources() {
   return (
     <section className="resources-page">
-      <h1 className="resources-title">Resources</h1>
       <div className="resources-grid">
         {resourcesData.map((item, idx) => (
           <div key={idx} className="resource-card">
