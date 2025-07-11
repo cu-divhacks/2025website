@@ -472,6 +472,14 @@ html, body, #root {
   align-items: center;
 }
 
+.schedule-image {
+  width: 50%;
+  height: 100%;
+  margin-top: 13vw;
+  margin-bottom: 3vw;
+  object-fit: contain;
+}
+
 /* Ensure the main container has no gaps */
 #root > div > div {
   margin: 0;
@@ -775,6 +783,46 @@ html, body, #root {
     gap: 4vw;
     padding: 0 4vw;
   }
+}
+
+/* Schedule Page Styles */
+.schedule-page {
+  padding: 120px 20px 40px 20px;
+  text-align: center;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #2A5DA5;
+  position: relative;
+  z-index: 1;
+}
+
+.schedule-page h1 {
+  font-size: 4rem;
+  margin-bottom: 40px;
+  color: #ffffff;
+  font-weight: 300;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.schedule-coming-soon {
+  background: #f8f9fa;
+  padding: 30px 50px;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.schedule-coming-soon p {
+  font-size: 1.8rem;
+  color: #6c757d;
+  margin: 0;
+  font-weight: 400;
+  letter-spacing: 1px;
+  font-style: italic;
 }
 /*Stats Section*/
 .stats-section {
