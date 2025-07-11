@@ -4,6 +4,7 @@ html, body, #root {
   padding: 0;
   height: 100%;
   background-color: #2A5DA5;
+  overflow-x: hidden;
 }
 
 #mlh-trust-badge {
@@ -546,8 +547,8 @@ html, body, #root {
   border-radius: 1vw;
   box-shadow: 0 4px 16px rgba(0,0,0,0.10);
   padding: 1.5vw 1.5vw;
-  max-width: 28vw;
-  min-width: 220px;
+  max-width: 60vw;
+  min-width: 320px;
   width: 100%;
   text-align: center;
   margin: 0 auto;
@@ -565,7 +566,7 @@ html, body, #root {
 .track-card h3 {
   margin-top: 0;
   color: #2A5DA5;
-  font-size: 2vw;
+  font-size: 3vw;
   margin-bottom: 0.3vw;
   font-weight: 900;
 }
@@ -574,7 +575,7 @@ html, body, #root {
   color: #333;
   font-size: 1.7vw;
   margin-bottom: 0;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .track-card:hover {
@@ -625,6 +626,18 @@ html, body, #root {
   transform: scale(1.08);
   box-shadow: 0 4px 16px rgba(43,111,201,0.15);
   outline: none;
+}
+
+.track-card-below-row {
+  position: static !important;
+  transform: none !important;
+  left: auto !important;
+  margin: -11vw auto 0 auto;
+  display: block;
+  text-align: center;
+  max-width: 58vw;
+  min-width: 320px;
+  width: 100%;
 }
 
 /*Team Page CSS*/
@@ -986,4 +999,60 @@ html, body, #root {
   padding-bottom: 0.5vw;
 }
 
+/*Resources Page*/
+.resources-page {
+  padding: 4rem 1rem;
+  background-color: #2A5DA5;
+  min-height: 80vh;
+  color: #fff;
+  text-align: center;
+}
+.resources-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+.resource-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.1);
+  text-align: left;
+  color: #333;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.resource-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+}
+.card-title {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+  font-family: 'Bebas Neue', cursive;
+  color: #2A5DA5;
+}
+.card-content {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+.card-links {
+  list-style: none;
+  padding: 0;
+}
+.card-links li {
+  margin-bottom: 0.5rem;
+}
+.card-links a {
+  color: #2A5DA5;
+  text-decoration: none;
+  font-weight: 500;
+}
+.card-links a:hover {
+  text-decoration: underline;
+}
 

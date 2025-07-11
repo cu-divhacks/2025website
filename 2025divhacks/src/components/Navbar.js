@@ -163,6 +163,12 @@ const Navbar = () => {
             MAP
           </Link>
           <Link 
+            className={`nav-link-custom ${location.pathname === '/resources' ? 'active' : ''}`} 
+            to="/resources"
+          >
+            RESOURCES
+          </Link>
+          <Link 
             className={`nav-link-custom ${location.pathname === '/team' ? 'active' : ''}`} 
             to="/team"
           >

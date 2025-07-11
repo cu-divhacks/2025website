@@ -242,15 +242,15 @@ export default function Home() {
               style={{ cursor: 'pointer' }}
             >
               <img src={imgSrc} alt={`Track ${idx + 1}`} />
-              {hoveredTrack === idx && (
-                <div className="track-card track-card-reveal" style={{position: 'absolute', top: '110%', left: '50%', transform: 'translateX(-50%)', zIndex: 10}}>
-                  <h3>{track[idx].title}</h3>
-                  <p>{track[idx].description}</p>
-                </div>
-              )}
             </div>
           ))}
         </div>
+        {hoveredTrack !== null && (
+          <div className="track-card track-card-reveal track-card-below-row">
+            <h3>{track[hoveredTrack].title}</h3>
+            <p>{track[hoveredTrack].description}</p>
+          </div>
+        )}
         
         <div id="sponsors">
           <img className="sponsors" src= {sponsors} alt ="Sponsors" />
