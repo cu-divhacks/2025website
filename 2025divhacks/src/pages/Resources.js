@@ -1,5 +1,6 @@
 import React from 'react';
 import '../App.css';
+import resourcesHeader from '../assets/resources_header.png';
 
 const resourcesData = [
   {
@@ -8,7 +9,7 @@ const resourcesData = [
   },
   {
     title: "Getting Started",
-    content: "Form a team (or go solo), brainstorm simple impactful ideas, break your project into small tasks, and lean on mentors for guidance anytime.",
+    content: "Form a team (or go solo), brainstorm simple impactful ideas, break your project into small tasks, and lean on mentors for guidance.",
   },
   {
     title: "Useful Links",
@@ -34,6 +35,18 @@ const resourcesData = [
 export default function Resources() {
   return (
     <section className="resources-page">
+      <img 
+        src={resourcesHeader} 
+        alt="Resources Header" 
+        style={{
+          maxWidth: '35vw',
+          minWidth: 450,
+          width: '100%',
+          height: 'auto',
+          marginTop: '3px',
+          marginBottom: '-6vw',
+        }}
+      />
       <div className="resources-grid">
         {resourcesData.map((item, idx) => (
           <div key={idx} className="resource-card">

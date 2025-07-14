@@ -1,5 +1,6 @@
 import React from 'react';
 import mapImg from '../assets/map.png';
+import mapHeader from '../assets/map_header.PNG';
 
 const Map = () => {
   return (
@@ -15,21 +16,24 @@ const Map = () => {
       position: 'relative',
       zIndex: 1
     }}>
-      <h1 style={{
-        fontSize: '4rem',
-        marginBottom: '20px',
-        color: '#ffffff',
-        fontWeight: '700',
-        textTransform: 'uppercase'
-      }}>
-        CAMPUS
-      </h1>
+      <img 
+        src={mapHeader} 
+        alt="Map Header" 
+        style={{
+          maxWidth: '35vw',
+          minWidth: 450,
+          width: '100%',
+          height: 'auto',
+          marginBottom: '20px',
+          marginTop: '20px'
+        }}
+      />
       <img 
         src={mapImg} 
         alt="DivHacks Venue Map" 
         style={{
           maxWidth: '35vw',
-          minWidth: 400,
+          minWidth: 450,
           width: '100%',
           height: 'auto',
           borderRadius: '12px',

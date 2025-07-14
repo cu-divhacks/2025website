@@ -1362,7 +1362,7 @@ html, body, #root {
 
 /*Resources Page*/
 .resources-page {
-  padding: 4rem 1rem;
+  padding: 1rem 1rem;
   background-color: #2A5DA5;
   min-height: 80vh;
   color: #fff;
@@ -1374,7 +1374,6 @@ html, body, #root {
   gap: 2rem;
   max-width: 1000px;
   margin: 0 auto;
-  padding-top: 50px;
 }
 .resource-card {
   background: #fff;
@@ -1392,14 +1391,15 @@ html, body, #root {
 .card-title {
   font-size: 1.5rem;
   margin-bottom: 0.75rem;
-  font-family: 'Bebas Neue', cursive;
   color: #2A5DA5;
+  font-family: 'Lato', sans-serif;
 }
 .card-content {
   font-size: 1rem;
   line-height: 1.6;
   margin-bottom: 1rem;
   font-weight: 500;
+  font-family: 'Lato', sans-serif;
 }
 .card-links {
   list-style: none;
