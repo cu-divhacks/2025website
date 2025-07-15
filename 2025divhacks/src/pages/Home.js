@@ -14,7 +14,7 @@ import train2 from '../assets/train2.png';
 import train3 from '../assets/train3.png';
 import train4 from '../assets/train4.png';
 import train5 from '../assets/train5.png';
-import train6 from '../assets/train6.png';
+import trainComingSoon from '../assets/trainComingSoon.png';
 import track1img from '../assets/track1.png';
 import track2img from '../assets/track2.png';
 import track3img from '../assets/track3.png';
@@ -54,8 +54,8 @@ export default function Home() {
   ];
   const aboutSectionRef = useRef(null);
   const [aboutCardVisible, setAboutCardVisible] = useState(false);
-  const judgesTrains = [train1, train2, train3];
-  const speakersTrains = [train4, train5, train6]; // Different order to make it obvious when switching
+  const judgesTrains = [train1, train2, train3, train4, train5];
+  const speakersTrains = [trainComingSoon]; // Only the coming soon train for speakers
   const [currentTrainSet, setCurrentTrainSet] = useState('judges'); // 'judges' or 'speakers'
   const [currentTrain, setCurrentTrain] = useState(0);
   const [nextTrain, setNextTrain] = useState(null);
