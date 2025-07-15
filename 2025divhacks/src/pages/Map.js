@@ -1,9 +1,11 @@
 import React from 'react';
+import mapImg from '../assets/map.png';
+import mapHeader from '../assets/map_header.PNG';
 
 const Map = () => {
   return (
     <div className="map-page" style={{
-      padding: '120px 20px 40px 20px',
+      padding: '60px 20px 0px 20px',
       textAlign: 'center',
       minHeight: '80vh',
       display: 'flex',
@@ -14,34 +16,32 @@ const Map = () => {
       position: 'relative',
       zIndex: 1
     }}>
-      <h1 style={{
-        fontSize: '4rem',
-        marginBottom: '40px',
-        color: '#ffffff',
-        fontWeight: '300',
-        letterSpacing: '3px',
-        textTransform: 'uppercase'
-      }}>
-        Map
-      </h1>
-      <div style={{
-        background: '#f8f9fa',
-        padding: '30px 50px',
-        borderRadius: '8px',
-        border: '1px solid #e9ecef',
-        boxShadow: '0 2px 10px rgba(0,0,0,0.05)'
-      }}>
-        <p style={{
-          fontSize: '1.8rem',
-          color: '#6c757d',
-          margin: '0',
-          fontWeight: '400',
-          letterSpacing: '1px',
-          fontStyle: 'italic'
-        }}>
-          coming soon...
-        </p>
-      </div>
+      <img 
+        src={mapHeader} 
+        alt="Map Header" 
+        style={{
+          maxWidth: '35vw',
+          minWidth: 450,
+          width: '100%',
+          height: 'auto',
+          marginBottom: '20px',
+          marginTop: '20px'
+        }}
+      />
+      <img 
+        src={mapImg} 
+        alt="DivHacks Venue Map" 
+        style={{
+          maxWidth: '35vw',
+          minWidth: 450,
+          width: '100%',
+          height: 'auto',
+          borderRadius: '12px',
+          boxShadow: '0 4px 24px rgba(0,0,0,0.12)',
+          border: '2px solid #fff',
+          background: '#fff',
+        }}
+      />
     </div>
   );
 };
