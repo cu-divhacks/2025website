@@ -1,6 +1,6 @@
 import React from 'react';
 import mapImg from '../assets/map.png';
-import mapHeader from '../assets/map_header.PNG';
+import mapHeader from '../assets/map_header.png';
 
 const Map = () => {
   return (
@@ -17,29 +17,29 @@ const Map = () => {
       zIndex: 1
     }}>
       <img 
-        src={mapHeader} 
-        alt="Map Header" 
-        style={{
-          maxWidth: '35vw',
-          minWidth: 450,
-          width: '100%',
-          height: 'auto',
-          marginBottom: '20px',
-          marginTop: '20px'
-        }}
-      />
-      <img 
         src={mapImg} 
         alt="DivHacks Venue Map" 
         style={{
-          maxWidth: '35vw',
-          minWidth: 450,
+          maxWidth: '24vw',
+          minWidth: 320,
           width: '100%',
           height: 'auto',
           borderRadius: '12px',
           boxShadow: '0 4px 24px rgba(0,0,0,0.12)',
           border: '2px solid #fff',
           background: '#fff',
+          marginTop: '30px'
+        }}
+      />
+      <img 
+        src={mapHeader} 
+        alt="Map Header" 
+        style={{
+          maxWidth: '25vw',
+          minWidth: 320,
+          width: '100%',
+          height: 'auto',
+          marginTop: '3px'
         }}
       />
     </div>
