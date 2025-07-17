@@ -63,14 +63,13 @@ const Team = () => {
             src={teamHeader} 
             alt="Team Header" 
             style={{
-              maxWidth: '30vw',
-              minWidth: '180px',
-              width: 'auto',
+              maxWidth: '35vw',
+              minWidth: '450',
+              width: '100%',
               height: 'auto',
               zIndex: 10,
-              pointerEvents: 'none',
               marginLeft: '100px',
-              marginBottom: '-1vw'
+              marginBottom: '-20px'
             }}
           />
           <p>Meet the passionate organizers behind DivHacks 2025! Our team is dedicated to creating an empowering and inspirational space for students who are historically underrepresented in tech. We work together to bring you an unforgettable hackathon experience.</p>
