@@ -1002,15 +1002,15 @@ html, body, #root {
 }
 
 .track-card-below-row {
-  position: static !important;
-  transform: none !important;
-  left: auto !important;
-  margin-top: 200px;
+  position: absolute !important;
+  top: calc(205vw + 18vw); /* adjust as needed to appear below tracks row */
+  z-index: 20;
   display: block;
   text-align: center;
   max-width: 58vw;
   min-width: 320px;
   width: 100%;
+  pointer-events: auto;
 }
 
 /*Team Page CSS*/
