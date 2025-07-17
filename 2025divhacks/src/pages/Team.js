@@ -57,25 +57,22 @@ const Team = () => {
 
   return (
     <div style={{ position: 'relative', minHeight: '100vh' }}>
-      <img 
-        src={teamHeader} 
-        alt="Team Header" 
-        style={{
-          position: 'fixed',
-          top: 0,
-          right: -100,
-          maxWidth: '28vw',
-          minWidth: '180px',
-          width: 'auto',
-          height: 'auto',
-          marginTop: '3vw',
-          zIndex: 10,
-          pointerEvents: 'none',
-        }}
-      />
       <div className="team-section">
         <div className="team-header">
-          <h1>MEET THE TEAM</h1>
+          <img 
+            src={teamHeader} 
+            alt="Team Header" 
+            style={{
+              maxWidth: '30vw',
+              minWidth: '180px',
+              width: 'auto',
+              height: 'auto',
+              zIndex: 10,
+              pointerEvents: 'none',
+              marginLeft: '100px',
+              marginBottom: '-1vw'
+            }}
+          />
           <p>Meet the passionate organizers behind DivHacks 2025! Our team is dedicated to creating an empowering and inspirational space for students who are historically underrepresented in tech. We work together to bring you an unforgettable hackathon experience.</p>
         </div>
         
