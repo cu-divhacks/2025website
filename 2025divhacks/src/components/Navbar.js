@@ -9,14 +9,6 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const timeoutRef = useRef(null);
 
-  // config obj for scroll positions as percentages of page height
-  const scrollPositions = {
-    about: 24,         
-    tracks: 42,  
-    judgesSpeakers: 59, 
-    sponsors: 75, 
-    faq: 88     
-  };
 
   // Function to scroll to a specific position
   const scrollToPosition = (percentage) => {
@@ -126,35 +118,35 @@ const Navbar = () => {
               >
                 <div 
                   className="dropdown-item"
-                  onClick={() => scrollToPosition(scrollPositions.about)}
+                  onClick={() => {}}
                   style={{ cursor: 'pointer' }}
                 >
                   About
                 </div>
                 <div 
                   className="dropdown-item"
-                  onClick={() => scrollToPosition(scrollPositions.tracks)}
+                  onClick={() => {}}
                   style={{ cursor: 'pointer' }}
                 >
                   Tracks
                 </div>
                 <div 
                   className="dropdown-item"
-                  onClick={() => scrollToPosition(scrollPositions.judgesSpeakers)}
+                  onClick={() => {}}
                   style={{ cursor: 'pointer' }}
                 >
                   Judges & Speakers
                 </div>
                 <div 
                   className="dropdown-item"
-                  onClick={() => scrollToPosition(scrollPositions.sponsors)}
+                  onClick={() => {}}
                   style={{ cursor: 'pointer' }}
                 >
                   Sponsors
                 </div>
                 <div 
                   className="dropdown-item"
-                  onClick={() => scrollToPosition(scrollPositions.faq)}
+                  onClick={() => {}}
                   style={{ cursor: 'pointer' }}
                 >
                   FAQ
@@ -179,6 +171,12 @@ const Navbar = () => {
             to="/resources"
           >
             RESOURCES
+          </Link>
+          <Link 
+            className={`nav-link-custom ${location.pathname === '/sponsorship' ? 'active' : ''}`} 
+            to="/sponsorship"
+          >
+            SPONSOR US 
           </Link>
           <Link 
             className={`nav-link-custom ${location.pathname === '/team' ? 'active' : ''}`} 
