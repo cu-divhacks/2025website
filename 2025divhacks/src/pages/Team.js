@@ -7,6 +7,7 @@ import adneen_talib from '../assets/adneen_talib.png';
 import leah_kim from '../assets/leah_kim.png';
 import isabella_lu from '../assets/isabella_lu.png';
 import grace_xu from '../assets/grace_xu.png';
+import teamHeader from '../assets/team_header.png';
 
 const Team = () => {
   const teamMembers = [
@@ -55,7 +56,23 @@ const Team = () => {
   ];
 
   return (
-    <div>
+    <div style={{ position: 'relative', minHeight: '100vh' }}>
+      <img 
+        src={teamHeader} 
+        alt="Team Header" 
+        style={{
+          position: 'fixed',
+          top: 0,
+          right: -100,
+          maxWidth: '28vw',
+          minWidth: '180px',
+          width: 'auto',
+          height: 'auto',
+          marginTop: '3vw',
+          zIndex: 10,
+          pointerEvents: 'none',
+        }}
+      />
       <div className="team-section">
         <div className="team-header">
           <h1>MEET THE TEAM</h1>
