@@ -7,6 +7,7 @@ import adneen_talib from '../assets/adneen_talib.png';
 import leah_kim from '../assets/leah_kim.png';
 import isabella_lu from '../assets/isabella_lu.png';
 import grace_xu from '../assets/grace_xu.png';
+import teamHeader from '../assets/team_header.png';
 
 const Team = () => {
   const teamMembers = [
@@ -55,10 +56,22 @@ const Team = () => {
   ];
 
   return (
-    <div>
+    <div style={{ position: 'relative', minHeight: '100vh' }}>
       <div className="team-section">
         <div className="team-header">
-          <h1>MEET THE TEAM</h1>
+          <img 
+            src={teamHeader} 
+            alt="Team Header" 
+            style={{
+              maxWidth: '35vw',
+              minWidth: '450',
+              width: '100%',
+              height: 'auto',
+              zIndex: 10,
+              marginLeft: '100px',
+              marginBottom: '-20px'
+            }}
+          />
           <p>Meet the passionate organizers behind DivHacks 2025! Our team is dedicated to creating an empowering and inspirational space for students who are historically underrepresented in tech. We work together to bring you an unforgettable hackathon experience.</p>
         </div>
         

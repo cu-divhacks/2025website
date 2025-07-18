@@ -259,7 +259,7 @@ export default function Home() {
         <img className="skuline" src= {skuline} alt ="Skuline" ref={skylineRef} />
         {/* Sponsors Coming Soon */}
         <div className="sponsors-section">
-          <img className="sponsors" src= {sponsors} alt ="Sponsors" />
+        <img className="sponsors" src= {sponsors} alt ="Sponsors" />
           <div className="coming-soon-text">
             <h2>Coming Soon</h2>
           </div>
