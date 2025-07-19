@@ -5,10 +5,6 @@ import mapHeader from '../assets/map_header.png';
 const Map = () => {
   return (
     <div className="map-page" style={{
-      padding: '60px 20px 0px 20px',
-      textAlign: 'center',
-      minHeight: '80vh',
-      display: 'flex',
       flexDirection: 'column',
       justifyContent: 'center',
       alignItems: 'center',
@@ -20,26 +16,19 @@ const Map = () => {
         src={mapImg} 
         alt="DivHacks Venue Map" 
         style={{
-          maxWidth: '24vw',
-          minWidth: 320,
-          width: '100%',
-          height: 'auto',
-          borderRadius: '12px',
-          boxShadow: '0 4px 24px rgba(0,0,0,0.12)',
-          border: '2px solid #fff',
-          background: '#fff',
-          marginTop: '30px'
+          marginTop: '3vh',
+          width: '40vw',
+          rotate: '90deg',
         }}
       />
       <img 
         src={mapHeader} 
         alt="Map Header" 
         style={{
-          maxWidth: '25vw',
-          minWidth: 320,
-          width: '100%',
+          marginTop: '-12vw',
+          width: '30%',
           height: 'auto',
-          marginTop: '3px'
+          marginBottom: '1vw',
         }}
       />
     </div>

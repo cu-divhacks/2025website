@@ -30,7 +30,7 @@ export default function Resources() {
         background: '#ffce2d',
         color: '#000000',
         fontWeight: 900,
-        fontSize: '1.5rem',
+        fontSize: '3vw',
         textAlign: 'center',
         padding: '0.4rem 0',
         letterSpacing: '2px',
@@ -45,25 +45,22 @@ export default function Resources() {
         src={resourcesHeader} 
         alt="Resources Header" 
         style={{
-          maxWidth: '35vw',
-          minWidth: 450,
           width: '100%',
           height: 'auto',
-          marginTop: '3px',
-          marginBottom: '-50px',
+          marginTop: '2vw',
         }}
       />
       <div style={{
         width: '100%',
         textAlign: 'center',
         color: '#fff',
-        margin: '-2vw 0 2vw 0',
+        marginTop: '-15vw',
       }}>
-        <h2 style={{ fontSize: '2.2rem', fontWeight: 900, letterSpacing: '1px', margin: 0, textShadow: '1px 1px 4px #0008' }}>
+        <h2 style={{ fontSize: '3.2vw', fontWeight: 900}}>
           What is a Hackathon?
         </h2>
-        <div style={{ fontSize: '1.5rem', fontWeight: 600, letterSpacing: '1px', textShadow: '1px 1px 4px #0008', marginTop: '0.5vw' }}>
-          A hackathon is a fun, collaborative event where people come together to build creative technology projects in a short period of time (often 24–36 hours). You don’t need to be an expert—hackathons are for everyone, especially beginners!
+        <div style={{ fontSize: '2vw'}}>
+          A hackathon is a fun, collaborative event where people come together to build creative technology projects in a short period of time (often 24–36 hours). You don't need to be an expert—hackathons are for everyone, especially beginners!
         </div>
       </div>
       {/* Horizontally aligned Past Projects, Tech Stacks, and Presentation & Competition cards */}
@@ -92,16 +89,10 @@ export default function Resources() {
             textAlign: 'left'
           }}
         >
-          <h2 className="card-title" style={{ color: '#2A5DA5' }}>Past Projects</h2>
+          <h2 className="card-title" style={{ color: '#2A5DA5' }}>Project Inspo</h2>
           <ul style={{ paddingLeft: '1.5em' }}>
             <li>
-              <b>Project 1: Name</b>
-              <div style={{ fontSize: '1rem', color: '#444' }}>
-                coming soon...
-              </div>
-            </li>
-            <li>
-              <b>Project 2: Name</b>
+              <b>Past Projects </b>
               <div style={{ fontSize: '1rem', color: '#444' }}>
                 coming soon...
               </div>
@@ -124,7 +115,7 @@ export default function Resources() {
             textAlign: 'left'
           }}
         >
-          <h2 className="card-title" style={{ color: '#2A5DA5' }}>Tech Stacks</h2>
+          <h2 className="card-title" style={{ color: '#2A5DA5' }}>Recommended Tech Stacks</h2>
           <ul style={{ paddingLeft: '1.5em' }}>
             <li><b>Web Apps:</b> React, Next.js, Tailwind CSS</li>
             <li><b>Mobile Apps:</b> React Native, Flutter</li>

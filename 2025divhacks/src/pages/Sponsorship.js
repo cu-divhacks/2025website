@@ -38,7 +38,7 @@ const Sponsorship = () => {
         }}>
         <h2 style={{ color: '#fff', fontSize: '2.7vw', marginBottom: '1.5rem' }}>Why Sponsor DivHacks?</h2>
           <p style={{ color: '#fff', fontSize: '1.5vw', marginBottom: '1.5rem' }}>
-          Sponsoring DivHacks is a powerful way for your company to establish brand awareness and engage directly with a diverse community of student innovators. By sending representatives and mentors to the event, you’ll not only showcase your technologies but also gain real‑time feedback as participants build creative projects using your products and APIs—past sponsors have even designed custom hack “tracks” to spotlight unique applications of their tools. In addition, you’ll have exclusive access to over 250 attendee resumes, plus opportunities to host a booth at our career fair and lead workshops or mentorship sessions, making it easy to identify and recruit top emerging talent.<br />
+          Sponsoring DivHacks is a great way for your company to further establish brand awareness and engage the student community. By sending representatives and mentors to the event, you’ll showcase your technologies, gain real‑time feedback as participants build creative projects using your products and APIs and connect directiy withh talendted, dedicated students via access to 250+ attendee resumes, our career fair, and exlusive workshops.<br />
           </p>
           <p style={{ color: '#fff', fontSize: '2vw', marginTop: '1.5vw', opacity: 0.85 }}>
           Contact us at <a href="mailto:cu.divhacks@gmail.com" style={{ color: "white", textDecoration: 'underline', fontWeight: 600 }}>cu.divhacks@gmail.com</a> for our sponsorship prospectus and partnership opportunities!
