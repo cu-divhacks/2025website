@@ -1,46 +1,25 @@
 import React from 'react';
+import '../App.css';
+import schedule from '../assets/schedule.png';
 
 const Schedule = () => {
   return (
-    <div className="schedule-page" style={{
-      padding: '120px 20px 40px 20px',
-      textAlign: 'center',
-      minHeight: '80vh',
-      display: 'flex',
-      flexDirection: 'column',
-      justifyContent: 'center',
-      alignItems: 'center',
-      backgroundColor: '#2A5DA5',
-      position: 'relative',
-      zIndex: 1
-    }}>
-      <h1 style={{
-        fontSize: '4rem',
-        marginBottom: '40px',
-        color: '#ffffff',
-        fontWeight: '300',
-        letterSpacing: '3px',
-        textTransform: 'uppercase'
-      }}>
-        Schedule
-      </h1>
-      <div style={{
-        background: '#f8f9fa',
-        padding: '30px 50px',
-        borderRadius: '8px',
-        border: '1px solid #e9ecef',
-        boxShadow: '0 2px 10px rgba(0,0,0,0.05)'
-      }}>
-        <p style={{
-          fontSize: '1.8rem',
-          color: '#6c757d',
-          margin: '0',
-          fontWeight: '400',
-          letterSpacing: '1px',
-          fontStyle: 'italic'
-        }}>
-          coming soon...
-        </p>
+    <div className="schedule-page">
+      <img src={schedule} alt="Schedule" className="schedule-image" />
+      <div className="schedule-coming-soon">
+{/*
+      <iframe
+        src="https://calendar.google.com/calendar/embed?src=689ffabbda38d13cf91b77e9803e0d386cf18b036e541f4f21fc5b54f5ef2fd8%40group.calendar.google.com&ctz=America%2FLos_Angeles&mode=WEEK"
+        className="schedule-calendar-iframe"
+        style={{ border: 0 }}
+        width="800"
+        height="600"
+        frameBorder="0"
+        scrolling="no"
+        title="DivHacks Schedule Calendar"
+      />
+      */}
+        <p>more info coming soon...</p>
       </div>
     </div>
   );

@@ -6,16 +6,9 @@ const Navbar = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const [isHomeDropdownOpen, setIsHomeDropdownOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const timeoutRef = useRef(null);
 
-  // config obj for scroll positions as percentages of page height
-  const scrollPositions = {
-    about: 24,         
-    tracks: 44,  
-    judgesSpeakers: 61, 
-    sponsors: 79, 
-    faq: 92     
-  };
 
   // Function to scroll to a specific position
   const scrollToPosition = (percentage) => {
@@ -65,8 +58,19 @@ const Navbar = () => {
     }
   }, [location.pathname, location.search, navigate]);
 
+  // Handle scroll effect for navbar
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      setIsScrolled(scrollTop > 50);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <nav className="navbar navbar-custom">
+    <nav className={`navbar navbar-custom ${isScrolled ? 'scrolled' : ''}`}>
       <div className="nav-container-custom">
         <div className="navbar-nav">
           <div 
@@ -84,7 +88,7 @@ const Navbar = () => {
             }}
           >
             <Link 
-              className={`nav-link-custom ${location.pathname === '/' ? 'active' : ''}`} 
+              className="nav-link-custom" 
               to="/"
               onClick={() => {
                 if (location.pathname === '/') {
@@ -97,9 +101,9 @@ const Navbar = () => {
             >
               HOME
             </Link>
-            {isHomeDropdownOpen && (
+                        {isHomeDropdownOpen && (
               <div 
-                className="dropdown-menu"
+                className={`dropdown-menu ${isHomeDropdownOpen ? 'show' : ''}`}
                 onMouseEnter={() => {
                   if (timeoutRef.current) {
                     clearTimeout(timeoutRef.current);
@@ -109,40 +113,40 @@ const Navbar = () => {
                 onMouseLeave={() => {
                   timeoutRef.current = setTimeout(() => {
                     setIsHomeDropdownOpen(false);
-                  }, 100);
+                  }, 150);
                 }}
               >
                 <div 
                   className="dropdown-item"
-                  onClick={() => scrollToPosition(scrollPositions.about)}
+                  onClick={() => {}}
                   style={{ cursor: 'pointer' }}
                 >
                   About
                 </div>
                 <div 
                   className="dropdown-item"
-                  onClick={() => scrollToPosition(scrollPositions.tracks)}
+                  onClick={() => {}}
                   style={{ cursor: 'pointer' }}
                 >
                   Tracks
                 </div>
                 <div 
                   className="dropdown-item"
-                  onClick={() => scrollToPosition(scrollPositions.judgesSpeakers)}
+                  onClick={() => {}}
                   style={{ cursor: 'pointer' }}
                 >
                   Judges & Speakers
                 </div>
                 <div 
                   className="dropdown-item"
-                  onClick={() => scrollToPosition(scrollPositions.sponsors)}
+                  onClick={() => {}}
                   style={{ cursor: 'pointer' }}
                 >
                   Sponsors
                 </div>
                 <div 
                   className="dropdown-item"
-                  onClick={() => scrollToPosition(scrollPositions.faq)}
+                  onClick={() => {}}
                   style={{ cursor: 'pointer' }}
                 >
                   FAQ
@@ -161,6 +165,18 @@ const Navbar = () => {
             to="/map"
           >
             MAP
+          </Link>
+          <Link 
+            className={`nav-link-custom ${location.pathname === '/resources' ? 'active' : ''}`} 
+            to="/resources"
+          >
+            RESOURCES
+          </Link>
+          <Link 
+            className={`nav-link-custom ${location.pathname === '/sponsorship' ? 'active' : ''}`} 
+            to="/sponsorship"
+          >
+            SPONSOR US 
           </Link>
           <Link 
             className={`nav-link-custom ${location.pathname === '/team' ? 'active' : ''}`} 
