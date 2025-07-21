@@ -7,6 +7,7 @@ const Navbar = () => {
   const navigate = useNavigate();
   const [isHomeDropdownOpen, setIsHomeDropdownOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [drawerOpen, setDrawerOpen] = useState(false);
   const timeoutRef = useRef(null);
 
 
@@ -69,9 +70,50 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Close drawer on route change
+  useEffect(() => {
+    setDrawerOpen(false);
+  }, [location.pathname]);
+
+  // Prevent background scroll when drawer is open
+  useEffect(() => {
+    if (drawerOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [drawerOpen]);
+
   return (
     <nav className={`navbar navbar-custom ${isScrolled ? 'scrolled' : ''}`}>
       <div className="nav-container-custom">
+        {/* Hamburger icon for mobile */}
+        <div className="hamburger-menu" onClick={() => setDrawerOpen(true)}>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        {/* Overlay and Drawer */}
+        {drawerOpen && (
+          <>
+            <div className="drawer-overlay" onClick={() => setDrawerOpen(false)}></div>
+            <div className="side-drawer">
+              <button className="drawer-close" onClick={() => setDrawerOpen(false)}>&times;</button>
+              <div className="drawer-links">
+                <Link className="drawer-link" to="/" onClick={() => setDrawerOpen(false)}>HOME</Link>
+                <Link className="drawer-link" to="/schedule" onClick={() => setDrawerOpen(false)}>SCHEDULE</Link>
+                <Link className="drawer-link" to="/map" onClick={() => setDrawerOpen(false)}>MAP</Link>
+                <Link className="drawer-link" to="/resources" onClick={() => setDrawerOpen(false)}>RESOURCES</Link>
+                <Link className="drawer-link" to="/sponsorship" onClick={() => setDrawerOpen(false)}>SPONSOR US</Link>
+                <Link className="drawer-link" to="/team" onClick={() => setDrawerOpen(false)}>TEAM</Link>
+              </div>
+            </div>
+          </>
+        )}
+        {/* Desktop Navbar */}
         <div className="navbar-nav">
           <div 
             className="nav-item dropdown"
@@ -118,35 +160,35 @@ const Navbar = () => {
               >
                 <div 
                   className="dropdown-item"
-                  onClick={() => {}}
+                  onClick={() => scrollToPosition(22)}
                   style={{ cursor: 'pointer' }}
                 >
                   About
                 </div>
                 <div 
                   className="dropdown-item"
-                  onClick={() => {}}
+                  onClick={() => scrollToPosition(42)}
                   style={{ cursor: 'pointer' }}
                 >
                   Tracks
                 </div>
                 <div 
                   className="dropdown-item"
-                  onClick={() => {}}
+                  onClick={() => scrollToPosition(59)}
                   style={{ cursor: 'pointer' }}
                 >
                   Judges & Speakers
                 </div>
                 <div 
                   className="dropdown-item"
-                  onClick={() => {}}
+                  onClick={() => scrollToPosition(70)}
                   style={{ cursor: 'pointer' }}
                 >
                   Sponsors
                 </div>
                 <div 
                   className="dropdown-item"
-                  onClick={() => {}}
+                  onClick={() => scrollToPosition(120)}
                   style={{ cursor: 'pointer' }}
                 >
                   FAQ
