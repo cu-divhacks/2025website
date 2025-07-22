@@ -225,27 +225,27 @@ export default function Home() {
             <b>STATS FROM 2024</b>
           </h2>
           <div className="stats-grid">
-            <div className="stat-item">
+            <div className="stat-item glass-card">
               <div className="stat-number">750+</div>
               <div className="stat-label">Applications</div>
             </div>
-            <div className="stat-item">
+            <div className="stat-item glass-card">
               <div className="stat-number">295</div>
               <div className="stat-label">Hackers</div>
             </div>
-            <div className="stat-item">
+            <div className="stat-item glass-card">
               <div className="stat-number">14</div>
               <div className="stat-label">Countries Represented</div>
             </div>
-            <div className="stat-item">
+            <div className="stat-item glass-card">
               <div className="stat-number">54</div>
               <div className="stat-label">Institutions</div>
             </div>
-            <div className="stat-item">
+            <div className="stat-item glass-card">
               <div className="stat-number">48.4%</div>
               <div className="stat-label">Female/Non-binary</div>
             </div>
-            <div className="stat-item">
+            <div className="stat-item glass-card">
               <div className="stat-number">58.6%</div>
               <div className="stat-label">Beginner Hackers</div>
             </div>

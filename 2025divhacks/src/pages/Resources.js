@@ -64,23 +64,12 @@ export default function Resources() {
         </div>
       </div>
       {/* Horizontally aligned Past Projects, Tech Stacks, and Presentation & Competition cards */}
-      <div
-        style={{
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'flex-start',
-          gap: '1vw',
-          flexWrap: 'wrap',
-          margin: '3vw 0'
-        }}
-      >
+      <div className="resources-grid">
         {/* Past Projects Card */}
         <div
+          className="resource-card"
           style={{
-            background: '#fff',
-            borderRadius: '12px',
-            boxShadow: '0 4px 24px rgba(0,0,0,0.10)',
-            padding: '0.5vw 2vw',
+            // Remove background and boxShadow here to use CSS class
             minWidth: '280px',
             maxWidth: '400px',
             flex: '1 1 320px',
@@ -102,11 +91,8 @@ export default function Resources() {
 
         {/* Tech Stacks Card */}
         <div
+          className="resource-card"
           style={{
-            background: '#fff',
-            borderRadius: '12px',
-            boxShadow: '0 4px 24px rgba(0,0,0,0.10)',
-            padding: '0.5vw 2vw',
             minWidth: '280px',
             maxWidth: '400px',
             flex: '1 1 320px',
@@ -126,11 +112,8 @@ export default function Resources() {
 
         {/* Presentation & Competition Card */}
         <div
+          className="resource-card"
           style={{
-            background: '#fff',
-            borderRadius: '12px',
-            boxShadow: '0 4px 24px rgba(0,0,0,0.10)',
-            padding: '0.5vw 2vw',
             minWidth: '280px',
             maxWidth: '400px',
             flex: '1 1 320px',
