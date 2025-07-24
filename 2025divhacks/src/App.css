@@ -1483,6 +1483,11 @@ html, body, #root {
 @media (max-width: 799px) {
   .train-carousel-container {
     width: 100vw;
+    margin-top: 30vw;
+  }
+
+  .speakers-header {
+    top: 51.5%;
   }
 
   .carousel-arrow {
