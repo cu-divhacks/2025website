@@ -333,9 +333,9 @@ export default function Home() {
             ›
           </button>
         </div>
-        <div id="faq" className="faq-section" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', width: '100%' }}>
-          <h2 className="faq-header" style={{ textAlign: 'center', width: '100%' }}>FAQs</h2>
-          <div style={{ margin: '0 auto', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+        <div id="faq" className="faq-section">
+          <h2 className="faq-header">FAQs</h2>
+          <div>
             <CollapsibleText 
               title="What is DivHacks?"
               isExpanded={openFaqItem === "What is DivHacks?"}
