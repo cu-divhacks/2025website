@@ -32,7 +32,7 @@ export default function Home() {
   const [containerHeight, setContainerHeight] = useState('700vh');
   const skylineRef = useRef(null);
   const containerRef = useRef(null);
-  const [hoveredTrack, setHoveredTrack] = useState(null);
+  const [hoveredTrack, setHoveredTrack] = useState(0);
   const [openFaqItem, setOpenFaqItem] = useState(null);
   const track = [
     {
@@ -270,9 +270,8 @@ export default function Home() {
           {[track1img, track2img, track3img, track4img].map((imgSrc, idx) => (
             <div
               key={idx}
-              className="track-image"
+              className={`track-image${hoveredTrack === idx ? ' selected' : ''}`}
               onMouseEnter={() => setHoveredTrack(idx)}
-              onMouseLeave={() => setHoveredTrack(null)}
               tabIndex={0}
               style={{ cursor: 'pointer' }}
             >
