@@ -97,10 +97,8 @@ export default function Home() {
         const isMobile = window.innerWidth <= 799;
         
         if (isMobile) {
-          // On mobile, the footer is positioned relatively, so we don't need to add its height
-          // Just add some padding for the footer
-          const skylineBottomVh = (skylineBottom / window.innerHeight) * 100;
-          const newHeight = Math.max(skylineBottomVh + 10, 100); // Add 10vh padding for footer
+          // On mobile, use a fixed height based on the new skyline position (200% + some padding)
+          const newHeight = 220; // 200% for skyline + 20% padding for footer and spacing
           setContainerHeight(`${newHeight}vh`);
         } else {
           // Desktop calculation (original logic)

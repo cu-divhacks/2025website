@@ -1625,6 +1625,23 @@ html, body, #root {
 
 
 @media (max-width: 799px) {
+  /* Mobile positioning adjustments for background elements */
+  .image-container1 .skuline {
+    transform: translate(0, 200%);
+  }
+  
+  .image-container1 .sponsors {
+    transform: translate(0, 160%);
+  }
+  
+  .image-container1 .tracks {
+    transform: translate(0, 90%);
+  }
+  
+  .image-container1 .station {
+    transform: translate(0, 35%);
+  }
+  
   .about-section {
     flex-direction: column;
     align-items: center;
