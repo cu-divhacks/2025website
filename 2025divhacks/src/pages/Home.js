@@ -332,12 +332,9 @@ export default function Home() {
             ›
           </button>
         </div>
-        <div id="faq" className="faq-section">
-          <h2 className="faq-header">Frequently Asked Questions</h2>
-          
-          <div className="faq-categories-container">
-            <div className="faq-category">
-              <h3 className="faq-category-title">General</h3>
+        <div id="faq" className="faq-section" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', width: '100%' }}>
+          <h2 className="faq-header" style={{ textAlign: 'center', width: '100%' }}>FAQs</h2>
+          <div style={{ margin: '0 auto', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
             <CollapsibleText 
               title="What is DivHacks?"
               isExpanded={openFaqItem === "What is DivHacks?"}
@@ -345,23 +342,13 @@ export default function Home() {
             >
               <p>DivHacks is an awesome 32-hour long in-person event hosted at Columbia University where students of all backgrounds come together to bring something new to life! Hackers are encouraged to build any software or hardware project. There will also be lots of workshops, fun games, speakers, and prizes for you to enjoy throughout the event!</p>
             </CollapsibleText>
-            
             <CollapsibleText 
-              title="I'm a beginner hacker. Can I still join?"
-              isExpanded={openFaqItem === "I'm a beginner hacker. Can I still join?"}
-              onToggle={() => handleFaqToggle("I'm a beginner hacker. Can I still join?")}
-            >
-              <p>Absolutely! You are not required to have prior experience or even be a CS major to apply. During the hackathon, there will be workshops, help sessions, and mentors available to assist you with your projects. Additionally, in the week leading up to DivHacks, there will be workshops to help prepare you for coding over the weekend.</p>
-            </CollapsibleText>
-            
-            <CollapsibleText 
-              title="What's the cost?"
-              isExpanded={openFaqItem === "What's the cost?"}
-              onToggle={() => handleFaqToggle("What's the cost?")}
+              title="What is the cost?"
+              isExpanded={openFaqItem === "What is the cost?"}
+              onToggle={() => handleFaqToggle("What is the cost?")}
             >
               <p>There is no cost to attend DivHacks. All attendees will have access to mentors, workshops, events, an overnight hacking space, and food throughout the weekend. However, we do not provide travel reimbursements.</p>
             </CollapsibleText>
-            
             <CollapsibleText 
               title="What can I win?"
               isExpanded={openFaqItem === "What can I win?"}
@@ -371,67 +358,19 @@ export default function Home() {
             </CollapsibleText>
             
             <CollapsibleText 
-              title="If everyone is welcome, why do I have to submit an application?"
-              isExpanded={openFaqItem === "If everyone is welcome, why do I have to submit an application?"}
-              onToggle={() => handleFaqToggle("If everyone is welcome, why do I have to submit an application?")}
-            >
-              <p>We would love to host everyone interested in attending DivHacks, but we are limited by venue size and budget limitations. </p>
-            </CollapsibleText>
-            
-            <CollapsibleText 
-              title="I still have questions!"
-              isExpanded={openFaqItem === "I still have questions!"}
-              onToggle={() => handleFaqToggle("I still have questions!")}
-            >
-              <p>Please email us at cu.divhacks@gmail.com if you have any additional questions.</p>
-            </CollapsibleText>
-          </div>
-          
-          <div className="faq-category">
-            <h3 className="faq-category-title">Registration</h3>
-            <CollapsibleText 
               title="Who can apply?"
               isExpanded={openFaqItem === "Who can apply?"}
               onToggle={() => handleFaqToggle("Who can apply?")}
             >
-              <p>Any college student (undergraduate or graduate) is welcome to apply!</p>
+              <p>Any college student (undergraduate or graduate) is welcome to apply! You are not required to have prior experience or even be a CS major to apply.</p>
             </CollapsibleText>
-            
-            <CollapsibleText 
-              title="What if I'm not eligible? / How can I help as a mentor, workshop leader, or volunteer?"
-              isExpanded={openFaqItem === "What if I'm not eligible? / How can I help as a mentor, workshop leader, or volunteer?"}
-              onToggle={() => handleFaqToggle("What if I'm not eligible? / How can I help as a mentor, workshop leader, or volunteer?")}
-            >
-              <p>Please contact us at cu.divhacks@gmail.com, and we will put you in touch with our Hacker Experience team!</p>
-            </CollapsibleText>
-            
-            <CollapsibleText 
-              title="How do I apply?"
-              isExpanded={openFaqItem === "How do I apply?"}
-              onToggle={() => handleFaqToggle("How do I apply?")}
-            >
-              <p>Priority applications are due July 31st, and regular applications are due August 31st. Just fill out the application before the deadline!</p>
-            </CollapsibleText>
-            
             <CollapsibleText 
               title="How do teams work?"
               isExpanded={openFaqItem === "How do teams work?"}
               onToggle={() => handleFaqToggle("How do teams work?")}
             >
-              <p>You can work in teams of up to 4 people. If you do not have a team, please don't worry! In the weeks leading up to the hackathon, we will share a link to a platform that allows you to create your profile and connect with other DivHacks attendees. You will be able to find teammates based on technical skills and interests (think Tinder for hackathon teams).</p>
+              <p>You can work in teams of up to 4 people. If you do not have a team, please don't worry! There will be plenty of opportunities to connect with other DivHacks attendees (think Tinder for hackathon teams).</p>
             </CollapsibleText>
-            
-            <CollapsibleText 
-              title="What if I don't have a team on the day of the hackathon?"
-              isExpanded={openFaqItem === "What if I don't have a team on the day of the hackathon?"}
-              onToggle={() => handleFaqToggle("What if I don't have a team on the day of the hackathon?")}
-            >
-              <p>Don't worry! We'll be hosting a team-forming mixer after opening ceremonies, so you'll have a chance to meet other participants and join a team. Hackers can also choose to work solo, in pairs, or as a trio!</p>
-            </CollapsibleText>
-          </div>
-          
-          <div className="faq-category">
-            <h3 className="faq-category-title">In-Person Logistics</h3>
             <CollapsibleText 
               title="Can I attend virtually?"
               isExpanded={openFaqItem === "Can I attend virtually?"}
@@ -439,7 +378,6 @@ export default function Home() {
             >
               <p>Unfortunately, DivHacks is only offered in-person.</p>
             </CollapsibleText>
-            
             <CollapsibleText 
               title="Will food be provided?"
               isExpanded={openFaqItem === "Will food be provided?"}
@@ -447,50 +385,20 @@ export default function Home() {
             >
               <p>Yes, we will be providing meals and snacks throughout the weekend. If you have any dietary restrictions, there is a space for you to note this on your application.</p>
             </CollapsibleText>
-            
             <CollapsibleText 
               title="Will there be overnight accommodations?"
               isExpanded={openFaqItem === "Will there be overnight accommodations?"}
               onToggle={() => handleFaqToggle("Will there be overnight accommodations?")}
             >
-              <p>We will provide an overnight hacking space where non-Columbia/Barnard students can work and sleep. Snacks will be available to keep you energized throughout the night.</p>
+              <p>We will provide an overnight hacking space where non-Columbia/Barnard students can work and sleep.</p>
             </CollapsibleText>
-            
             <CollapsibleText 
-              title="What will campus access look like for non-Columbia/Barnard participants?"
-              isExpanded={openFaqItem === "What will campus access look like for non-Columbia/Barnard participants?"}
-              onToggle={() => handleFaqToggle("What will campus access look like for non-Columbia/Barnard participants?")}
+              title="I still have questions!"
+              isExpanded={openFaqItem === "I still have questions!"}
+              onToggle={() => handleFaqToggle("I still have questions!")}
             >
-              <p>While non-Columbia/Barnard students will have access to campus for the hackathon weekend, please note that access may be restricted due to current campus restrictions. Please pay close and timely attention to all communications from the hackathon organizing team to ensure a seamless and enjoyable experience.</p>
+              <p>Please email us at cu.divhacks@gmail.com.</p>
             </CollapsibleText>
-          </div>
-          
-          <div className="faq-category">
-            <h3 className="faq-category-title">Project Submissions</h3>
-            <CollapsibleText 
-              title="What are hackathon tracks and how do they work?"
-              isExpanded={openFaqItem === "What are hackathon tracks and how do they work?"}
-              onToggle={() => handleFaqToggle("What are hackathon tracks and how do they work?")}
-            >
-              <p>DivHacks projects are required to fall under 1 of 4 distinct "tracks", thematic focus areas intended to broadly guide your project. This year, our tracks are productivity, sustainability, entertainment, and immersive technology. During submission, you will be prompted to select 1 track that best fits your project. You can find further descriptions of each of our tracks above.</p>
-            </CollapsibleText>
-            
-            <CollapsibleText 
-              title="How do submissions work with tracks and sponsor challenges?"
-              isExpanded={openFaqItem === "How do submissions work with tracks and sponsor challenges?"}
-              onToggle={() => handleFaqToggle("How do submissions work with tracks and sponsor challenges?")}
-            >
-              <p>Some of our sponsors propose their own challenges, which can be understood as mini-tracks. We have designed our tracks to align with all sponsor challenges to maximize the chances of your project winning. You may submit to an unlimited amount of sponsor challenges, so long as you fulfill the challenge requirements.</p>
-            </CollapsibleText>
-            
-            <CollapsibleText 
-              title="Do I have to submit a project if I attend?"
-              isExpanded={openFaqItem === "Do I have to submit a project if I attend?"}
-              onToggle={() => handleFaqToggle("Do I have to submit a project if I attend?")}
-            >
-              <p>Submitting a project is not required, but is highly encouraged, and it's the only way you'll be eligible for a prize! This is a fantastic opportunity to leave the hackathon with a completed project and receive valuable feedback from industry leaders and professionals!</p>
-            </CollapsibleText>
-          </div>
           </div>
         </div>
         <Footer />
