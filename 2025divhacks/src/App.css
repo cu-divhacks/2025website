@@ -1202,7 +1202,8 @@ html, body, #root {
 }
 
 .stat-label {
-  color: #ffffff;
+
+  color: #fff;
   font-size: 1.1vw;
   font-family: 'Lato', sans-serif;
   font-weight: 500;
@@ -1327,6 +1328,7 @@ html, body, #root {
   padding: 2vw 0;
   max-width: 1000px;
   margin: 0 auto;
+  justify-items: center;
 }
 .resource-card {
   padding: 2vw 1.5vw;
