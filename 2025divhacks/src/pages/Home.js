@@ -93,16 +93,26 @@ export default function Home() {
         // Calculate the bottom position of the skyline relative to the container
         const skylineBottom = skylineRect.bottom - containerRect.top;
         
-        // Get footer height
-        const footer = document.querySelector('.footer');
-        const footerHeight = footer ? footer.offsetHeight : 0;
-        const footerHeightVh = (footerHeight / window.innerHeight) * 100;
+        // Check if we're on mobile
+        const isMobile = window.innerWidth <= 799;
         
-        // Convert to viewport height percentage and add footer height
-        const skylineBottomVh = (skylineBottom / window.innerHeight) * 100;
-        const newHeight = Math.max(skylineBottomVh + footerHeightVh, 100); // Add footer height, minimum 100vh
-        
-        setContainerHeight(`${newHeight}vh`);
+        if (isMobile) {
+          // On mobile, use a simpler calculation that accounts for the footer being positioned relatively
+          const skylineBottomVh = (skylineBottom / window.innerHeight) * 100;
+          const newHeight = Math.max(skylineBottomVh + 15, 100); // Add some padding for footer
+          setContainerHeight(`${newHeight}vh`);
+        } else {
+          // Desktop calculation (original logic)
+          const footer = document.querySelector('.footer');
+          const footerHeight = footer ? footer.offsetHeight : 0;
+          const footerHeightVh = (footerHeight / window.innerHeight) * 100;
+          
+          // Convert to viewport height percentage and add footer height
+          const skylineBottomVh = (skylineBottom / window.innerHeight) * 100;
+          const newHeight = Math.max(skylineBottomVh + footerHeightVh, 100); // Add footer height, minimum 100vh
+          
+          setContainerHeight(`${newHeight}vh`);
+        }
       }
     };
 
