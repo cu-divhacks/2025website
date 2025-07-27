@@ -40,6 +40,7 @@ export default function Resources() {
         transform: 'rotate(-15deg)',
         border: '0.3vw solid #000',
         width: '25vw',
+        zIndex: 10
       }}>
         🚧 WORK IN PROGRESS 🚧
       </div>
