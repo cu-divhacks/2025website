@@ -719,6 +719,13 @@ html, body, #root {
   filter: brightness(0) invert(0.8);
 }
 
+/* Hide footer icons on mobile */
+@media (max-width: 799px) {
+  .footer-icons {
+    display: none !important;
+  }
+}
+
 .team-page {
   padding: 2rem;
   text-align: center;
