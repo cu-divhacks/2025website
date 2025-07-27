@@ -227,7 +227,7 @@ export default function Home() {
         <div className="about-section" ref={aboutSectionRef}>
           <img className={`about-card${aboutCardVisible ? ' slide-in' : ' slide-out'}`} src={aboutCard} alt="About DivHacks" />
           <div className="about-text">
-            <p>DivHacks, founded in 2017, is Columbia University's premier student-led annual diversity hackathon. Over the past eight years, DivHacks has welcomed attendees from all over the tri-state area. We strive to create an empowering and inspirational space for students who are historically underrepresented in the tech industry. Our goal is an experience that not only reimagines what diversity should look like in the tech industry but gives students the tools to use technology to implement change.</p>
+            <p>DivHacks, founded in 2017, is Columbia University's premier student-led annual diversity hackathon run by Women in Computer Science. Over the past eight years, DivHacks has welcomed attendees from all over the tri-state area. We strive to create an empowering and inspirational space for students who are historically underrepresented in the tech industry. Our goal is an experience that not only reimagines what diversity should look like in the tech industry but gives students the tools to use technology to implement change.</p>
           </div>
         </div>
         {/*Stats Section */}
