@@ -724,6 +724,10 @@ html, body, #root {
   .footer-icons {
     display: none !important;
   }
+  
+  .footer {
+    padding-bottom: 4vh !important;
+  }
 }
 
 .team-page {
