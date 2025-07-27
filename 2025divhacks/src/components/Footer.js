@@ -14,11 +14,11 @@ const Footer = () => {
         href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf"
       >MLH Code of Conduct</a>
       <div className="footer-icons">
-        <a href="mailto:cu.divhacks@gmail.com"><img id="contact-icon" src={emailIcon} alt="Contact Us" /></a>
-        <a href="https://instagram.com/divhacks"><img id="contact-icon" src={instagramIcon} alt="Instagram" /></a>
-        <a href="https://facebook.com/divhacks"><img id="contact-icon" src={facebookIcon} alt="Facebook" /></a>
-        <a href="https://linkedin.com/company/divhacks"><img id="contact-icon" src={linkedinIcon} alt="Linkedin" /></a>
-        <a href="https://twitter.com/divhacks"><img id="contact-icon" src={twitterIcon} alt="Twitter" /></a>
+        <a href="mailto:cu.divhacks@gmail.com"><img className="contact-icon" src={emailIcon} alt="Contact Us" /></a>
+        <a href="https://instagram.com/divhacks"><img className="contact-icon" src={instagramIcon} alt="Instagram" /></a>
+        <a href="https://facebook.com/divhacks"><img className="contact-icon" src={facebookIcon} alt="Facebook" /></a>
+        <a href="https://linkedin.com/company/divhacks"><img className="contact-icon" src={linkedinIcon} alt="Linkedin" /></a>
+        <a href="https://twitter.com/divhacks"><img className="contact-icon" src={twitterIcon} alt="Twitter" /></a>
       </div>
     </footer>
   );
