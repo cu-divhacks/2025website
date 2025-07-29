@@ -345,71 +345,78 @@ export default function Home() {
         </div>
         <div id="faq" className="faq-section" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', width: '100%' }}>
           <h2 className="faq-header" style={{ textAlign: 'center', width: '100%' }}>FAQs</h2>
-          <div style={{ margin: '0 auto', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-            <CollapsibleText 
-              title="What is DivHacks?"
-              isExpanded={openFaqItem === "What is DivHacks?"}
-              onToggle={() => handleFaqToggle("What is DivHacks?")}
-            >
-              <p>DivHacks is an awesome 32-hour long in-person event hosted at Columbia University where students of all backgrounds come together to bring something new to life! Hackers are encouraged to build any software or hardware project. There will also be lots of workshops, fun games, speakers, and prizes for you to enjoy throughout the event!</p>
-            </CollapsibleText>
-            <CollapsibleText 
-              title="What is the cost?"
-              isExpanded={openFaqItem === "What is the cost?"}
-              onToggle={() => handleFaqToggle("What is the cost?")}
-            >
-              <p>There is no cost to attend DivHacks. All attendees will have access to mentors, workshops, events, an overnight hacking space, and food throughout the weekend. However, we do not provide travel reimbursements.</p>
-            </CollapsibleText>
-            <CollapsibleText 
-              title="What can I win?"
-              isExpanded={openFaqItem === "What can I win?"}
-              onToggle={() => handleFaqToggle("What can I win?")}
-            >
-              <p>Prizes are given for the overall top 3 projects. There are also prizes for top submissions in each of the 4 tracks, as well as other categories such as Best Beginner Hack. Hackers also have the opportunity to win prizes from sponsor challenges– there is no limit to how many prizes a team can win. Stay tuned for our official list of prizes!</p>
-            </CollapsibleText>
-            
-            <CollapsibleText 
-              title="Who can apply?"
-              isExpanded={openFaqItem === "Who can apply?"}
-              onToggle={() => handleFaqToggle("Who can apply?")}
-            >
-              <p>Any college student (undergraduate or graduate) is welcome to apply! You are not required to have prior experience or even be a CS major to apply.</p>
-            </CollapsibleText>
-            <CollapsibleText 
-              title="How do teams work?"
-              isExpanded={openFaqItem === "How do teams work?"}
-              onToggle={() => handleFaqToggle("How do teams work?")}
-            >
-              <p>You can work in teams of up to 4 people. If you do not have a team, please don't worry! There will be plenty of opportunities to connect with other DivHacks attendees (think Tinder for hackathon teams).</p>
-            </CollapsibleText>
-            <CollapsibleText 
-              title="Can I attend virtually?"
-              isExpanded={openFaqItem === "Can I attend virtually?"}
-              onToggle={() => handleFaqToggle("Can I attend virtually?")}
-            >
-              <p>Unfortunately, DivHacks is only offered in-person.</p>
-            </CollapsibleText>
-            <CollapsibleText 
-              title="Will food be provided?"
-              isExpanded={openFaqItem === "Will food be provided?"}
-              onToggle={() => handleFaqToggle("Will food be provided?")}
-            >
-              <p>Yes, we will be providing meals and snacks throughout the weekend. If you have any dietary restrictions, there is a space for you to note this on your application.</p>
-            </CollapsibleText>
-            <CollapsibleText 
-              title="Will there be overnight accommodations?"
-              isExpanded={openFaqItem === "Will there be overnight accommodations?"}
-              onToggle={() => handleFaqToggle("Will there be overnight accommodations?")}
-            >
-              <p>We will provide an overnight hacking space where non-Columbia/Barnard students can work and sleep.</p>
-            </CollapsibleText>
-            <CollapsibleText 
-              title="I still have questions!"
-              isExpanded={openFaqItem === "I still have questions!"}
-              onToggle={() => handleFaqToggle("I still have questions!")}
-            >
-              <p>Please email us at cu.divhacks@gmail.com.</p>
-            </CollapsibleText>
+          <div className="faq-columns-container" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4vw', width: '100%', maxWidth: '1100px' }}>
+            {/* Left Column */}
+            <div className="faq-column">
+              <h3 className="faq-column-header">General</h3>
+              <CollapsibleText 
+                title="What is DivHacks?"
+                isExpanded={openFaqItem === "What is DivHacks?"}
+                onToggle={() => handleFaqToggle("What is DivHacks?")}
+              >
+                <p>DivHacks is an awesome 32-hour long in-person event hosted at Columbia University where students of all backgrounds come together to bring something new to life! Hackers are encouraged to build any software or hardware project. There will also be lots of workshops, fun games, speakers, and prizes for you to enjoy throughout the event!</p>
+              </CollapsibleText>
+              <CollapsibleText 
+                title="What is the cost?"
+                isExpanded={openFaqItem === "What is the cost?"}
+                onToggle={() => handleFaqToggle("What is the cost?")}
+              >
+                <p>There is no cost to attend DivHacks. All attendees will have access to mentors, workshops, events, an overnight hacking space, and food throughout the weekend. However, we do not provide travel reimbursements.</p>
+              </CollapsibleText>
+              <CollapsibleText 
+                title="What can I win?"
+                isExpanded={openFaqItem === "What can I win?"}
+                onToggle={() => handleFaqToggle("What can I win?")}
+              >
+                <p>Prizes are given for the overall top 3 projects. There are also prizes for top submissions in each of the 4 tracks, as well as other categories such as Best Beginner Hack. Hackers also have the opportunity to win prizes from sponsor challenges– there is no limit to how many prizes a team can win. Stay tuned for our official list of prizes!</p>
+              </CollapsibleText>
+              <CollapsibleText 
+                title="Who can apply?"
+                isExpanded={openFaqItem === "Who can apply?"}
+                onToggle={() => handleFaqToggle("Who can apply?")}
+              >
+                <p>Any college student (undergraduate or graduate) is welcome to apply! You are not required to have prior experience or even be a CS major to apply.</p>
+              </CollapsibleText>
+              <CollapsibleText 
+                title="How do teams work?"
+                isExpanded={openFaqItem === "How do teams work?"}
+                onToggle={() => handleFaqToggle("How do teams work?")}
+              >
+                <p>You can work in teams of up to 4 people. If you do not have a team, please don't worry! There will be plenty of opportunities to connect with other DivHacks attendees (think Tinder for hackathon teams).</p>
+              </CollapsibleText>
+            </div>
+            {/* Right Column */}
+            <div className="faq-column">
+              <h3 className="faq-column-header">Logistics</h3>
+              <CollapsibleText 
+                title="Can I attend virtually?"
+                isExpanded={openFaqItem === "Can I attend virtually?"}
+                onToggle={() => handleFaqToggle("Can I attend virtually?")}
+              >
+                <p>Unfortunately, DivHacks is only offered in-person.</p>
+              </CollapsibleText>
+              <CollapsibleText 
+                title="Will food be provided?"
+                isExpanded={openFaqItem === "Will food be provided?"}
+                onToggle={() => handleFaqToggle("Will food be provided?")}
+              >
+                <p>Yes, we will be providing meals and snacks throughout the weekend. If you have any dietary restrictions, there is a space for you to note this on your application.</p>
+              </CollapsibleText>
+              <CollapsibleText 
+                title="Will there be overnight accommodations?"
+                isExpanded={openFaqItem === "Will there be overnight accommodations?"}
+                onToggle={() => handleFaqToggle("Will there be overnight accommodations?")}
+              >
+                <p>We will provide an overnight hacking space where non-Columbia/Barnard students can work and sleep.</p>
+              </CollapsibleText>
+              <CollapsibleText 
+                title="I still have questions!"
+                isExpanded={openFaqItem === "I still have questions!"}
+                onToggle={() => handleFaqToggle("I still have questions!")}
+              >
+                <p>Please email us at cu.divhacks@gmail.com.</p>
+              </CollapsibleText>
+            </div>
           </div>
         </div>
         <Footer />
