@@ -1534,11 +1534,11 @@ html, body, #root {
 @media (max-width: 799px) {
   .train-carousel-container {
     width: 100vw;
-    margin-top: 90vw;
+    margin-top: 80vw;
   }
 
   .speakers-header {
-    top: 58.5%;
+    top: 57%;
   }
 
   .carousel-arrow {
