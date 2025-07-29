@@ -1306,7 +1306,6 @@ html, body, #root {
   grid-template-columns: 1fr 1fr;
   gap: 4vw;
   width: 100%;
-  max-width: 1100px;
   align-items: start;
 }
 
@@ -1323,10 +1322,9 @@ html, body, #root {
   margin-bottom: 2vw;
   text-align: center;
   letter-spacing: 0.1vw;
-  border-bottom: 3px solid #fff;
+  border-bottom: 2px solid #fff;
   padding-bottom: 0.5vw;
   margin-top: 0;
-  width: 100%;
   min-height: 3.5vw;
   box-sizing: border-box;
   display: flex;
@@ -1336,17 +1334,13 @@ html, body, #root {
 
 @media (max-width: 900px) {
   .faq-columns-container {
-    display: flex;
-    flex-direction: column;
     gap: 2vw;
-    align-items: center;
   }
   .faq-column {
     width: 100%;
-    max-width: 500px;
   }
   .faq-column-header {
-    font-size: 5vw;
+    font-size: 2vw;
     padding-bottom: 1vw;
     min-height: 6vw;
   }
