@@ -1198,7 +1198,7 @@ html, body, #root {
 }
 .stat-item:hover {
   transform: translateY(-8px);
-  background: #3578c5;
+  background: rgba(30, 44, 80, 0.55);
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
 }
 
@@ -1225,6 +1225,8 @@ html, body, #root {
   margin: 0.5vw 0;
   overflow: hidden;
   width: 100%;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(30,44,80,0.10);
 }
 
 .collapsible-header {
@@ -1336,12 +1338,49 @@ html, body, #root {
   letter-spacing: 0.5vw;
 }
 
-.faq-section > div {
-  width: 50vw;
-  margin: 0 auto;
+.faq-columns-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4vw;
+  width: 100%;
+  align-items: start;
+}
+
+.faq-column {
   display: flex;
   flex-direction: column;
+  gap: 1vw;
+}
+
+.faq-column-header {
+  color: #fff;
+  font-weight: 700;
+  font-size: 2vw;
+  margin-bottom: 2vw;
+  text-align: center;
+  letter-spacing: 0.1vw;
+  border-bottom: 2px solid #fff;
+  padding-bottom: 0.5vw;
+  margin-top: 0;
+  min-height: 3.5vw;
+  box-sizing: border-box;
+  display: flex;
   align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 900px) {
+  .faq-columns-container {
+    gap: 2vw;
+  }
+  .faq-column {
+    width: 100%;
+  }
+  .faq-column-header {
+    font-size: 2vw;
+    padding-bottom: 1vw;
+    min-height: 6vw;
+  }
 }
 
 /* Remove old multi-column/category FAQ styles */
@@ -1521,11 +1560,11 @@ html, body, #root {
 @media (max-width: 799px) {
   .train-carousel-container {
     width: 100vw;
-    margin-top: 30vw;
+    margin-top: 50vw;
   }
 
   .speakers-header {
-    top: 51.5%;
+    top: 53%;
   }
 
   .carousel-arrow {
