@@ -895,7 +895,6 @@ html, body, #root {
 }
 
 .track-card:hover {
-  transform: translateY(-8px) scale(1.03);
   box-shadow: 0 8px 24px rgba(43,111,201,0.15);
 }
 
