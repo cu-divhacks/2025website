@@ -21,7 +21,6 @@ const Schedule = () => {
       
       */}
       <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSwZXe7_GqPrXb5fzInQx-qT7v28_yIj9eODOR79UORqCHRSeHFtWUWufOKmTEaSuVm8KgEbTuj2rk9/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
-        <p>more updates coming soon...</p>
       </div>
     </div>
   );

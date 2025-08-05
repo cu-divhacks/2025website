@@ -1115,7 +1115,6 @@ html, body, #root {
 
 /* Schedule Page Styles */
 .schedule-page {
-  padding: 120px 20px 40px 20px;
   text-align: center;
   min-height: 80vh;
   display: flex;
@@ -1136,13 +1135,6 @@ html, body, #root {
   text-transform: uppercase;
 }
 
-.schedule-coming-soon {
-  background: #f8f9fa;
-  padding: 3vw 7vw;
-  border-radius: 8px;
-  border: 1px solid #e9ecef;
-}
-
 .schedule-coming-soon p {
   font-size: 3vw;
   color: #6c757d;
@@ -1151,6 +1143,16 @@ html, body, #root {
   letter-spacing: 1px;
   font-style: italic;
 }
+
+.schedule-coming-soon iframe {
+  width: 90vw;
+  height: 90vh;
+  border: none;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  margin: 0 0;
+  margin-bottom: 20px; 
+}
+
 /*Stats Section*/
 .stats-section {
   position: absolute;
