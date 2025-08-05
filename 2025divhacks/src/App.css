@@ -895,7 +895,6 @@ html, body, #root {
 }
 
 .track-card:hover {
-  transform: translateY(-8px) scale(1.03);
   box-shadow: 0 8px 24px rgba(43,111,201,0.15);
 }
 
@@ -1198,7 +1197,7 @@ html, body, #root {
 }
 .stat-item:hover {
   transform: translateY(-8px);
-  background: #3578c5;
+  background: rgba(30, 44, 80, 0.55);
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
 }
 
@@ -1225,6 +1224,8 @@ html, body, #root {
   margin: 0.5vw 0;
   overflow: hidden;
   width: 100%;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(30,44,80,0.10);
 }
 
 .collapsible-header {
@@ -1267,7 +1268,33 @@ html, body, #root {
 }
 
 .collapsible-content.expanded {
-  max-height: 500px; /* Adjust based on your content */
+  max-height: 500px; 
+}
+
+/* Resources page specific scrollable collapsible content */
+.resources-page .collapsible-content.expanded {
+  max-height: 400px; /* Reduced height to make scrolling more likely */
+  overflow-y: auto; /* Enable vertical scrolling */
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: rgba(255, 255, 255, 0.3) transparent; /* For Firefox */
+}
+
+/* Custom scrollbar for Webkit browsers (Chrome, Safari, Edge) - Resources page only */
+.resources-page .collapsible-content.expanded::-webkit-scrollbar {
+  width: 8px;
+}
+
+.resources-page .collapsible-content.expanded::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.resources-page .collapsible-content.expanded::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+}
+
+.resources-page .collapsible-content.expanded::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
 }
 
 .collapsible-inner {
@@ -1310,12 +1337,49 @@ html, body, #root {
   letter-spacing: 0.5vw;
 }
 
-.faq-section > div {
-  width: 50vw;
-  margin: 0 auto;
+.faq-columns-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4vw;
+  width: 100%;
+  align-items: start;
+}
+
+.faq-column {
   display: flex;
   flex-direction: column;
+  gap: 1vw;
+}
+
+.faq-column-header {
+  color: #fff;
+  font-weight: 700;
+  font-size: 2vw;
+  margin-bottom: 2vw;
+  text-align: center;
+  letter-spacing: 0.1vw;
+  border-bottom: 2px solid #fff;
+  padding-bottom: 0.5vw;
+  margin-top: 0;
+  min-height: 3.5vw;
+  box-sizing: border-box;
+  display: flex;
   align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 900px) {
+  .faq-columns-container {
+    gap: 2vw;
+  }
+  .faq-column {
+    width: 100%;
+  }
+  .faq-column-header {
+    font-size: 2vw;
+    padding-bottom: 1vw;
+    min-height: 6vw;
+  }
 }
 
 /* Remove old multi-column/category FAQ styles */
@@ -1333,7 +1397,7 @@ html, body, #root {
 }
 .resources-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 2.5vw;
   padding: 2vw 0;
   max-width: 1000px;
@@ -1349,8 +1413,8 @@ html, body, #root {
   transition: all 0.3s ease;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   border: 1px solid rgba(255, 255, 255, 0.2);
-  width: 100%;
-  max-width: 100%;
+  width: auto;
+  max-width: none;
   box-sizing: border-box;
   overflow: hidden;
   color: #333;
@@ -1495,11 +1559,11 @@ html, body, #root {
 @media (max-width: 799px) {
   .train-carousel-container {
     width: 100vw;
-    margin-top: 30vw;
+    margin-top: 50vw;
   }
 
   .speakers-header {
-    top: 51.5%;
+    top: 53%;
   }
 
   .carousel-arrow {
@@ -1656,4 +1720,82 @@ html, body, #root {
     font-size: 3vw;
     padding: 0.5vw 1vw;
   }
+}
+
+/* Interactive Checkbox Styles for Tools Section */
+.tool-checkbox {
+  width: 20px;
+  height: 20px;
+  min-width: 20px;
+  min-height: 20px;
+  border: 2px solid #fff;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background-color: transparent;
+  flex-shrink: 0;
+}
+
+.tool-checkbox.checked {
+  background-color: #10B981;
+}
+
+.tool-checkbox:hover {
+  transform: scale(1.05);
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.2);
+}
+
+/* Clickable Resource Box Styles for Starter Guide */
+.resource-box {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 1.5vw;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+/* Resources Page Responsive Layout */
+.resources-layout {
+  display: grid;
+  grid-template-columns: clamp(200px, 20vw, 250px) 1fr;
+  gap: 3vw;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2vw;
+}
+
+@media (max-width: 680px) {
+  .resources-layout {
+    grid-template-columns: 1fr;
+    gap: 2vw;
+  }
+}
+
+.resource-box:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+}
+
+.resource-link {
+  text-decoration: none;
+}
+
+.resource-title {
+  font-weight: 600;
+  margin-bottom: 0.5vw;
+}
+
+.resource-description {
+  opacity: 0.9;
+  font-size: clamp(0.9rem, 1vw, 1.1rem);
+  color: #fff;
 }
