@@ -1,5 +1,8 @@
 import '../App.css';
 
+//track analytics using vercel 
+import { Analytics } from "@vercel/analytics/next" 
+
 import { useState, useEffect, useRef } from 'react';
 import background1 from '../assets/bg.png';
 import Footer from '../components/Footer';
@@ -263,6 +266,8 @@ export default function Home() {
             </div>
           </div>
         </div>
+  
+        <Analytics />
 
         <img className="low" src= {low} alt ="Background" />
         <img className="station" src= {station} alt ="Background" />
