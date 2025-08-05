@@ -18,7 +18,9 @@ const Schedule = () => {
         scrolling="no"
         title="DivHacks Schedule Calendar"
       />
+      
       */}
+      <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQpY9WIkE_igO3DCkGj_PzQczpkp8worh4fs_-M6RPmoo2GnlFYi2xf84iM_uHEVAm8O5oqG5VDuW7H/pubhtml?gid=145409191&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
         <p>more info coming soon...</p>
       </div>
     </div>
