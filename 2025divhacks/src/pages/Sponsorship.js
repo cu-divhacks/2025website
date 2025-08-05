@@ -138,7 +138,7 @@ const Sponsorship = () => {
                 {tier.features.map((feature, fidx) => {
                   let display;
                   if (feature.includes('early access')) {
-                    display = <span style={{color:'#2A5DA5', fontWeight:600, fontSize:'0.95em'}}>early access</span>;
+                    display = <span style={{color:'#1e4a8a', fontWeight:600, fontSize:'0.95em'}}>early access</span>;
                   } else {
                     display = <span style={{color:'#F7B32B', fontWeight:900, fontSize:'1.2em', marginRight:4}}>✓</span>;
                   }
