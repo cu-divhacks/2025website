@@ -1,5 +1,6 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Analytics } from '@vercel/analytics/react';
 import Home from './pages/Home';
 import Team from './pages/Team';
 import Map from './pages/Map';
@@ -21,6 +22,7 @@ export default function App() {
           <Route path="/resources" element={<Resources />} />
           <Route path="/sponsorship" element={<Sponsorship />} />
         </Routes>
+        <Analytics />
       </div>
     </Router>
   );
