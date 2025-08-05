@@ -20,8 +20,8 @@ const Schedule = () => {
       />
       
       */}
-      <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQpY9WIkE_igO3DCkGj_PzQczpkp8worh4fs_-M6RPmoo2GnlFYi2xf84iM_uHEVAm8O5oqG5VDuW7H/pubhtml?gid=145409191&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
-        <p>more info coming soon...</p>
+      <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSwZXe7_GqPrXb5fzInQx-qT7v28_yIj9eODOR79UORqCHRSeHFtWUWufOKmTEaSuVm8KgEbTuj2rk9/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+        <p>more updates coming soon...</p>
       </div>
     </div>
   );
