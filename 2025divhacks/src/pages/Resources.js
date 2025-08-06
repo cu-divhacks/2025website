@@ -31,10 +31,12 @@ export default function Resources() {
           <div>
             <h3 style={{
               fontSize: 'clamp(1.3rem, 2.5vw, 2rem)',
-              color: '#FFD700',
+              color: '#fff',
               marginBottom: '2vw',
-              fontWeight: 600,
-              textAlign: 'center'
+              fontWeight: 900,
+              textAlign: 'center',
+              fontFamily: "'Lato', sans-serif",
+              letterSpacing: '0.05em'
             }}>
               HACKATHON GLOSSARY
             </h3>
@@ -47,10 +49,12 @@ export default function Resources() {
                 <div style={{ 
                   fontSize: 'clamp(1vw, 1.2vw, 1.5vw)', 
                   color: '#fff', 
-                  lineHeight: '1.3',
+                  lineHeight: '1.6',
                   maxHeight: '300px',
                   overflowY: 'auto',
-                  paddingRight: '10px'
+                  paddingRight: '10px',
+                  fontFamily: "'Lato', sans-serif",
+                  fontWeight: 500
                 }}>
                   <p><b>Hackathon:</b> A short event (1–3 days) where you team up to build a tech project with purpose, usually from scratch.</p>
                   <p><b>Track:</b> A theme you can choose for your project (e.g., Sustainability, AI, Healthcare).</p>
@@ -78,7 +82,9 @@ export default function Resources() {
                   lineHeight: '1.6',
                   maxHeight: '300px',
                   overflowY: 'auto',
-                  paddingRight: '10px'
+                  paddingRight: '10px',
+                  fontFamily: "'Lato', sans-serif",
+                  fontWeight: 500
                 }}>
                   <p><b>Frontend:</b> The part of a website/app you can see and click on.</p>
                   <p><b>Backend:</b> The hidden part that does the thinking. It stores data, handles logins, runs logic.</p>
@@ -109,7 +115,9 @@ export default function Resources() {
                   lineHeight: '1.6',
                   maxHeight: '300px',
                   overflowY: 'auto',
-                  paddingRight: '10px'
+                  paddingRight: '10px',
+                  fontFamily: "'Lato', sans-serif",
+                  fontWeight: 500
                 }}>
                   <p><b>Figma:</b> Designing your app visually without code.</p>
                   <p><b>Canva:</b> Making slides or designing posters.</p>
@@ -132,7 +140,9 @@ export default function Resources() {
                   lineHeight: '1.6',
                   maxHeight: '300px',
                   overflowY: 'auto',
-                  paddingRight: '10px'
+                  paddingRight: '10px',
+                  fontFamily: "'Lato', sans-serif",
+                  fontWeight: 500
                 }}>
                   <p><b>Slack:</b> A group chat platform for announcements and questions.</p>
                   <p><b>Google Drive:</b> Where you can store and share slides, docs, and designs with your team.</p>
@@ -148,10 +158,12 @@ export default function Resources() {
           <div>
             <h3 style={{
               fontSize: 'clamp(1.3rem, 2.5vw, 2rem)',
-              color: '#FFD700',
+              color: '#fff',
               marginBottom: '3vw',
-              fontWeight: 600,
-              textAlign: 'center'
+              fontWeight: 900,
+              textAlign: 'center',
+              fontFamily: "'Lato', sans-serif",
+              letterSpacing: '0.05em'
             }}>
               INTRODUCTION
             </h3>
@@ -221,8 +233,9 @@ export default function Resources() {
           <div>
             <h3 style={{
               fontSize: 'clamp(1.3rem, 2.5vw, 2rem)',
-              color: '#FFD700',
-              fontWeight: 600,
+              color: '#fff',
+              fontWeight: 900,
+              fontFamily: "'Lato', sans-serif",
               textAlign: 'center'
             }}>
               BROWSE A STARTER GUIDE
@@ -382,9 +395,10 @@ export default function Resources() {
           <div>
             <h3 style={{
               fontSize: 'clamp(1.3rem, 2.5vw, 2rem)',
-              color: '#FFD700',
+              color: '#fff',
               marginBottom: '3vw',
-              fontWeight: 600,
+              fontWeight: 900,
+              fontFamily: "'Lato', sans-serif",
               textAlign: 'center'
             }}>
               PICK YOUR TOOLS
@@ -446,9 +460,10 @@ export default function Resources() {
           <div>
             <h3 style={{
               fontSize: 'clamp(1.3rem, 2.5vw, 2rem)',
-              color: '#FFD700',
+              color: '#fff',
               marginBottom: '3vw',
-              fontWeight: 600,
+              fontWeight: 900,
+              fontFamily: "'Lato', sans-serif",
               textAlign: 'center'
             }}>
               TRY BEGINNER-FRIENDLY PROJECT TEMPLATES
@@ -554,9 +569,10 @@ export default function Resources() {
           <div>
             <h3 style={{
               fontSize: 'clamp(1.3rem, 2.5vw, 2rem)',
-              color: '#FFD700',
+              color: '#fff',
               marginBottom: '3vw',
-              fontWeight: 600,
+              fontWeight: 900,
+              fontFamily: "'Lato', sans-serif",
               textAlign: 'center'
             }}>
               PAST PROJECTS
@@ -812,17 +828,8 @@ export default function Resources() {
           padding: '2vw',
           backdropFilter: 'blur(10px)',
           border: '1px solid rgba(255, 255, 255, 0.2)',
-          height: 'fit-content'
+          height: 'fit-content',
         }}>
-          <h3 style={{
-            fontSize: 'clamp(1rem, 1.3vw, 1.8rem)',
-            color: '#FFD700',
-            marginBottom: 'clamp(1.5vw, 2vw, 2.5vw)',
-            fontWeight: 900,
-            textAlign: 'center'
-          }}>
-            Navigation
-          </h3>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1vw' }}>
             {sections.map((section) => (
               <button
@@ -836,10 +843,10 @@ export default function Resources() {
                   borderRadius: '8px',
                   cursor: 'pointer',
                   fontSize: 'clamp(0.8rem, 1vw, 1.3rem)',
-                  fontWeight: activeSection === section.id ? 600 : 400,
+                  fontWeight: 600,
                   textAlign: 'left',
                   transition: 'all 0.3s ease',
-                  borderLeft: activeSection === section.id ? '4px solid #FFD700' : '4px solid transparent'
+                  borderLeft: activeSection === section.id ? '4px solid #fff' : '4px solid transparent'
                 }}
               >
                 {section.title}
@@ -882,7 +889,7 @@ export default function Resources() {
           margin: '0 auto',
           fontSize: 'clamp(1.2rem, 1.5vw, 1.8rem)',
           color: '#fff',
-          fontWeight: 500,
+          fontWeight: 900,
           textAlign: 'center',
         }}>
           MORE INFO COMING SOON...
