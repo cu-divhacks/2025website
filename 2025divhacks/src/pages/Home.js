@@ -1,10 +1,9 @@
 import '../App.css';
 
 //track analytics using vercel 
-import { Analytics } from "@vercel/analytics/next" 
+import { Analytics } from '@vercel/analytics/react';
 
 import { useState, useEffect, useRef } from 'react';
-import background1 from '../assets/bg.png';
 import Footer from '../components/Footer';
 import CollapsibleText from '../components/CollapsibleText';
 import low from '../assets/low.png';
