@@ -477,14 +477,6 @@ export default function Resources() {
                   padding: '2.5vw',
                   border: '1px solid rgba(255, 255, 255, 0.2)'
                 }}>
-                  <h4 style={{
-                    fontSize: 'clamp(1.1rem, 1.5vw, 1.4rem)',
-                    color: '#fff',
-                    marginBottom: '1.5vw',
-                    fontWeight: 600
-                  }}>
-                    Resource 1
-                  </h4>
                   <div style={{ marginBottom: '1.5vw' }}>
                     <a href="https://codesandbox.io/p/sandbox/hackathon-website-template-jnoizb" target="_blank" rel="noopener noreferrer" style={{ 
                       color: '#fff', 
@@ -522,14 +514,6 @@ export default function Resources() {
                   padding: '2.5vw',
                   border: '1px solid rgba(255, 255, 255, 0.2)'
                 }}>
-                  <h4 style={{
-                    fontSize: 'clamp(1.1rem, 1.5vw, 1.4rem)',
-                    color: '#fff',
-                    marginBottom: '1.5vw',
-                    fontWeight: 600
-                  }}>
-                    Resource 2
-                  </h4>
                   <div style={{ marginBottom: '1.5vw' }}>
                     <a href="https://codesandbox.io/p/sandbox/mlh-mlh-hackathon-flask-starter-20rlor" target="_blank" rel="noopener noreferrer" style={{ 
                       color: '#fff', 
@@ -575,7 +559,7 @@ export default function Resources() {
               fontFamily: "'Lato', sans-serif",
               textAlign: 'center'
             }}>
-              PAST PROJECTS
+              PAST PROJECTS (DIVHACKS 2024)
             </h3>
             <div style={{ fontSize: 'clamp(1vw, 1.2vw, 1.5vw)', color: '#fff', lineHeight: '1.6' }}>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '3vw' }}>
