@@ -257,27 +257,66 @@ export default function Resources() {
                     1. Build your first website
                   </h4>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '1vw' }}>
-                    <a href="https://www.freecodecamp.org/learn/2022/responsive-web-design/" target="_blank" rel="noopener noreferrer" className="resource-link">
-                      <div className="resource-box">
-                        <div className="resource-description">
-                          Free, interactive lessons to build real web pages from scratch
-                        </div>
+                    <div style={{ backgroundColor: 'rgba(255, 255, 255, 0.08)', borderRadius: '15px', padding: '2.5vw', border: '1px solid rgba(255, 255, 255, 0.2)' }}>
+                      <div style={{ marginBottom: '1.5vw' }}>
+                        <a href="https://www.freecodecamp.org/learn/2022/responsive-web-design/" target="_blank" rel="noopener noreferrer" style={{ 
+                          color: '#fff', 
+                          textDecoration: 'none', 
+                          fontWeight: 600, 
+                          fontSize: 'clamp(1rem, 1.1vw, 1.2rem)',
+                          backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                          padding: '0.8vw 1.5vw',
+                          borderRadius: '25px',
+                          border: '1px solid rgba(255, 255, 255, 0.3)',
+                          display: 'inline-block',
+                          transition: 'all 0.3s ease',
+                          cursor: 'pointer'
+                        }} onMouseEnter={(e) => {
+                          e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.2)';
+                          e.currentTarget.style.transform = 'translateY(-2px)';
+                          e.currentTarget.style.boxShadow = '0 4px 12px rgba(255, 255, 255, 0.2)';
+                        }} onMouseLeave={(e) => {
+                          e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+                          e.currentTarget.style.transform = 'translateY(0)';
+                          e.currentTarget.style.boxShadow = 'none';
+                        }}>
+                          FreeCodeCamp: Responsive Web Design
+                        </a>
+                        <p style={{ margin: '0.5vw 0 0 0', opacity: 0.9, fontSize: 'clamp(0.9rem, 1vw, 1.1rem)' }}>
+                          Free, interactive HTML & CSS lessons that walk you through building real, responsive web pages step-by-step—all in your browser, no setup required. 
+                        </p>
                       </div>
-                    </a>
-                    <a href="https://www.codecademy.com/learn/learn-html" target="_blank" rel="noopener noreferrer" className="resource-link">
-                      <div className="resource-box">
-                        <div className="resource-description">
-                          Short, beginner friendly HTML/CSS tutorials
-                        </div>
+                    </div>
+                    <div style={{ backgroundColor: 'rgba(255, 255, 255, 0.08)', borderRadius: '15px', padding: '2.5vw', border: '1px solid rgba(255, 255, 255, 0.2)' }}>
+                      <div style={{ marginBottom: '1.5vw' }}>
+                        <a href="https://www.codecademy.com/learn/learn-html" target="_blank" rel="noopener noreferrer" style={{ 
+                          color: '#fff', 
+                          textDecoration: 'none', 
+                          fontWeight: 600, 
+                          fontSize: 'clamp(1rem, 1.1vw, 1.2rem)',
+                          backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                          padding: '0.8vw 1.5vw',
+                          borderRadius: '25px',
+                          border: '1px solid rgba(255, 255, 255, 0.3)',
+                          display: 'inline-block',
+                          transition: 'all 0.3s ease',
+                          cursor: 'pointer'
+                        }} onMouseEnter={(e) => {
+                          e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.2)';
+                          e.currentTarget.style.transform = 'translateY(-2px)';
+                          e.currentTarget.style.boxShadow = '0 4px 12px rgba(255, 255, 255, 0.2)';
+                        }} onMouseLeave={(e) => {
+                          e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+                          e.currentTarget.style.transform = 'translateY(0)';
+                          e.currentTarget.style.boxShadow = 'none';
+                        }}>
+                          Codecademy: Learn HTML
+                        </a>
+                        <p style={{ margin: '0.5vw 0 0 0', opacity: 0.9, fontSize: 'clamp(0.9rem, 1vw, 1.1rem)' }}>
+                          Hands-on tutorials teaching you how to structure and style a personal webpage. Start by learning HTML basics—perfect if you've never written a single line of code before. 
+                        </p>
                       </div>
-                    </a>
-                    <a href="https://replit.com/templates/html" target="_blank" rel="noopener noreferrer" className="resource-link">
-                      <div className="resource-box">
-                        <div className="resource-description">
-                          Open and edit a working website right in your browser
-                        </div>
-                      </div>
-                    </a>
+                    </div>
                   </div>
                 </div>
 
@@ -293,27 +332,66 @@ export default function Resources() {
                     2. Make a Python chatbot
                   </h4>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '1vw' }}>
-                    <a href="https://www.youtube.com/watch?v=Jk4kuuwLTh4" target="_blank" rel="noopener noreferrer" className="resource-link">
-                      <div className="resource-box">
-                        <div className="resource-description">
-                          Create a Simple Chatbot with Python by freeCodeCamp YouTube
-                        </div>
+                    <div style={{ backgroundColor: 'rgba(255, 255, 255, 0.08)', borderRadius: '15px', padding: '2.5vw', border: '1px solid rgba(255, 255, 255, 0.2)' }}>
+                      <div style={{ marginBottom: '1.5vw' }}>
+                        <a href="https://youtu.be/UU1WVnMk4E8?si=vS_ErMx866li6UVr" target="_blank" rel="noopener noreferrer" style={{ 
+                          color: '#fff', 
+                          textDecoration: 'none', 
+                          fontWeight: 600, 
+                          fontSize: 'clamp(1rem, 1.1vw, 1.2rem)',
+                          backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                          padding: '0.8vw 1.5vw',
+                          borderRadius: '25px',
+                          border: '1px solid rgba(255, 255, 255, 0.3)',
+                          display: 'inline-block',
+                          transition: 'all 0.3s ease',
+                          cursor: 'pointer'
+                        }} onMouseEnter={(e) => {
+                          e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.2)';
+                          e.currentTarget.style.transform = 'translateY(-2px)';
+                          e.currentTarget.style.boxShadow = '0 4px 12px rgba(255, 255, 255, 0.2)';
+                        }} onMouseLeave={(e) => {
+                          e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+                          e.currentTarget.style.transform = 'translateY(0)';
+                          e.currentTarget.style.boxShadow = 'none';
+                        }}>
+                          Create a Simple Chatbot with Python (YouTube)
+                        </a>
+                        <p style={{ margin: '0.5vw 0 0 0', opacity: 0.9, fontSize: 'clamp(0.9rem, 1vw, 1.1rem)' }}>
+                          A friendly video guide walking through how to code a basic chatbot in Python—no prior Python experience needed.
+                        </p>
                       </div>
-                    </a>
-                    <a href="https://replit.com/@replit/Python-Chatbot?v=1" target="_blank" rel="noopener noreferrer" className="resource-link">
-                      <div className="resource-box">
-                        <div className="resource-description">
-                          Try a Chatbot Starter Project on Replit
-                        </div>
+                    </div>
+                    <div style={{ backgroundColor: 'rgba(255, 255, 255, 0.08)', borderRadius: '15px', padding: '2.5vw', border: '1px solid rgba(255, 255, 255, 0.2)' }}>
+                      <div style={{ marginBottom: '1.5vw' }}>
+                        <a href="https://replit.com/usecases/chatbot-builder" target="_blank" rel="noopener noreferrer" style={{ 
+                          color: '#fff', 
+                          textDecoration: 'none', 
+                          fontWeight: 600, 
+                          fontSize: 'clamp(1rem, 1.1vw, 1.2rem)',
+                          backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                          padding: '0.8vw 1.5vw',
+                          borderRadius: '25px',
+                          border: '1px solid rgba(255, 255, 255, 0.3)',
+                          display: 'inline-block',
+                          transition: 'all 0.3s ease',
+                          cursor: 'pointer'
+                        }} onMouseEnter={(e) => {
+                          e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.2)';
+                          e.currentTarget.style.transform = 'translateY(-2px)';
+                          e.currentTarget.style.boxShadow = '0 4px 12px rgba(255, 255, 255, 0.2)';
+                        }} onMouseLeave={(e) => {
+                          e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+                          e.currentTarget.style.transform = 'translateY(0)';
+                          e.currentTarget.style.boxShadow = 'none';
+                        }}>
+                          Replit: Chatbot Starter Project
+                        </a>
+                        <p style={{ margin: '0.5vw 0 0 0', opacity: 0.9, fontSize: 'clamp(0.9rem, 1vw, 1.1rem)' }}>
+                          A drag-and-drop tool that lets you assemble your own chatbot without writing a single line of code. Choose from pre-built response blocks, train your bot with sample conversations, and test it live—all in your browser.
+                        </p>
                       </div>
-                    </a>
-                    <a href="https://www.geeksforgeeks.org/building-a-chatbot-in-python/" target="_blank" rel="noopener noreferrer" className="resource-link">
-                      <div className="resource-box">
-                        <div className="resource-description">
-                          Step-by-step Python Chatbot Tutorial (GeeksforGeeks)
-                        </div>
-                      </div>
-                    </a>
+                    </div>
                   </div>
                 </div>
 
@@ -329,27 +407,96 @@ export default function Resources() {
                     3. Design your first app in Figma
                   </h4>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '1vw' }}>
-                    <a href="https://www.youtube.com/watch?v=FTFaQWZBqQ8" target="_blank" rel="noopener noreferrer" className="resource-link">
-                      <div className="resource-box">
-                        <div className="resource-description">
+                    <div style={{ backgroundColor: 'rgba(255, 255, 255, 0.08)', borderRadius: '15px', padding: '2.5vw', border: '1px solid rgba(255, 255, 255, 0.2)' }}>
+                      <div style={{ marginBottom: '1.5vw' }}>
+                        <a href="https://www.youtube.com/watch?v=FTFaQWZBqQ8" target="_blank" rel="noopener noreferrer" style={{ 
+                          color: '#fff', 
+                          textDecoration: 'none', 
+                          fontWeight: 600, 
+                          fontSize: 'clamp(1rem, 1.1vw, 1.2rem)',
+                          backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                          padding: '0.8vw 1.5vw',
+                          borderRadius: '25px',
+                          border: '1px solid rgba(255, 255, 255, 0.3)',
+                          display: 'inline-block',
+                          transition: 'all 0.3s ease',
+                          cursor: 'pointer'
+                        }} onMouseEnter={(e) => {
+                          e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.2)';
+                          e.currentTarget.style.transform = 'translateY(-2px)';
+                          e.currentTarget.style.boxShadow = '0 4px 12px rgba(255, 255, 255, 0.2)';
+                        }} onMouseLeave={(e) => {
+                          e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+                          e.currentTarget.style.transform = 'translateY(0)';
+                          e.currentTarget.style.boxShadow = 'none';
+                        }}>
                           Figma Crash Course For Beginners (YouTube)
-                        </div>
+                        </a>
+                        <p style={{ margin: '0.5vw 0 0 0', opacity: 0.9, fontSize: 'clamp(0.9rem, 1vw, 1.1rem)' }}>
+                          A visual, fast-paced tutorial covering Figma’s core tools so you can sketch app screens and play with layouts right away.
+                        </p>
                       </div>
-                    </a>
-                    <a href="https://help.figma.com/hc/en-us/articles/360040318613-Figma-for-beginners" target="_blank" rel="noopener noreferrer" className="resource-link">
-                      <div className="resource-box">
-                        <div className="resource-description">
+                    </div>
+                    <div style={{ backgroundColor: 'rgba(255, 255, 255, 0.08)', borderRadius: '15px', padding: '2.5vw', border: '1px solid rgba(255, 255, 255, 0.2)' }}>
+                      <div style={{ marginBottom: '1.5vw' }}>
+                        <a href="https://help.figma.com/hc/en-us/sections/30880632542743-Figma-Design-for-beginners" target="_blank" rel="noopener noreferrer" style={{ 
+                          color: '#fff', 
+                          textDecoration: 'none', 
+                          fontWeight: 600, 
+                          fontSize: 'clamp(1rem, 1.1vw, 1.2rem)',
+                          backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                          padding: '0.8vw 1.5vw',
+                          borderRadius: '25px',
+                          border: '1px solid rgba(255, 255, 255, 0.3)',
+                          display: 'inline-block',
+                          transition: 'all 0.3s ease',
+                          cursor: 'pointer'
+                        }} onMouseEnter={(e) => {
+                          e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.2)';
+                          e.currentTarget.style.transform = 'translateY(-2px)';
+                          e.currentTarget.style.boxShadow = '0 4px 12px rgba(255, 255, 255, 0.2)';
+                        }} onMouseLeave={(e) => {
+                          e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+                          e.currentTarget.style.transform = 'translateY(0)';
+                          e.currentTarget.style.boxShadow = 'none';
+                        }}>
                           Figma Beginner Guide
-                        </div>
+                        </a>
+                        <p style={{ margin: '0.5vw 0 0 0', opacity: 0.9, fontSize: 'clamp(0.9rem, 1vw, 1.1rem)' }}>
+                          Official, step-by-step written guides straight from the Figma team. Learn how to set up your first file, draw frames and shapes, work with text and colors, and create simple interactive prototypes. Perfect if you prefer a structured tutorial you can follow at your own pace.
+                        </p>
                       </div>
-                    </a>
-                    <a href="https://www.figma.com/community?tab=files" target="_blank" rel="noopener noreferrer" className="resource-link">
-                      <div className="resource-box">
-                        <div className="resource-description">
-                          Figma Templates (Community Files)
-                        </div>
+                    </div>
+                    <div style={{ backgroundColor: 'rgba(255, 255, 255, 0.08)', borderRadius: '15px', padding: '2.5vw', border: '1px solid rgba(255, 255, 255, 0.2)' }}>
+                      <div style={{ marginBottom: '1.5vw' }}>
+                        <a href="https://www.figma.com/community?tab=files" target="_blank" rel="noopener noreferrer" style={{ 
+                          color: '#fff', 
+                          textDecoration: 'none', 
+                          fontWeight: 600, 
+                          fontSize: 'clamp(1rem, 1.1vw, 1.2rem)',
+                          backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                          padding: '0.8vw 1.5vw',
+                          borderRadius: '25px',
+                          border: '1px solid rgba(255, 255, 255, 0.3)',
+                          display: 'inline-block',
+                          transition: 'all 0.3s ease',
+                          cursor: 'pointer'
+                        }} onMouseEnter={(e) => {
+                          e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.2)';
+                          e.currentTarget.style.transform = 'translateY(-2px)';
+                          e.currentTarget.style.boxShadow = '0 4px 12px rgba(255, 255, 255, 0.2)';
+                        }} onMouseLeave={(e) => {
+                          e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+                          e.currentTarget.style.transform = 'translateY(0)';
+                          e.currentTarget.style.boxShadow = 'none';
+                        }}>
+                          Figma Pre-Built Templates
+                        </a>
+                        <p style={{ margin: '0.5vw 0 0 0', opacity: 0.9, fontSize: 'clamp(0.9rem, 1vw, 1.1rem)' }}>
+                          Browse free, community-made UI kits and mockups—duplicate any file to customize it for your own project in seconds.
+                        </p>
                       </div>
-                    </a>
+                    </div>
                   </div>
                 </div>
 
@@ -365,27 +512,66 @@ export default function Resources() {
                     4. Learn more about GitHub and How to share your projects
                   </h4>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '1vw' }}>
-                    <a href="https://www.youtube.com/watch?v=SWYqp7iY_Tc" target="_blank" rel="noopener noreferrer" className="resource-link">
-                      <div className="resource-box">
-                        <div className="resource-description">
+                    <div style={{ backgroundColor: 'rgba(255, 255, 255, 0.08)', borderRadius: '15px', padding: '2.5vw', border: '1px solid rgba(255, 255, 255, 0.2)' }}>
+                      <div style={{ marginBottom: '1.5vw' }}>
+                        <a href="https://youtu.be/RGOj5yH7evk?si=dJ6_7YR-rXpd5tyE" target="_blank" rel="noopener noreferrer" style={{ 
+                          color: '#fff', 
+                          textDecoration: 'none', 
+                          fontWeight: 600, 
+                          fontSize: 'clamp(1rem, 1.1vw, 1.2rem)',
+                          backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                          padding: '0.8vw 1.5vw',
+                          borderRadius: '25px',
+                          border: '1px solid rgba(255, 255, 255, 0.3)',
+                          display: 'inline-block',
+                          transition: 'all 0.3s ease',
+                          cursor: 'pointer'
+                        }} onMouseEnter={(e) => {
+                          e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.2)';
+                          e.currentTarget.style.transform = 'translateY(-2px)';
+                          e.currentTarget.style.boxShadow = '0 4px 12px rgba(255, 255, 255, 0.2)';
+                        }} onMouseLeave={(e) => {
+                          e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+                          e.currentTarget.style.transform = 'translateY(0)';
+                          e.currentTarget.style.boxShadow = 'none';
+                        }}>
                           Git + GitHub Crash Course (YouTube)
-                        </div>
+                        </a>
+                        <p style={{ margin: '0.5vw 0 0 0', opacity: 0.9, fontSize: 'clamp(0.9rem, 1vw, 1.1rem)' }}>
+                          A comprehensive yet beginner-friendly video that walks you through the essentials of Git and GitHub. You’ll learn how to initialize a repository, stage and commit changes, create and switch branches, and push your work to GitHub—all explained clearly with on-screen demonstrations.
+                        </p>
                       </div>
-                    </a>
-                    <a href="https://skills.github.com/" target="_blank" rel="noopener noreferrer" className="resource-link">
-                      <div className="resource-box">
-                        <div className="resource-description">
+                    </div>
+                    <div style={{ backgroundColor: 'rgba(255, 255, 255, 0.08)', borderRadius: '15px', padding: '2.5vw', border: '1px solid rgba(255, 255, 255, 0.2)' }}>
+                      <div style={{ marginBottom: '1.5vw' }}>
+                        <a href="https://skills.github.com/" target="_blank" rel="noopener noreferrer" style={{ 
+                          color: '#fff', 
+                          textDecoration: 'none', 
+                          fontWeight: 600, 
+                          fontSize: 'clamp(1rem, 1.1vw, 1.2rem)',
+                          backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                          padding: '0.8vw 1.5vw',
+                          borderRadius: '25px',
+                          border: '1px solid rgba(255, 255, 255, 0.3)',
+                          display: 'inline-block',
+                          transition: 'all 0.3s ease',
+                          cursor: 'pointer'
+                        }} onMouseEnter={(e) => {
+                          e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.2)';
+                          e.currentTarget.style.transform = 'translateY(-2px)';
+                          e.currentTarget.style.boxShadow = '0 4px 12px rgba(255, 255, 255, 0.2)';
+                        }} onMouseLeave={(e) => {
+                          e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+                          e.currentTarget.style.transform = 'translateY(0)';
+                          e.currentTarget.style.boxShadow = 'none';
+                        }}>
                           GitHub Skills (Official Courses)
-                        </div>
+                        </a>
+                        <p style={{ margin: '0.5vw 0 0 0', opacity: 0.9, fontSize: 'clamp(0.9rem, 1vw, 1.1rem)' }}>
+                          A free, browser-based learning platform hosted by GitHub. Dive into bite-sized, interactive modules that teach you how to use Git and GitHub—from creating repositories and managing branches to collaborating on open-source projects. Each “skill” is a hands-on exercise you complete right inside your browser.
+                        </p>
                       </div>
-                    </a>
-                    <a href="https://www.youtube.com/watch?v=RGOj5yH7evk" target="_blank" rel="noopener noreferrer" className="resource-link">
-                      <div className="resource-box">
-                        <div className="resource-description">
-                          Using GitHub for the First Time (YouTube)
-                        </div>
-                      </div>
-                    </a>
+                    </div>
                   </div>
                 </div>
 
@@ -425,7 +611,7 @@ export default function Resources() {
                           e.currentTarget.style.transform = 'translateY(0)';
                           e.currentTarget.style.boxShadow = 'none';
                         }}>
-                          Hackathon Starter Web App (No Experience Needed)
+                          Hackathon Starter Web App 
                         </a>
                         <p style={{ margin: '0.5vw 0 0 0', opacity: 0.9, fontSize: 'clamp(0.9rem, 1vw, 1.1rem)' }}>
                           This is a ready-to-use website template. You don’t need to know how to code! Just click the link, and you can change the words, colors, or pictures to make it your own. Perfect for your first hackathon project.
@@ -456,7 +642,7 @@ export default function Resources() {
                           e.currentTarget.style.transform = 'translateY(0)';
                           e.currentTarget.style.boxShadow = 'none';
                         }}>
-                          MLH Hackathon Flask Starter (Python, No Experience Needed)
+                          MLH Hackathon Flask Starter
                         </a>
                         <p style={{ margin: '0.5vw 0 0 0', opacity: 0.9, fontSize: 'clamp(0.9rem, 1vw, 1.1rem)' }}>
                           This template lets you make a simple app using Python. You don’t need to write code from scratch—just follow the instructions, and you can build a tiny app by giving commands. Great for beginners who want to try something new!
@@ -1160,6 +1346,7 @@ export default function Resources() {
           backdropFilter: 'blur(10px)',
           border: '1px solid rgba(255, 255, 255, 0.2)',
           height: 'fit-content',
+          boxShadow: '0 2px 12px rgba(0,0,0,0.18)'
         }}>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1vw' }}>
             {sections.map((section) => (
@@ -1193,7 +1380,8 @@ export default function Resources() {
           padding: '3vw',
           backdropFilter: 'blur(10px)',
           border: '1px solid rgba(255, 255, 255, 0.2)',
-          minHeight: '500px'
+          minHeight: '500px',
+          boxShadow: '0 2px 12px rgba(0,0,0,0.18)'
         }}>
           {renderContent()}
         </div>
