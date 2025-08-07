@@ -91,7 +91,6 @@ const Team = () => {
               width: '100%',
               height: 'auto',
               zIndex: 10,
-              marginLeft: '100px',
               marginBottom: '-20px'
             }}
           />

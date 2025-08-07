@@ -20,7 +20,6 @@ export default function Resources() {
     { id: 'glossary', title: 'Glossary' },
     { id: 'starter-guide', title: 'Starter Guide' },
     { id: 'tools', title: 'Tools' },
-    { id: 'resource-templates', title: 'Resource Templates' },
     { id: 'past-projects', title: 'Past Projects' }
   ];
 
@@ -300,14 +299,14 @@ export default function Resources() {
                     <a href="https://replit.com/@replit/Python-Chatbot?v=1" target="_blank" rel="noopener noreferrer" className="resource-link">
                       <div className="resource-box">
                         <div className="resource-description">
-                          Replit: Chatbot Starter Project
+                          Try a Chatbot Starter Project on Replit
                         </div>
                       </div>
                     </a>
                     <a href="https://www.geeksforgeeks.org/building-a-chatbot-in-python/" target="_blank" rel="noopener noreferrer" className="resource-link">
                       <div className="resource-box">
                         <div className="resource-description">
-                          Python Chatbot Tutorial – GeeksforGeeks
+                          Step-by-step Python Chatbot Tutorial (GeeksforGeeks)
                         </div>
                       </div>
                     </a>
@@ -329,7 +328,7 @@ export default function Resources() {
                     <a href="https://www.youtube.com/watch?v=FTFaQWZBqQ8" target="_blank" rel="noopener noreferrer" className="resource-link">
                       <div className="resource-box">
                         <div className="resource-description">
-                          Figma Crash Course For Beginners on YouTube
+                          Figma Crash Course For Beginners (YouTube)
                         </div>
                       </div>
                     </a>
@@ -379,10 +378,87 @@ export default function Resources() {
                     <a href="https://www.youtube.com/watch?v=RGOj5yH7evk" target="_blank" rel="noopener noreferrer" className="resource-link">
                       <div className="resource-box">
                         <div className="resource-description">
-                          Upload to GitHub in 5 Minutes (YouTube)
+                          Using GitHub for the First Time (YouTube)
                         </div>
                       </div>
                     </a>
+                  </div>
+                </div>
+
+                {/* Beginner-Friendly Project Templates */}
+                <div>
+                  <h4 style={{
+                    fontSize: 'clamp(1.1rem, 1.5vw, 1.4rem)',
+                    color: '#fff',
+                    marginBottom: '1.5vw',
+                    marginTop: '1vw',
+                    fontWeight: 600
+                  }}>
+                    5. Beginner-Friendly Project Templates
+                  </h4>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '2vw' }}>
+                    {/* Hackathon Starter Web App */}
+                    <div style={{ backgroundColor: 'rgba(255, 255, 255, 0.08)', borderRadius: '15px', padding: '2.5vw', border: '1px solid rgba(255, 255, 255, 0.2)' }}>
+                      <div style={{ marginBottom: '1.5vw' }}>
+                        <a href="https://codesandbox.io/p/sandbox/hackathon-website-template-jnoizb" target="_blank" rel="noopener noreferrer" style={{ 
+                          color: '#fff', 
+                          textDecoration: 'none', 
+                          fontWeight: 600, 
+                          fontSize: 'clamp(1rem, 1.1vw, 1.2rem)',
+                          backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                          padding: '0.8vw 1.5vw',
+                          borderRadius: '25px',
+                          border: '1px solid rgba(255, 255, 255, 0.3)',
+                          display: 'inline-block',
+                          transition: 'all 0.3s ease',
+                          cursor: 'pointer'
+                        }} onMouseEnter={(e) => {
+                          e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.2)';
+                          e.currentTarget.style.transform = 'translateY(-2px)';
+                          e.currentTarget.style.boxShadow = '0 4px 12px rgba(255, 255, 255, 0.2)';
+                        }} onMouseLeave={(e) => {
+                          e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+                          e.currentTarget.style.transform = 'translateY(0)';
+                          e.currentTarget.style.boxShadow = 'none';
+                        }}>
+                          Hackathon Starter Web App (No Experience Needed)
+                        </a>
+                        <p style={{ margin: '0.5vw 0 0 0', opacity: 0.9, fontSize: 'clamp(0.9rem, 1vw, 1.1rem)' }}>
+                          This is a ready-to-use website template. You don’t need to know how to code! Just click the link, and you can change the words, colors, or pictures to make it your own. Perfect for your first hackathon project.
+                        </p>
+                      </div>
+                    </div>
+                    {/* MLH Hackathon Flask Starter */}
+                    <div style={{ backgroundColor: 'rgba(255, 255, 255, 0.08)', borderRadius: '15px', padding: '2.5vw', border: '1px solid rgba(255, 255, 255, 0.2)' }}>
+                      <div style={{ marginBottom: '1.5vw' }}>
+                        <a href="https://codesandbox.io/p/sandbox/mlh-mlh-hackathon-flask-starter-20rlor" target="_blank" rel="noopener noreferrer" style={{ 
+                          color: '#fff', 
+                          textDecoration: 'none', 
+                          fontWeight: 600, 
+                          fontSize: 'clamp(1rem, 1.1vw, 1.2rem)',
+                          backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                          padding: '0.8vw 1.5vw',
+                          borderRadius: '25px',
+                          border: '1px solid rgba(255, 255, 255, 0.3)',
+                          display: 'inline-block',
+                          transition: 'all 0.3s ease',
+                          cursor: 'pointer'
+                        }} onMouseEnter={(e) => {
+                          e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.2)';
+                          e.currentTarget.style.transform = 'translateY(-2px)';
+                          e.currentTarget.style.boxShadow = '0 4px 12px rgba(255, 255, 255, 0.2)';
+                        }} onMouseLeave={(e) => {
+                          e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+                          e.currentTarget.style.transform = 'translateY(0)';
+                          e.currentTarget.style.boxShadow = 'none';
+                        }}>
+                          MLH Hackathon Flask Starter (Python, No Experience Needed)
+                        </a>
+                        <p style={{ margin: '0.5vw 0 0 0', opacity: 0.9, fontSize: 'clamp(0.9rem, 1vw, 1.1rem)' }}>
+                          This template lets you make a simple app using Python. You don’t need to write code from scratch—just follow the instructions, and you can build a tiny app by giving commands. Great for beginners who want to try something new!
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -449,99 +525,6 @@ export default function Resources() {
                     {checkedTools.slack ? '✓' : ''}
                   </div>
                   <span style={{ fontSize: 'clamp(1rem, 1.2vw, 1.3rem)', color: '#fff' }}>Join a <span style={{ fontWeight: 'bold', color: '#fff' }}>Slack</span> community and introduce yourself</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        );
-
-      case 'resource-templates':
-        return (
-          <div>
-            <h3 style={{
-              fontSize: 'clamp(1.3rem, 2.5vw, 2rem)',
-              color: '#fff',
-              marginBottom: '3vw',
-              fontWeight: 900,
-              fontFamily: "'Lato', sans-serif",
-              textAlign: 'center'
-            }}>
-              TRY BEGINNER-FRIENDLY PROJECT TEMPLATES
-            </h3>
-            <div style={{ fontSize: 'clamp(1vw, 1.2vw, 1.5vw)', color: '#fff', lineHeight: '1.6' }}>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '3vw' }}>
-                {/* Resource 1 */}
-                <div style={{
-                  backgroundColor: 'rgba(255, 255, 255, 0.08)',
-                  borderRadius: '15px',
-                  padding: '2.5vw',
-                  border: '1px solid rgba(255, 255, 255, 0.2)'
-                }}>
-                  <div style={{ marginBottom: '1.5vw' }}>
-                    <a href="https://codesandbox.io/p/sandbox/hackathon-website-template-jnoizb" target="_blank" rel="noopener noreferrer" style={{ 
-                      color: '#fff', 
-                      textDecoration: 'none', 
-                      fontWeight: 600, 
-                      fontSize: 'clamp(1rem, 1.1vw, 1.2rem)',
-                      backgroundColor: 'rgba(255, 255, 255, 0.1)',
-                      padding: '0.8vw 1.5vw',
-                      borderRadius: '25px',
-                      border: '1px solid rgba(255, 255, 255, 0.3)',
-                      display: 'inline-block',
-                      transition: 'all 0.3s ease',
-                      cursor: 'pointer'
-                    }} onMouseEnter={(e) => {
-                      e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.2)';
-                      e.currentTarget.style.transform = 'translateY(-2px)';
-                      e.currentTarget.style.boxShadow = '0 4px 12px rgba(255, 255, 255, 0.2)';
-                    }} onMouseLeave={(e) => {
-                      e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
-                      e.currentTarget.style.transform = 'translateY(0)';
-                      e.currentTarget.style.boxShadow = 'none';
-                    }}>
-                      CodeSandbox: Hackathon Starter Web App
-                    </a>
-                    <p style={{ margin: '0.5vw 0 0 0', opacity: 0.9, fontSize: 'clamp(0.9rem, 1vw, 1.1rem)' }}>
-                      This template provides a website that is already made and you just need to change the words, colors or pictures to make it yours.
-                    </p>
-                  </div>
-                </div>
-
-                {/* Resource 2 */}
-                <div style={{
-                  backgroundColor: 'rgba(255, 255, 255, 0.08)',
-                  borderRadius: '15px',
-                  padding: '2.5vw',
-                  border: '1px solid rgba(255, 255, 255, 0.2)'
-                }}>
-                  <div style={{ marginBottom: '1.5vw' }}>
-                    <a href="https://codesandbox.io/p/sandbox/mlh-mlh-hackathon-flask-starter-20rlor" target="_blank" rel="noopener noreferrer" style={{ 
-                      color: '#fff', 
-                      textDecoration: 'none', 
-                      fontWeight: 600, 
-                      fontSize: 'clamp(1rem, 1.1vw, 1.2rem)',
-                      backgroundColor: 'rgba(255, 255, 255, 0.1)',
-                      padding: '0.8vw 1.5vw',
-                      borderRadius: '25px',
-                      border: '1px solid rgba(255, 255, 255, 0.3)',
-                      display: 'inline-block',
-                      transition: 'all 0.3s ease',
-                      cursor: 'pointer'
-                    }} onMouseEnter={(e) => {
-                      e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.2)';
-                      e.currentTarget.style.transform = 'translateY(-2px)';
-                      e.currentTarget.style.boxShadow = '0 4px 12px rgba(255, 255, 255, 0.2)';
-                    }} onMouseLeave={(e) => {
-                      e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
-                      e.currentTarget.style.transform = 'translateY(0)';
-                      e.currentTarget.style.boxShadow = 'none';
-                    }}>
-                      CodeSandbox: MLH Hackathon Flask Starter (Python)
-                    </a>
-                    <p style={{ margin: '0.5vw 0 0 0', opacity: 0.9, fontSize: 'clamp(0.9rem, 1vw, 1.1rem)' }}>
-                      This template helps you make a tiny app using Python (you do not need to write the code in Python, just give commands to the robot that will translate them into its language). You are allowed to teach the robot your own rules.
-                    </p>
-                  </div>
                 </div>
               </div>
             </div>
