@@ -42,7 +42,7 @@ export default function Resources() {
             </h3>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5vw' }}>
               <CollapsibleText
-                title="🚀 Hackathon Terms"
+                title="Hackathon Terms"
                 isExpanded={openDropdown === "Hackathon Terms"}
                 onToggle={() => setOpenDropdown(openDropdown === "Hackathon Terms" ? null : "Hackathon Terms")}
               >
@@ -56,16 +56,16 @@ export default function Resources() {
                   fontFamily: "'Lato', sans-serif",
                   fontWeight: 500
                 }}>
-                  <p><b>Hackathon:</b> A short event where you team up to build a tech project with purpose, usually from scratch.</p>
-                  <p><b>Track:</b> A theme you can choose for your project (e.g., Sustainability, AI, Healthcare).</p>
-                  <p><b>Mentor:</b> Someone who helps you during the hackathon with coding, design, or ideas.</p>
-                  <p><b>Workshop:</b> A short class or tutorial during or before the hackathon.</p>
-                  <p><b>Devpost:</b> The website where you submit your hackathon project.</p>
+                  <p><strong style={{ fontWeight: 1000 }}>Hackathon:</strong> A short event where you team up to build a tech project with purpose, usually from scratch.</p>
+                  <p><strong style={{ fontWeight: 1000 }}>Track:</strong> A theme you can choose for your project (e.g., Sustainability, AI, Healthcare).</p>
+                  <p><strong style={{ fontWeight: 1000 }}>Mentor:</strong> Someone who helps you during the hackathon with coding, design, or ideas.</p>
+                  <p><strong style={{ fontWeight: 1000 }}>Workshop:</strong> A short class or tutorial during or before the hackathon.</p>
+                  <p><strong style={{ fontWeight: 1000 }}>Devpost:</strong> The website where you submit your hackathon project.</p>
                 </div>
               </CollapsibleText>
 
               <CollapsibleText
-                title="💻 Technical Terms"
+                title="Technical Terms"
                 isExpanded={openDropdown === "Tech Terms"}
                 onToggle={() => setOpenDropdown(openDropdown === "Tech Terms" ? null : "Tech Terms")}
               >
@@ -79,17 +79,17 @@ export default function Resources() {
                   fontFamily: "'Lato', sans-serif",
                   fontWeight: 500
                 }}>
-                  <p><b>Frontend:</b> The part of a website/app you can see and click on.</p>
-                  <p><b>Backend:</b> The hidden part that does the thinking. It stores data, handles logins, runs logic.</p>
-                  <p><b>Full-stack:</b> A project that has both frontend and backend.</p>
-                  <p><b>API:</b> APIs let you easily add powerful features to your project without building everything from scratch.</p>
-                  <p><b>Database:</b> A place your app stores info, like usernames, messages, or scores.</p>
-                  <p><b>Deployment:</b> Making your project live on the internet so others can use it.</p>
+                  <p><strong style={{ fontWeight: 1000 }}>Frontend:</strong> The part of a website/app you can see and click on.</p>
+                  <p><strong style={{ fontWeight: 1000 }}>Backend:</strong> The hidden part that does the thinking. It stores data, handles logins, runs logic.</p>
+                  <p><strong style={{ fontWeight: 1000 }}>Full-stack:</strong> A project that has both frontend and backend.</p>
+                  <p><strong style={{ fontWeight: 1000 }}>API:</strong> APIs let you easily add powerful features to your project without building everything from scratch.</p>
+                  <p><strong style={{ fontWeight: 1000 }}>Database:</strong> A place your app stores info, like usernames, messages, or scores.</p>
+                  <p><strong style={{ fontWeight: 1000 }}>Deployment:</strong> Making your project live on the internet so others can use it.</p>
                 </div>
               </CollapsibleText>
 
               <CollapsibleText
-                title="🎨 Design & UX Terms"
+                title="Design & UX Terms"
                 isExpanded={openDropdown === "Design Terms"}
                 onToggle={() => setOpenDropdown(openDropdown === "Design Terms" ? null : "Design Terms")}
               >
@@ -103,16 +103,16 @@ export default function Resources() {
                   fontFamily: "'Lato', sans-serif",
                   fontWeight: 500
                 }}>
-                  <p><b>UI (User Interface):</b> The visual elements users interact with - buttons, menus, forms.</p>
-                  <p><b>UX (User Experience):</b> How users feel when using your product - should be smooth and intuitive.</p>
-                  <p><b>Wireframe:</b> A simple sketch showing the layout of your app/website.</p>
-                  <p><b>Prototype:</b> An interactive mockup that shows how your app will work.</p>
-                  <p><b>Responsive Design:</b> Making your app work well on phones, tablets, and computers.</p>
+                  <p><strong style={{ fontWeight: 1000 }}>UI (User Interface):</strong> The visual elements users interact with - buttons, menus, forms.</p>
+                  <p><strong style={{ fontWeight: 1000 }}>UX (User Experience):</strong> How users feel when using your product - should be smooth and intuitive.</p>
+                  <p><strong style={{ fontWeight: 1000 }}>Wireframe:</strong> A simple sketch showing the layout of your app/website.</p>
+                  <p><strong style={{ fontWeight: 1000 }}>Prototype:</strong> An interactive mockup that shows how your app will work.</p>
+                  <p><strong style={{ fontWeight: 1000 }}>Responsive Design:</strong> Making your app work well on phones, tablets, and computers.</p>
                 </div>
               </CollapsibleText>
 
               <CollapsibleText
-                title="🤖 AI & Data Terms"
+                title="AI & Data Terms"
                 isExpanded={openDropdown === "AI Terms"}
                 onToggle={() => setOpenDropdown(openDropdown === "AI Terms" ? null : "AI Terms")}
               >
@@ -126,14 +126,14 @@ export default function Resources() {
                   fontFamily: "'Lato', sans-serif",
                   fontWeight: 500
                 }}>
-                  <p><b>API Key:</b> A password that lets your app access external AI services.</p>
-                  <p><b>Natural Language Processing:</b> Teaching computers to understand and generate human language.</p>
-                  <p><b>Computer Vision:</b> Teaching computers to understand and analyze images.</p>
+                  <p><strong style={{ fontWeight: 1000 }}>API Key:</strong> A password that lets your app access external AI services.</p>
+                  <p><strong style={{ fontWeight: 1000 }}>Natural Language Processing:</strong> Teaching computers to understand and generate human language.</p>
+                  <p><strong style={{ fontWeight: 1000 }}>Computer Vision:</strong> Teaching computers to understand and analyze images.</p>
                 </div>
               </CollapsibleText>
 
               <CollapsibleText
-                title="📱 Mobile & App Terms"
+                title="Mobile & App Terms"
                 isExpanded={openDropdown === "Mobile Terms"}
                 onToggle={() => setOpenDropdown(openDropdown === "Mobile Terms" ? null : "Mobile Terms")}
               >
@@ -147,9 +147,9 @@ export default function Resources() {
                   fontFamily: "'Lato', sans-serif",
                   fontWeight: 500
                 }}>
-                  <p><b>Native App:</b> An app built specifically for one platform (iOS or Android).</p>
-                  <p><b>Cross-platform:</b> An app that works on multiple platforms (iOS, Android, web).</p>
-                  <p><b>Progressive Web App (PWA):</b> A website that works like a mobile app.</p>
+                  <p><strong style={{ fontWeight: 1000 }}>Native App:</strong> An app built specifically for one platform (iOS or Android).</p>
+                  <p><strong style={{ fontWeight: 1000 }}>Cross-platform:</strong> An app that works on multiple platforms (iOS, Android, web).</p>
+                  <p><strong style={{ fontWeight: 1000 }}>Progressive Web App (PWA):</strong> A website that works like a mobile app.</p>
                 </div>
               </CollapsibleText>
             </div>
