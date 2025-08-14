@@ -1767,7 +1767,7 @@ html, body, #root {
 /* Resources Page Responsive Layout */
 .resources-layout {
   display: grid;
-  grid-template-columns: clamp(200px, 20vw, 250px) 1fr;
+  grid-template-columns: clamp(200px, 24vw, 300px) 1fr;
   gap: 3vw;
   max-width: 1200px;
   margin: 0 auto;
