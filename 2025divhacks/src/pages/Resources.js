@@ -30,17 +30,6 @@ export default function Resources() {
       case 'glossary':
         return (
           <div>
-            <h3 style={{
-              fontSize: 'clamp(1.5rem, 3vw, 2.5rem)',
-              color: '#fff',
-              marginBottom: '1.5vw',
-              fontWeight: 900,
-              textAlign: 'center',
-              fontFamily: "'Lato', sans-serif",
-              letterSpacing: '0.05em'
-            }}>
-              HACKATHON GLOSSARY
-            </h3>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1vw' }}>
               <CollapsibleText
                 title="Hackathon Terms"
@@ -160,17 +149,6 @@ export default function Resources() {
       case 'introduction':
         return (
           <div>
-            <h3 style={{
-              fontSize: 'clamp(1.5rem, 3vw, 2.5rem)',
-              color: '#fff',
-              marginBottom: '2vw',
-              fontWeight: 900,
-              textAlign: 'center',
-              fontFamily: "'Lato', sans-serif",
-              letterSpacing: '0.05em'
-            }}>
-              INTRODUCTION
-            </h3>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '2vw' }}>
               <div style={{
                 backgroundColor: 'rgba(255, 255, 255, 0.15)',
@@ -262,15 +240,6 @@ export default function Resources() {
       case 'starter-guide':
         return (
           <div>
-            <h3 style={{
-              fontSize: 'clamp(1.5rem, 3vw, 2.5rem)',
-              color: '#fff',
-              fontWeight: 900,
-              fontFamily: "'Lato', sans-serif",
-              textAlign: 'center'
-            }}>
-              BROWSE A STARTER GUIDE
-            </h3>
             <div style={{ fontSize: 'clamp(1.2vw, 1.5vw, 1.8vw)', color: '#fff', lineHeight: '1.6' }}>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '2vw' }}>
                 {/* Build your first website */}
@@ -424,16 +393,6 @@ export default function Resources() {
       case 'tools':
         return (
           <div>
-            <h3 style={{
-              fontSize: 'clamp(1.5rem, 3vw, 2.5rem)',
-              color: '#fff',
-              marginBottom: '2vw',
-              fontWeight: 900,
-              fontFamily: "'Lato', sans-serif",
-              textAlign: 'center'
-            }}>
-              TOOLS & TECH STACKS
-            </h3>
             
             {/* Tab Navigation */}
             <div style={{
@@ -492,7 +451,6 @@ export default function Resources() {
                     }
                   }}
                 >
-                  <span style={{ fontSize: '1.2em' }}>{tab.icon}</span>
                   {tab.label}
                 </button>
               ))}
@@ -537,7 +495,6 @@ export default function Resources() {
                       }}>
                         <a href={tool.link} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
                           <div style={{ textAlign: 'center', marginBottom: '1vw' }}>
-                            <div style={{ fontSize: '3vw', marginBottom: '0.5vw' }}>{tool.icon}</div>
                             <h5 style={{ 
                               color: '#fff', 
                               fontWeight: 600, 
@@ -618,7 +575,6 @@ export default function Resources() {
                       }}>
                         <a href={tool.link} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
                           <div style={{ textAlign: 'center', marginBottom: '1vw' }}>
-                            <div style={{ fontSize: '3vw', marginBottom: '0.5vw' }}>{tool.icon}</div>
                             <h5 style={{ 
                               color: '#fff', 
                               fontWeight: 600, 
@@ -699,7 +655,6 @@ export default function Resources() {
                       }}>
                         <a href={tool.link} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
                           <div style={{ textAlign: 'center', marginBottom: '1vw' }}>
-                            <div style={{ fontSize: '3vw', marginBottom: '0.5vw' }}>{tool.icon}</div>
                             <h5 style={{ 
                               color: '#fff', 
                               fontWeight: 600, 
@@ -780,7 +735,6 @@ export default function Resources() {
                       }}>
                         <a href={tool.link} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
                           <div style={{ textAlign: 'center', marginBottom: '1vw' }}>
-                            <div style={{ fontSize: '3vw', marginBottom: '0.5vw' }}>{tool.icon}</div>
                             <h5 style={{ 
                               color: '#fff', 
                               fontWeight: 600, 
@@ -931,7 +885,7 @@ export default function Resources() {
               fontFamily: "'Lato', sans-serif",
               textAlign: 'center'
             }}>
-              PAST PROJECTS (DIVHACKS 2024)
+              DIVHACKS 2024
             </h3>
             <div style={{ fontSize: 'clamp(1.2vw, 1.5vw, 1.8vw)', color: '#fff', lineHeight: '1.6' }}>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '2vw' }}>
@@ -979,8 +933,8 @@ export default function Resources() {
                         boxShadow: '0 2px 8px rgba(255, 215, 0, 0.4)',
                         border: '2px solid #FFA500',
                         marginBottom: '1vw'
-                      }}>
-                        🏆 1st Place Overall Winner
+                                              }}>
+                        1st Place Overall Winner
                       </div>
                       <div className="resource-box" style={{ flex: '1' }}>
                         <div className="resource-description">
@@ -991,7 +945,7 @@ export default function Resources() {
                         <a href="https://github.com/cheersanimesh/StrokePlayAR" target="_blank" rel="noopener noreferrer" className="resource-link">
                           <div className="resource-box">
                             <div className="resource-description">
-                              💻 GitHub Link
+                              GitHub Link
                             </div>
                           </div>
                         </a>
@@ -1043,8 +997,8 @@ export default function Resources() {
                         boxShadow: '0 2px 8px rgba(205, 127, 50, 0.4)',
                         border: '2px solid #B8860B',
                         marginBottom: '1vw'
-                      }}>
-                        🥉 3rd Place Overall + 🏆 Capital One Track Winner
+                                              }}>
+                        3rd Place Overall + Capital One Track Winner
                       </div>
                       <div className="resource-box" style={{ flex: '1' }}>
                         <div className="resource-description">
@@ -1055,7 +1009,7 @@ export default function Resources() {
                         <a href="https://github.com/ld0rn76/PennyPals" target="_blank" rel="noopener noreferrer" className="resource-link">
                           <div className="resource-box">
                             <div className="resource-description">
-                              💻 GitHub Link
+                              GitHub Link
                             </div>
                           </div>
                         </a>
@@ -1107,8 +1061,8 @@ export default function Resources() {
                         boxShadow: '0 2px 8px rgba(50, 205, 50, 0.4)',
                         border: '2px solid #228B22',
                         marginBottom: '1vw'
-                      }}>
-                        🌱 Environment Track Winner
+                                              }}>
+                        Environment Track Winner
                       </div>
                       <div className="resource-box" style={{ flex: '1' }}>
                         <div className="resource-description">
@@ -1119,7 +1073,7 @@ export default function Resources() {
                         <a href="https://github.com/enano1/divhacks-2024?tab=readme-ov-file" target="_blank" rel="noopener noreferrer" className="resource-link">
                           <div className="resource-box">
                             <div className="resource-description">
-                              💻 GitHub Link
+                              GitHub Link
                             </div>
                           </div>
                         </a>
@@ -1143,7 +1097,7 @@ export default function Resources() {
   return (
     <section className="resources-page">
       {/* Work in Progress Marker */}
-      <div style={{
+      {/* <div style={{
         position: 'absolute',
         background: '#ffce2d',
         color: '#000000',
@@ -1158,8 +1112,8 @@ export default function Resources() {
         width: '25vw',
         zIndex: 10
       }}>
-        🚧 WORK IN PROGRESS 🚧
-      </div>
+        WORK IN PROGRESS
+      </div> */}
 
       {/* Header */}
       <div style={{ textAlign: 'center', marginBottom: '-3vw' }}>
@@ -1189,7 +1143,7 @@ export default function Resources() {
           fontWeight: 500,
           opacity: 0.9
         }}>
-          Welcome to your hackathon toolkit! 🛠️ Use the navigation on the left to explore different resources. 
+          Welcome to your hackathon toolkit! Use the navigation on the left to explore different resources. 
           Whether you're a first-time hacker or a seasoned developer, there's something here for everyone!
         </p>
       </div>
