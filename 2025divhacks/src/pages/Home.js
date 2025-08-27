@@ -11,6 +11,9 @@ import station from '../assets/station.png';
 import skuline from '../assets/skyline.png';
 import sponsors from '../assets/sponsors.png';
 import tracks from '../assets/tracks.png';
+import tavilyLogo from '../assets/tavily-logo.png';
+import rippleLogo from '../assets/ripple-logo.png';
+import cognitive3dLogo from '../assets/cog-logo.png';
 import train1 from '../assets/train1.png';
 import train2 from '../assets/train2.png';
 import train3 from '../assets/train3.png';
@@ -261,11 +264,16 @@ export default function Home() {
 
 
         <img className="skuline" src= {skuline} alt ="Skuline" ref={skylineRef} />
-        {/* Sponsors Coming Soon */}
+        {/* Sponsors Section */}
         <div className="sponsors-section">
-        <img className="sponsors" src= {sponsors} alt ="Sponsors" />
-          <div className="coming-soon-text">
-            <h2>Coming Soon</h2>
+          <img className="sponsors" src={sponsors} alt="Sponsors" />
+          <div className="sponsors-logos">
+            <img src={tavilyLogo} alt="Tavily" className="sponsor-logo" />
+            <img src={rippleLogo} alt="Ripple" className="sponsor-logo" />
+            <img src={cognitive3dLogo} alt="Cognitive3D" className="sponsor-logo" />
+          </div>
+          <div className="more-sponsors-text">
+            <h3>and more to come...</h3>
           </div>
         </div>
         {/*/Tracks Section*/}
