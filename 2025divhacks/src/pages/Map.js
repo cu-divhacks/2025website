@@ -8,7 +8,7 @@ const Map = () => {
       flexDirection: 'column',
       justifyContent: 'center',
       alignItems: 'center',
-      backgroundColor: '#2A5DA5',
+      backgroundColor: '#8EBAE0',
       position: 'relative',
       zIndex: 1
     }}>

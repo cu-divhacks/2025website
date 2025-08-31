@@ -7,7 +7,7 @@ const Sponsorship = () => {
   return (
     <div style={{
       minHeight: '100vh',
-      backgroundColor: '#2A5DA5',
+      backgroundColor: '#8EBAE0',
       display: 'flex',
       flexDirection: 'column',
     }}>
