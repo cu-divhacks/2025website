@@ -518,17 +518,8 @@ html, body, #root {
   object-fit: contain;
   left: 10%;
   width: 30vw;
-  transition: transform 0.7s cubic-bezier(0.77, 0, 0.175, 1), opacity 0.7s cubic-bezier(0.77, 0, 0.175, 1);
-}
-
-.about-card.slide-in {
-  transform: translate(0, 0) !important;
   opacity: 1;
-}
-
-.about-card.slide-out {
-  transform: translate(-100vw, 0) !important;
-  opacity: 0;
+  transform: translate(0, 0);
 }
 
 .about-text {
@@ -849,12 +840,58 @@ html, body, #root {
   width: 100%;
 }
 
-.sponsors-section .coming-soon-text h2 {
+.sponsors-section .sponsors-logos {
+  position: absolute;
+  top: 0%;
+  left: 10%;
+  transform: translate(0, 330vw);
+  z-index: 2;
+  display: flex;
+  gap: 4vw;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  max-width: 40vw;
+  width: 100%;
+}
+
+.sponsors-section .sponsor-logo {
+  height: 8vw !important;
+  width: auto !important;
+  max-width: 18vw !important;
+  /* makes logos white */
+  /* filter: brightness(0) invert(1);  */
+  transition: transform 0.3s ease;
+  position: relative !important; /* Change from absolute to relative */
+  left: auto !important;
+  right: auto !important;
+}
+
+.sponsors-section .sponsor-logo:hover {
+  transform: scale(1.05);
+}
+
+.sponsors-section .sponsor-logo:nth-child(3) {
+  margin-left: 2vw;
+}
+
+.sponsors-section .more-sponsors-text {
+  position: absolute;
+  top: 0%;
+  left: 10%;
+  transform: translate(30vw, 350vw);
+  z-index: 2;
+  text-align: left;
+  width: 100%;
+}
+
+.sponsors-section .more-sponsors-text h3 {
   color: white;
-  font-size: 4vw;
-  font-weight: bold;
+  font-size: 2.5vw;
+  font-weight: normal;
   margin: 0;
-  padding: 2rem 0 2rem 0.5rem;
+  padding: 1rem 0;
+  opacity: 0.8;
 }
 /*Track Section*/
 .track-card,
@@ -1764,10 +1801,37 @@ html, body, #root {
   text-align: center;
 }
 
+/* Mobile responsive styles for sponsors section */
+@media (max-width: 799px) {
+  .sponsors-section .sponsors-logos {
+    transform: translate(0, 320vw);
+    gap: 3vw;
+    max-width: 80vw;
+    left: 5%;
+  }
+  
+  .sponsors-section .sponsor-logo {
+    height: 12vw !important;
+    max-width: 22vw !important;
+    width: auto !important;
+    left: auto !important;
+    right: auto !important;
+  }
+  
+  .sponsors-section .more-sponsors-text {
+    transform: translate(0, 340vw);
+    left: 5%;
+  }
+  
+  .sponsors-section .more-sponsors-text h3 {
+    font-size: 3.5vw;
+  }
+}
+
 /* Resources Page Responsive Layout */
 .resources-layout {
   display: grid;
-  grid-template-columns: clamp(200px, 20vw, 250px) 1fr;
+  grid-template-columns: clamp(200px, 24vw, 300px) 1fr;
   gap: 3vw;
   max-width: 1200px;
   margin: 0 auto;

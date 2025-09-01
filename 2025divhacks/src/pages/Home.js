@@ -11,12 +11,18 @@ import station from '../assets/station.png';
 import skuline from '../assets/skyline.png';
 import sponsors from '../assets/sponsors.png';
 import tracks from '../assets/tracks.png';
+import tavilyLogo from '../assets/tavily-logo.png';
+import rippleLogo from '../assets/ripple-logo.png';
+import cognitive3dLogo from '../assets/cog-logo.png';
 import train1 from '../assets/train1.png';
 import train2 from '../assets/train2.png';
 import train3 from '../assets/train3.png';
 import train4 from '../assets/train4.png';
 import train5 from '../assets/train5.png';
 import train6 from '../assets/train6.png';
+import train7 from '../assets/train7.png';
+import train8 from '../assets/train8.png';
+import train9 from '../assets/train9.png';
 import trainComingSoon from '../assets/trainComingSoon.png';
 import track1img from '../assets/track1.png';
 import track2img from '../assets/track2.png';
@@ -56,8 +62,7 @@ export default function Home() {
     }
   ];
   const aboutSectionRef = useRef(null);
-  const [aboutCardVisible, setAboutCardVisible] = useState(false);
-  const judgesTrains = [train1, train2, train3, train4, train5, train6];
+  const judgesTrains = [train1, train2, train3, train4, train5, train6, train7, train8, train9];
   const speakersTrains = [trainComingSoon]; // Only the coming soon train for speakers
   const [currentTrainSet, setCurrentTrainSet] = useState('judges'); // 'judges' or 'speakers'
   const [currentTrain, setCurrentTrain] = useState(0);
@@ -133,21 +138,7 @@ export default function Home() {
     };
   }, []);
 
-  useEffect(() => {
-    function handleScroll() {
-      if (!aboutSectionRef.current) return;
-      const rect = aboutSectionRef.current.getBoundingClientRect();
-      const windowHeight = window.innerHeight || document.documentElement.clientHeight;
-      if (rect.top < windowHeight * 0.5 && rect.bottom > windowHeight * 0.5) {
-        setAboutCardVisible(true);
-      } else {
-        setAboutCardVisible(false);
-      }
-    }
-    window.addEventListener('scroll', handleScroll);
-    handleScroll(); // Initial check
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+
 
   const handlePrevTrain = () => {
     if (isAnimating) return;
@@ -228,7 +219,7 @@ export default function Home() {
         
         {/* About section */}
         <div className="about-section" ref={aboutSectionRef}>
-          <img className={`about-card${aboutCardVisible ? ' slide-in' : ' slide-out'}`} src={aboutCard} alt="About DivHacks" />
+          <img className="about-card" src={aboutCard} alt="About DivHacks" />
           <div className="about-text">
             <p>DivHacks, founded in 2017, is Columbia University's premier student-led annual diversity hackathon run by Women in Computer Science. Over the past eight years, DivHacks has welcomed attendees from all over the tri-state area. We strive to create an empowering and inspirational space for students who are historically underrepresented in the tech industry. Our goal is an experience that not only reimagines what diversity should look like in the tech industry but gives students the tools to use technology to implement change.</p>
           </div>
@@ -273,11 +264,16 @@ export default function Home() {
 
 
         <img className="skuline" src= {skuline} alt ="Skuline" ref={skylineRef} />
-        {/* Sponsors Coming Soon */}
+        {/* Sponsors Section */}
         <div className="sponsors-section">
-        <img className="sponsors" src= {sponsors} alt ="Sponsors" />
-          <div className="coming-soon-text">
-            <h2>Coming Soon</h2>
+          <img className="sponsors" src={sponsors} alt="Sponsors" />
+          <div className="sponsors-logos">
+            <img src={tavilyLogo} alt="Tavily" className="sponsor-logo" />
+            <img src={rippleLogo} alt="Ripple" className="sponsor-logo" />
+            <img src={cognitive3dLogo} alt="Cognitive3D" className="sponsor-logo" />
+          </div>
+          <div className="more-sponsors-text">
+            <h3>and more to come...</h3>
           </div>
         </div>
         {/*/Tracks Section*/}

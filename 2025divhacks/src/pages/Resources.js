@@ -7,6 +7,7 @@ import workshopHeader from '../assets/workshop_header.png';
 export default function Resources() {
   const [openDropdown, setOpenDropdown] = useState(null);
   const [activeSection, setActiveSection] = useState('glossary');
+  const [activeToolTab, setActiveToolTab] = useState('development');
   const [checkedTools, setCheckedTools] = useState({
     replit: false,
     vscode: false,
@@ -29,114 +30,116 @@ export default function Resources() {
       case 'glossary':
         return (
           <div>
-            <h3 style={{
-              fontSize: 'clamp(1.3rem, 2.5vw, 2rem)',
-              color: '#FFD700',
-              marginBottom: '2vw',
-              fontWeight: 600,
-              textAlign: 'center'
-            }}>
-              HACKATHON GLOSSARY
-            </h3>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1vw' }}>
               <CollapsibleText
-                title="1. Hackathon Specific Terms"
+                title="Hackathon Terms"
                 isExpanded={openDropdown === "Hackathon Terms"}
                 onToggle={() => setOpenDropdown(openDropdown === "Hackathon Terms" ? null : "Hackathon Terms")}
               >
                 <div style={{ 
-                  fontSize: 'clamp(1vw, 1.2vw, 1.5vw)', 
+                  fontSize: 'clamp(1.2vw, 1.5vw, 1.8vw)', 
                   color: '#fff', 
-                  lineHeight: '1.3',
-                  maxHeight: '300px',
+                  lineHeight: '1.6',
+                  maxHeight: '350px',
                   overflowY: 'auto',
-                  paddingRight: '10px'
+                  paddingRight: '10px',
+                  fontFamily: "'Lato', sans-serif",
+                  fontWeight: 500
                 }}>
-                  <p><b>Hackathon:</b> A short event (1–3 days) where you team up to build a tech project with purpose, usually from scratch.</p>
-                  <p><b>Track:</b> A theme you can choose for your project (e.g., Sustainability, AI, Healthcare).</p>
-                  <p><b>Prompt:</b> A challenge or idea to base your project on.</p>
-                  <p><b>Team Formation:</b> Finding people to work with. Happens before or at the start of the hackathon.</p>
-                  <p><b>Mentor:</b> Someone who helps you during the hackathon with coding, design, or ideas.</p>
-                  <p><b>Sponsor:</b> A company that supports the hackathon and sometimes gives out prizes, APIs, or tools.</p>
-                  <p><b>Workshop:</b> A short class or tutorial during or before the hackathon.</p>
-                  <p><b>Pitch:</b> A 1–2 minute explanation of your project.</p>
-                  <p><b>Demo:</b> A quick walkthrough showing your project in action.</p>
-                  <p><b>Devpost:</b> The website where you submit your hackathon project.</p>
-                  <p><b>Swag:</b> Free stuff from sponsors! Stickers, t-shirts, water bottles and more.</p>
-                  <p><b>Hacker:</b> Someone building cool stuff with code (or no code!).</p>
+                  <p><strong style={{ fontWeight: 1000 }}>Hackathon:</strong> A short event where you team up to build a tech project with purpose, usually from scratch.</p>
+                  <p><strong style={{ fontWeight: 1000 }}>Track:</strong> A theme you can choose for your project (e.g., Sustainability, AI, Healthcare).</p>
+                  <p><strong style={{ fontWeight: 1000 }}>Mentor:</strong> Someone who helps you during the hackathon with coding, design, or ideas.</p>
+                  <p><strong style={{ fontWeight: 1000 }}>Workshop:</strong> A short class or tutorial during or before the hackathon.</p>
+                  <p><strong style={{ fontWeight: 1000 }}>Devpost:</strong> The website where you submit your hackathon project.</p>
                 </div>
               </CollapsibleText>
 
               <CollapsibleText
-                title="2. Tech and Programming Tools"
+                title="Technical Terms"
                 isExpanded={openDropdown === "Tech Terms"}
                 onToggle={() => setOpenDropdown(openDropdown === "Tech Terms" ? null : "Tech Terms")}
               >
                 <div style={{ 
-                  fontSize: 'clamp(1vw, 1.2vw, 1.5vw)', 
+                  fontSize: 'clamp(1.2vw, 1.5vw, 1.8vw)', 
                   color: '#fff', 
                   lineHeight: '1.6',
-                  maxHeight: '300px',
+                  maxHeight: '350px',
                   overflowY: 'auto',
-                  paddingRight: '10px'
+                  paddingRight: '10px',
+                  fontFamily: "'Lato', sans-serif",
+                  fontWeight: 500
                 }}>
-                  <p><b>Frontend:</b> The part of a website/app you can see and click on.</p>
-                  <p><b>Backend:</b> The hidden part that does the thinking. It stores data, handles logins, runs logic.</p>
-                  <p><b>Full-stack:</b> A project that has both frontend and backend.</p>
-                  <p><b>API:</b> APIs let you easily add powerful features to your project without building everything from scratch.</p>
-                  <p><b>Database:</b> A place your app stores info, like usernames, messages, or scores.</p>
-                  <p><b>GitHub:</b> A place to save your code online, track changes, and work with teammates.</p>
-                  <p><b>IDE:</b> Stands for Integrated Development Environment - a space where you write code.</p>
-                  <p><b>Replit:</b> A free online tool where you can code without downloading anything.</p>
-                  <p><b>VS Code:</b> A downloadable code editor.</p>
-                  <p><b>Figma:</b> A drag-and-drop design tool for sketching how your app/website will look.</p>
-                  <p><b>HTML/CSS/JS:</b> The basic languages for building websites.</p>
-                  <p><b>Python:</b> A beginner-friendly programming language.</p>
-                  <p><b>Terminal/CLI:</b> A text-based tool where you type instructions for your computer.</p>
-                  <p><b>Bug:</b> A mistake in your code that makes things break.</p>
-                  <p><b>Debugging:</b> Finding and fixing bugs.</p>
+                  <p><strong style={{ fontWeight: 1000 }}>Frontend:</strong> The part of a website/app you can see and click on.</p>
+                  <p><strong style={{ fontWeight: 1000 }}>Backend:</strong> The hidden part that does the thinking. It stores data, handles logins, runs logic.</p>
+                  <p><strong style={{ fontWeight: 1000 }}>Full-stack:</strong> A project that has both frontend and backend.</p>
+                  <p><strong style={{ fontWeight: 1000 }}>API:</strong> APIs let you easily add powerful features to your project without building everything from scratch.</p>
+                  <p><strong style={{ fontWeight: 1000 }}>Database:</strong> A place your app stores info, like usernames, messages, or scores.</p>
+                  <p><strong style={{ fontWeight: 1000 }}>Deployment:</strong> Making your project live on the internet so others can use it.</p>
                 </div>
               </CollapsibleText>
 
               <CollapsibleText
-                title="3. Project Tools"
-                isExpanded={openDropdown === "Project Tools"}
-                onToggle={() => setOpenDropdown(openDropdown === "Project Tools" ? null : "Project Tools")}
+                title="Design & UX Terms"
+                isExpanded={openDropdown === "Design Terms"}
+                onToggle={() => setOpenDropdown(openDropdown === "Design Terms" ? null : "Design Terms")}
               >
                 <div style={{ 
-                  fontSize: 'clamp(1vw, 1.2vw, 1.5vw)', 
+                  fontSize: 'clamp(1.2vw, 1.5vw, 1.8vw)', 
                   color: '#fff', 
                   lineHeight: '1.6',
-                  maxHeight: '300px',
+                  maxHeight: '350px',
                   overflowY: 'auto',
-                  paddingRight: '10px'
+                  paddingRight: '10px',
+                  fontFamily: "'Lato', sans-serif",
+                  fontWeight: 500
                 }}>
-                  <p><b>Figma:</b> Designing your app visually without code.</p>
-                  <p><b>Canva:</b> Making slides or designing posters.</p>
-                  <p><b>Replit:</b> Writing and running code online without setup.</p>
-                  <p><b>Notion:</b> Organizing your project plan or checklist.</p>
-                  <p><b>Google Slides:</b> Making your final pitch deck.</p>
-                  <p><b>Glitch:</b> Building web apps with simple templates.</p>
-                  <p><b>Bubble:</b> Drag-and-drop builder to make apps without code.</p>
+                  <p><strong style={{ fontWeight: 1000 }}>UI (User Interface):</strong> The visual elements users interact with - buttons, menus, forms.</p>
+                  <p><strong style={{ fontWeight: 1000 }}>UX (User Experience):</strong> How users feel when using your product - should be smooth and intuitive.</p>
+                  <p><strong style={{ fontWeight: 1000 }}>Wireframe:</strong> A simple sketch showing the layout of your app/website.</p>
+                  <p><strong style={{ fontWeight: 1000 }}>Prototype:</strong> An interactive mockup that shows how your app will work.</p>
+                  <p><strong style={{ fontWeight: 1000 }}>Responsive Design:</strong> Making your app work well on phones, tablets, and computers.</p>
                 </div>
               </CollapsibleText>
 
               <CollapsibleText
-                title="4. Team and Communication Tools"
-                isExpanded={openDropdown === "Communication Tools"}
-                onToggle={() => setOpenDropdown(openDropdown === "Communication Tools" ? null : "Communication Tools")}
+                title="AI & Data Terms"
+                isExpanded={openDropdown === "AI Terms"}
+                onToggle={() => setOpenDropdown(openDropdown === "AI Terms" ? null : "AI Terms")}
               >
                 <div style={{ 
-                  fontSize: 'clamp(1vw, 1.2vw, 1.5vw)', 
+                  fontSize: 'clamp(1.2vw, 1.5vw, 1.8vw)', 
                   color: '#fff', 
                   lineHeight: '1.6',
-                  maxHeight: '300px',
+                  maxHeight: '350px',
                   overflowY: 'auto',
-                  paddingRight: '10px'
+                  paddingRight: '10px',
+                  fontFamily: "'Lato', sans-serif",
+                  fontWeight: 500
                 }}>
-                  <p><b>Slack:</b> A group chat platform for announcements and questions.</p>
-                  <p><b>Google Drive:</b> Where you can store and share slides, docs, and designs with your team.</p>
-                  <p><b>Discord:</b> Another group chat tool (may be used instead of Slack).</p>
+                  <p><strong style={{ fontWeight: 1000 }}>API Key:</strong> A password that lets your app access external AI services.</p>
+                  <p><strong style={{ fontWeight: 1000 }}>Natural Language Processing:</strong> Teaching computers to understand and generate human language.</p>
+                  <p><strong style={{ fontWeight: 1000 }}>Computer Vision:</strong> Teaching computers to understand and analyze images.</p>
+                </div>
+              </CollapsibleText>
+
+              <CollapsibleText
+                title="Mobile & App Terms"
+                isExpanded={openDropdown === "Mobile Terms"}
+                onToggle={() => setOpenDropdown(openDropdown === "Mobile Terms" ? null : "Mobile Terms")}
+              >
+                <div style={{ 
+                  fontSize: 'clamp(1.2vw, 1.5vw, 1.8vw)', 
+                  color: '#fff', 
+                  lineHeight: '1.6',
+                  maxHeight: '350px',
+                  overflowY: 'auto',
+                  paddingRight: '10px',
+                  fontFamily: "'Lato', sans-serif",
+                  fontWeight: 500
+                }}>
+                  <p><strong style={{ fontWeight: 1000 }}>Native App:</strong> An app built specifically for one platform (iOS or Android).</p>
+                  <p><strong style={{ fontWeight: 1000 }}>Cross-platform:</strong> An app that works on multiple platforms (iOS, Android, web).</p>
+                  <p><strong style={{ fontWeight: 1000 }}>Progressive Web App (PWA):</strong> A website that works like a mobile app.</p>
                 </div>
               </CollapsibleText>
             </div>
@@ -146,69 +149,87 @@ export default function Resources() {
       case 'introduction':
         return (
           <div>
-            <h3 style={{
-              fontSize: 'clamp(1.3rem, 2.5vw, 2rem)',
-              color: '#FFD700',
-              marginBottom: '3vw',
-              fontWeight: 600,
-              textAlign: 'center'
-            }}>
-              INTRODUCTION
-            </h3>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '3vw' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '2vw' }}>
               <div style={{
-                backgroundColor: 'rgba(255, 255, 255, 0.08)',
-                borderRadius: '15px',
-                padding: '2.5vw',
-                border: '1px solid rgba(255, 255, 255, 0.2)'
+                backgroundColor: 'rgba(255, 255, 255, 0.15)',
+                borderRadius: '20px',
+                padding: '2vw',
+                border: '1px solid rgba(255, 255, 255, 0.2)',
+                boxShadow: '0 4px 12px rgba(255, 255, 255, 0.1)',
+                transition: 'all 0.3s ease',
+                cursor: 'pointer'
+              }} onMouseEnter={(e) => {
+                e.currentTarget.style.transform = 'translateY(-5px)';
+                e.currentTarget.style.boxShadow = '0 8px 25px rgba(255, 255, 255, 0.2)';
+              }} onMouseLeave={(e) => {
+                e.currentTarget.style.transform = 'translateY(0)';
+                e.currentTarget.style.boxShadow = '0 4px 12px rgba(255, 255, 255, 0.1)';
               }}>
                 <h4 style={{
-                  fontSize: 'clamp(1.1rem, 1.5vw, 1.4rem)',
+                  fontSize: 'clamp(1.3rem, 1.8vw, 1.6rem)',
                   color: '#fff',
-                  marginBottom: '1.5vw',
+                  marginBottom: '1vw',
                   fontWeight: 600
                 }}>
                   What is a Hackathon?
                 </h4>
-                <div style={{ fontSize: 'clamp(1vw, 1.2vw, 1.5vw)', color: '#fff', lineHeight: '1.6' }}>
+                <div style={{ fontSize: 'clamp(1.2vw, 1.5vw, 1.8vw)', color: '#fff', lineHeight: '1.6' }}>
                   A hackathon is a fun, collaborative event where people come together to build creative technology projects in a short period of time (often 24–36 hours). You don't need to be an expert—hackathons are for everyone, especially beginners!
                 </div>
               </div>
 
               <div style={{
-                backgroundColor: 'rgba(255, 255, 255, 0.08)',
-                borderRadius: '15px',
-                padding: '2.5vw',
-                border: '1px solid rgba(255, 255, 255, 0.2)'
+                backgroundColor: 'rgba(255, 255, 255, 0.15)',
+                borderRadius: '20px',
+                padding: '2vw',
+                border: '1px solid rgba(255, 255, 255, 0.2)',
+                boxShadow: '0 4px 12px rgba(255, 255, 255, 0.1)',
+                transition: 'all 0.3s ease',
+                cursor: 'pointer'
+              }} onMouseEnter={(e) => {
+                e.currentTarget.style.transform = 'translateY(-5px)';
+                e.currentTarget.style.boxShadow = '0 8px 25px rgba(255, 255, 255, 0.2)';
+              }} onMouseLeave={(e) => {
+                e.currentTarget.style.transform = 'translateY(0)';
+                e.currentTarget.style.boxShadow = '0 4px 12px rgba(255, 255, 255, 0.1)';
               }}>
                 <h4 style={{
-                  fontSize: 'clamp(1.1rem, 1.5vw, 1.4rem)',
+                  fontSize: 'clamp(1.3rem, 1.8vw, 1.6rem)',
                   color: '#fff',
-                  marginBottom: '1.5vw',
+                  marginBottom: '1vw',
                   fontWeight: 600
                 }}>
                   What are hackathon tracks and how do they work?
                 </h4>
-                <div style={{ fontSize: 'clamp(1vw, 1.2vw, 1.5vw)', color: '#fff', lineHeight: '1.6' }}>
+                <div style={{ fontSize: 'clamp(1.2vw, 1.5vw, 1.8vw)', color: '#fff', lineHeight: '1.6' }}>
                   DivHacks projects are required to fall under 1 of 4 distinct "tracks", thematic focus areas intended to broadly guide your project. This year, our tracks are productivity, sustainability, entertainment, and immersive technology. During submission, you will be prompted to select 1 track that best fits your project.
                 </div>
               </div>
 
               <div style={{
-                backgroundColor: 'rgba(255, 255, 255, 0.08)',
-                borderRadius: '15px',
-                padding: '2.5vw',
-                border: '1px solid rgba(255, 255, 255, 0.2)'
+                backgroundColor: 'rgba(255, 255, 255, 0.15)',
+                borderRadius: '20px',
+                padding: '2vw',
+                border: '1px solid rgba(255, 255, 255, 0.2)',
+                boxShadow: '0 4px 12px rgba(255, 255, 255, 0.1)',
+                transition: 'all 0.3s ease',
+                cursor: 'pointer'
+              }} onMouseEnter={(e) => {
+                e.currentTarget.style.transform = 'translateY(-5px)';
+                e.currentTarget.style.boxShadow = '0 8px 25px rgba(255, 255, 255, 0.2)';
+              }} onMouseLeave={(e) => {
+                e.currentTarget.style.transform = 'translateY(0)';
+                e.currentTarget.style.boxShadow = '0 4px 12px rgba(255, 255, 255, 0.1)';
               }}>
                 <h4 style={{
-                  fontSize: 'clamp(1.1rem, 1.5vw, 1.4rem)',
+                  fontSize: 'clamp(1.3rem, 1.8vw, 1.6rem)',
                   color: '#fff',
-                  marginBottom: '1.5vw',
+                  marginBottom: '1vw',
                   fontWeight: 600
                 }}>
                   Do I need to submit a project?
                 </h4>
-                <div style={{ fontSize: 'clamp(1vw, 1.2vw, 1.5vw)', color: '#fff', lineHeight: '1.6' }}>
+                <div style={{ fontSize: 'clamp(1.2vw, 1.5vw, 1.8vw)', color: '#fff', lineHeight: '1.6' }}>
                   Submitting a project is not required, but is highly encouraged, and it's the only way you'll be eligible for a prize! This is a fantastic opportunity to leave the hackathon with a completed project and receive valuable feedback from industry leaders and professionals!
                 </div>
               </div>
@@ -219,28 +240,20 @@ export default function Resources() {
       case 'starter-guide':
         return (
           <div>
-            <h3 style={{
-              fontSize: 'clamp(1.3rem, 2.5vw, 2rem)',
-              color: '#FFD700',
-              fontWeight: 600,
-              textAlign: 'center'
-            }}>
-              BROWSE A STARTER GUIDE
-            </h3>
-            <div style={{ fontSize: 'clamp(1vw, 1.2vw, 1.5vw)', color: '#fff', lineHeight: '1.6' }}>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '3vw' }}>
+            <div style={{ fontSize: 'clamp(1.2vw, 1.5vw, 1.8vw)', color: '#fff', lineHeight: '1.6' }}>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '2vw' }}>
                 {/* Build your first website */}
                 <div>
                   <h4 style={{
-                    fontSize: 'clamp(1.1rem, 1.5vw, 1.4rem)',
+                    fontSize: 'clamp(1.3rem, 1.8vw, 1.6rem)',
                     color: '#fff',
-                    marginBottom: '1.5vw',
-                    marginTop: '1vw',
+                    marginBottom: '1vw',
+                    marginTop: '0.5vw',
                     fontWeight: 600
                   }}>
                     1. Build your first website
                   </h4>
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: '1vw' }}>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '0.8vw' }}>
                     <a href="https://www.freecodecamp.org/learn/2022/responsive-web-design/" target="_blank" rel="noopener noreferrer" className="resource-link">
                       <div className="resource-box">
                         <div className="resource-description">
@@ -268,15 +281,15 @@ export default function Resources() {
                 {/* Make a Python chatbot */}
                 <div>
                   <h4 style={{
-                    fontSize: 'clamp(1.1rem, 1.5vw, 1.4rem)',
+                    fontSize: 'clamp(1.3rem, 1.8vw, 1.6rem)',
                     color: '#fff',
-                    marginBottom: '1.5vw',
-                    marginTop: '1vw',
+                    marginBottom: '1vw',
+                    marginTop: '0.5vw',
                     fontWeight: 600
                   }}>
                     2. Make a Python chatbot
                   </h4>
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: '1vw' }}>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '0.8vw' }}>
                     <a href="https://www.youtube.com/watch?v=Jk4kuuwLTh4" target="_blank" rel="noopener noreferrer" className="resource-link">
                       <div className="resource-box">
                         <div className="resource-description">
@@ -304,15 +317,15 @@ export default function Resources() {
                 {/* Design your first app in Figma */}
                 <div>
                   <h4 style={{
-                    fontSize: 'clamp(1.1rem, 1.5vw, 1.4rem)',
+                    fontSize: 'clamp(1.3rem, 1.8vw, 1.6rem)',
                     color: '#fff',
-                    marginBottom: '1.5vw',
-                    marginTop: '1vw',
+                    marginBottom: '1vw',
+                    marginTop: '0.5vw',
                     fontWeight: 600
                   }}>
                     3. Design your first app in Figma
                   </h4>
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: '1vw' }}>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '0.8vw' }}>
                     <a href="https://www.youtube.com/watch?v=FTFaQWZBqQ8" target="_blank" rel="noopener noreferrer" className="resource-link">
                       <div className="resource-box">
                         <div className="resource-description">
@@ -340,15 +353,15 @@ export default function Resources() {
                 {/* Learn more about GitHub */}
                 <div>
                   <h4 style={{
-                    fontSize: 'clamp(1.1rem, 1.5vw, 1.4rem)',
+                    fontSize: 'clamp(1.3rem, 1.8vw, 1.6rem)',
                     color: '#fff',
-                    marginBottom: '1.5vw',
-                    marginTop: '1vw',
+                    marginBottom: '1vw',
+                    marginTop: '0.5vw',
                     fontWeight: 600
                   }}>
                     4. Learn more about GitHub and How to share your projects
                   </h4>
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: '1vw' }}>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '0.8vw' }}>
                     <a href="https://www.youtube.com/watch?v=SWYqp7iY_Tc" target="_blank" rel="noopener noreferrer" className="resource-link">
                       <div className="resource-box">
                         <div className="resource-description">
@@ -380,63 +393,390 @@ export default function Resources() {
       case 'tools':
         return (
           <div>
-            <h3 style={{
-              fontSize: 'clamp(1.3rem, 2.5vw, 2rem)',
-              color: '#FFD700',
-              marginBottom: '3vw',
-              fontWeight: 600,
-              textAlign: 'center'
+            
+            {/* Tab Navigation */}
+            <div style={{
+              display: 'flex',
+              justifyContent: 'center',
+              gap: '1vw',
+              marginBottom: '2vw',
+              flexWrap: 'wrap'
             }}>
-              PICK YOUR TOOLS
-            </h3>
-            <div style={{ fontSize: 'clamp(1vw, 1.2vw, 1.5vw)', color: '#fff', lineHeight: '1.6' }}>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5vw', alignItems: 'flex-start' }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '1vw' }}>
-                  <div 
-                    onClick={() => setCheckedTools(prev => ({ ...prev, replit: !prev.replit }))}
-                    className={`tool-checkbox ${checkedTools.replit ? 'checked' : ''}`}
-                  >
-                    {checkedTools.replit ? '✓' : ''}
+              <p style={{
+                color: '#fff',
+                fontSize: 'clamp(0.9rem, 1vw, 1.1rem)',
+                marginBottom: '1.5vw',
+                opacity: 0.9,
+                textAlign: 'center',
+                width: '100%'
+              }}>
+                Click on a category below to explore different tools:
+              </p>
+                              {[
+                  { id: 'development', label: 'Development', icon: '💻' },
+                  { id: 'web', label: 'Web Frameworks', icon: '🌐' },
+                  { id: 'design', label: 'Design & Teamwork', icon: '🎨' },
+                  { id: 'ai', label: 'Data Science & ML', icon: '🤖' }
+                ].map((tab) => (
+                <button
+                  key={tab.id}
+                  onClick={() => setActiveToolTab(tab.id)}
+                  style={{
+                    backgroundColor: activeToolTab === tab.id ? 'rgba(255, 255, 255, 0.25)' : 'rgba(255, 255, 255, 0.1)',
+                    border: activeToolTab === tab.id ? '2px solid rgba(255, 255, 255, 0.5)' : '1px solid rgba(255, 255, 255, 0.3)',
+                    borderRadius: '20px',
+                    padding: '0.6vw 1.2vw',
+                    color: '#fff',
+                    fontSize: 'clamp(0.8rem, 0.9vw, 1rem)',
+                    fontWeight: activeToolTab === tab.id ? 700 : 600,
+                    cursor: 'pointer',
+                    transition: 'all 0.3s ease',
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '0.3vw',
+                    boxShadow: activeToolTab === tab.id ? '0 4px 12px rgba(255, 255, 255, 0.2)' : 'none'
+                  }}
+                  onMouseEnter={(e) => {
+                    if (activeToolTab !== tab.id) {
+                      e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.15)';
+                      e.currentTarget.style.transform = 'translateY(-2px)';
+                      e.currentTarget.style.boxShadow = '0 2px 8px rgba(255, 255, 255, 0.1)';
+                    }
+                  }}
+                  onMouseLeave={(e) => {
+                    if (activeToolTab !== tab.id) {
+                      e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+                      e.currentTarget.style.transform = 'translateY(0)';
+                      e.currentTarget.style.boxShadow = 'none';
+                    }
+                  }}
+                >
+                  {tab.label}
+                </button>
+              ))}
+            </div>
+
+            {/* Tab Content */}
+            <div style={{ fontSize: 'clamp(1.2vw, 1.5vw, 1.8vw)', color: '#fff', lineHeight: '1.6' }}>
+              {activeToolTab === 'development' && (
+                <div style={{
+                  backgroundColor: 'rgba(255, 255, 255, 0.08)',
+                  borderRadius: '15px',
+                  padding: '3vw',
+                  border: '1px solid rgba(255, 255, 255, 0.2)'
+                }}>
+
+                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '2vw' }}>
+                    {[
+                      { name: 'VS Code', icon: '🖱️', desc: 'Popular code editor', link: 'https://code.visualstudio.com/', details: 'Free, powerful editor with extensive extensions and debugging tools' },
+                      { name: 'Replit', icon: '🌍', desc: 'Online coding platform', link: 'https://replit.com/', details: 'Code, run, and deploy projects directly in your browser - no setup required' },
+                      { name: 'GitHub', icon: '📚', desc: 'Code hosting platform', link: 'https://github.com/', details: 'Store, version control, and collaborate on code with teams worldwide' },
+                      { name: 'Git', icon: '🔄', desc: 'Version control system', link: 'https://git-scm.com/', details: 'Track changes, manage branches, and coordinate work across teams' },
+                      { name: 'Terminal/CLI', icon: '⌨️', desc: 'Command line interface', link: 'https://en.wikipedia.org/wiki/Command-line_interface', details: 'Essential for running commands, installing packages, and managing your development environment' },
+                      { name: 'Firebase', icon: '🔥', desc: 'Backend-as-a-Service', link: 'https://firebase.google.com/', details: 'Quick setup for authentication, database, hosting, and real-time features - perfect for hackathons' }
+                    ].map((tool, index) => (
+                      <div key={index} style={{
+                        backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                        borderRadius: '12px',
+                        padding: '2vw',
+                        border: '1px solid rgba(255, 255, 255, 0.2)',
+                        cursor: 'pointer',
+                        transition: 'all 0.3s ease',
+                        position: 'relative',
+                        overflow: 'hidden'
+                      }} onMouseEnter={(e) => {
+                        e.currentTarget.style.transform = 'translateY(-5px)';
+                        e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.15)';
+                        e.currentTarget.style.boxShadow = '0 8px 25px rgba(255, 255, 255, 0.1)';
+                      }} onMouseLeave={(e) => {
+                        e.currentTarget.style.transform = 'translateY(0)';
+                        e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+                        e.currentTarget.style.boxShadow = 'none';
+                      }}>
+                        <a href={tool.link} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
+                          <div style={{ textAlign: 'center', marginBottom: '1vw' }}>
+                            <h5 style={{ 
+                              color: '#fff', 
+                              fontWeight: 600, 
+                              margin: '0 0 0.5vw 0',
+                              fontSize: 'clamp(1rem, 1.2vw, 1.3rem)'
+                            }}>{tool.name}</h5>
+                            <p style={{ 
+                              color: 'rgba(255, 255, 255, 0.8)', 
+                              margin: 0,
+                              fontSize: 'clamp(0.8rem, 1vw, 1.1rem)'
+                            }}>{tool.desc}</p>
+                          </div>
+                          <div style={{
+                            position: 'absolute',
+                            top: 0,
+                            left: 0,
+                            right: 0,
+                            bottom: 0,
+                            backgroundColor: 'rgba(0, 0, 0, 0.9)',
+                            color: '#fff',
+                            padding: '2vw',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            textAlign: 'center',
+                            opacity: 0,
+                            transition: 'opacity 0.3s ease',
+                            fontSize: 'clamp(0.8rem, 1vw, 1.1rem)',
+                            lineHeight: '1.4'
+                          }} onMouseEnter={(e) => {
+                            e.currentTarget.style.opacity = '1';
+                          }} onMouseLeave={(e) => {
+                            e.currentTarget.style.opacity = '0';
+                          }}>
+                            {tool.details}
+                          </div>
+                        </a>
+                      </div>
+                    ))}
                   </div>
-                  <span style={{ fontSize: 'clamp(1rem, 1.2vw, 1.3rem)', color: '#fff' }}><span style={{ fontWeight: 'bold', color: '#fff' }}>Replit</span> for coding</span>
                 </div>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '1vw' }}>
-                  <div 
-                    onClick={() => setCheckedTools(prev => ({ ...prev, vscode: !prev.vscode }))}
-                    className={`tool-checkbox ${checkedTools.vscode ? 'checked' : ''}`}
-                  >
-                    {checkedTools.vscode ? '✓' : ''}
+              )}
+
+              {activeToolTab === 'web' && (
+                <div style={{
+                  backgroundColor: 'rgba(255, 255, 255, 0.08)',
+                  borderRadius: '15px',
+                  padding: '3vw',
+                  border: '1px solid rgba(255, 255, 255, 0.2)'
+                }}>
+
+                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '2vw' }}>
+                    {[
+                      { name: 'React', icon: '⚛️', desc: 'JavaScript library', link: 'https://react.dev/', details: 'Build interactive user interfaces with reusable components and efficient rendering' },
+                      { name: 'Next.js', icon: '🚀', desc: 'React framework', link: 'https://nextjs.org/', details: 'Full-stack React framework with server-side rendering and optimized performance' },
+                      { name: 'Tailwind CSS', icon: '🎪', desc: 'Utility-first CSS', link: 'https://tailwindcss.com/', details: 'Rapidly build custom designs with utility classes and responsive design' },
+                      { name: 'Node.js', icon: '🟢', desc: 'JavaScript runtime', link: 'https://nodejs.org/', details: 'Run JavaScript on the server-side for building scalable network applications' },
+                      { name: 'Glitch', icon: '🔧', desc: 'Web app templates', link: 'https://glitch.com/', details: 'Remix existing projects or start from scratch with instant deployment' },
+                      { name: 'Bubble', icon: '🫧', desc: 'Visual programming', link: 'https://bubble.io/', details: 'Create web applications without code using visual programming interface' }
+                    ].map((tool, index) => (
+                      <div key={index} style={{
+                        backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                        borderRadius: '12px',
+                        padding: '2vw',
+                        border: '1px solid rgba(255, 255, 255, 0.2)',
+                        cursor: 'pointer',
+                        transition: 'all 0.3s ease',
+                        position: 'relative',
+                        overflow: 'hidden'
+                      }} onMouseEnter={(e) => {
+                        e.currentTarget.style.transform = 'translateY(-5px)';
+                        e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.15)';
+                        e.currentTarget.style.boxShadow = '0 8px 25px rgba(255, 255, 255, 0.1)';
+                      }} onMouseLeave={(e) => {
+                        e.currentTarget.style.transform = 'translateY(0)';
+                        e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+                        e.currentTarget.style.boxShadow = 'none';
+                      }}>
+                        <a href={tool.link} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
+                          <div style={{ textAlign: 'center', marginBottom: '1vw' }}>
+                            <h5 style={{ 
+                              color: '#fff', 
+                              fontWeight: 600, 
+                              margin: '0 0 0.5vw 0',
+                              fontSize: 'clamp(1rem, 1.2vw, 1.3rem)'
+                            }}>{tool.name}</h5>
+                            <p style={{ 
+                              color: 'rgba(255, 255, 255, 0.8)', 
+                              margin: 0,
+                              fontSize: 'clamp(0.8rem, 1vw, 1.1rem)'
+                            }}>{tool.desc}</p>
+                          </div>
+                          <div style={{
+                            position: 'absolute',
+                            top: 0,
+                            left: 0,
+                            right: 0,
+                            bottom: 0,
+                            backgroundColor: 'rgba(0, 0, 0, 0.9)',
+                            color: '#fff',
+                            padding: '2vw',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            textAlign: 'center',
+                            opacity: 0,
+                            transition: 'opacity 0.3s ease',
+                            fontSize: 'clamp(0.8rem, 1vw, 1.1rem)',
+                            lineHeight: '1.4'
+                          }} onMouseEnter={(e) => {
+                            e.currentTarget.style.opacity = '1';
+                          }} onMouseLeave={(e) => {
+                            e.currentTarget.style.opacity = '0';
+                          }}>
+                            {tool.details}
+                          </div>
+                        </a>
+                      </div>
+                    ))}
                   </div>
-                  <span style={{ fontSize: 'clamp(1rem, 1.2vw, 1.3rem)', color: '#fff' }}><span style={{ fontWeight: 'bold', color: '#fff' }}>VS Code</span> for coding</span>
                 </div>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '1vw' }}>
-                  <div 
-                    onClick={() => setCheckedTools(prev => ({ ...prev, figma: !prev.figma }))}
-                    className={`tool-checkbox ${checkedTools.figma ? 'checked' : ''}`}
-                  >
-                    {checkedTools.figma ? '✓' : ''}
+              )}
+
+              {activeToolTab === 'design' && (
+                <div style={{
+                  backgroundColor: 'rgba(255, 255, 255, 0.08)',
+                  borderRadius: '15px',
+                  padding: '3vw',
+                  border: '1px solid rgba(255, 255, 255, 0.2)'
+                }}>
+
+                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '2vw' }}>
+                    {[
+                      { name: 'Figma', icon: '🎭', desc: 'UI/UX design', link: 'https://www.figma.com/', details: 'Collaborative design tool for creating interfaces, prototypes, and design systems' },
+                      { name: 'Canva', icon: '📝', desc: 'Graphic design', link: 'https://www.canva.com/', details: 'Easy-to-use design platform for creating presentations, graphics, and social media content' },
+                      { name: 'Slack', icon: '💬', desc: 'Team communication', link: 'https://slack.com/', details: 'Real-time messaging platform for team collaboration, file sharing, and project coordination' },
+                      { name: 'Notion', icon: '📋', desc: 'All-in-one workspace', link: 'https://www.notion.so/', details: 'Organize projects, take notes, create databases, and collaborate with your team' },
+                      { name: 'Google Drive', icon: '☁️', desc: 'File storage & sharing', link: 'https://drive.google.com/', details: 'Cloud storage for documents, presentations, and team file collaboration' },
+                      { name: 'Trello', icon: '📌', desc: 'Project management', link: 'https://trello.com/', details: 'Visual project management with boards, lists, and cards for organizing tasks' }
+                    ].map((tool, index) => (
+                      <div key={index} style={{
+                        backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                        borderRadius: '12px',
+                        padding: '2vw',
+                        border: '1px solid rgba(255, 255, 255, 0.2)',
+                        cursor: 'pointer',
+                        transition: 'all 0.3s ease',
+                        position: 'relative',
+                        overflow: 'hidden'
+                      }} onMouseEnter={(e) => {
+                        e.currentTarget.style.transform = 'translateY(-5px)';
+                        e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.15)';
+                        e.currentTarget.style.boxShadow = '0 8px 25px rgba(255, 255, 255, 0.1)';
+                      }} onMouseLeave={(e) => {
+                        e.currentTarget.style.transform = 'translateY(0)';
+                        e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+                        e.currentTarget.style.boxShadow = 'none';
+                      }}>
+                        <a href={tool.link} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
+                          <div style={{ textAlign: 'center', marginBottom: '1vw' }}>
+                            <h5 style={{ 
+                              color: '#fff', 
+                              fontWeight: 600, 
+                              margin: '0 0 0.5vw 0',
+                              fontSize: 'clamp(1rem, 1.2vw, 1.3rem)'
+                            }}>{tool.name}</h5>
+                            <p style={{ 
+                              color: 'rgba(255, 255, 255, 0.8)', 
+                              margin: 0,
+                              fontSize: 'clamp(0.8rem, 1vw, 1.1rem)'
+                            }}>{tool.desc}</p>
+                          </div>
+                          <div style={{
+                            position: 'absolute',
+                            top: 0,
+                            left: 0,
+                            right: 0,
+                            bottom: 0,
+                            backgroundColor: 'rgba(0, 0, 0, 0.9)',
+                            color: '#fff',
+                            padding: '2vw',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            textAlign: 'center',
+                            opacity: 0,
+                            transition: 'opacity 0.3s ease',
+                            fontSize: 'clamp(0.8rem, 1vw, 1.1rem)',
+                            lineHeight: '1.4'
+                          }} onMouseEnter={(e) => {
+                            e.currentTarget.style.opacity = '1';
+                          }} onMouseLeave={(e) => {
+                            e.currentTarget.style.opacity = '0';
+                          }}>
+                            {tool.details}
+                          </div>
+                        </a>
+                      </div>
+                    ))}
                   </div>
-                  <span style={{ fontSize: 'clamp(1rem, 1.2vw, 1.3rem)', color: '#fff' }}><span style={{ fontWeight: 'bold', color: '#fff' }}>Figma</span> for designing</span>
                 </div>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '1vw' }}>
-                  <div 
-                    onClick={() => setCheckedTools(prev => ({ ...prev, github: !prev.github }))}
-                    className={`tool-checkbox ${checkedTools.github ? 'checked' : ''}`}
-                  >
-                    {checkedTools.github ? '✓' : ''}
+              )}
+
+              {activeToolTab === 'ai' && (
+                <div style={{
+                  backgroundColor: 'rgba(255, 255, 255, 0.08)',
+                  borderRadius: '15px',
+                  padding: '3vw',
+                  border: '1px solid rgba(255, 255, 255, 0.2)'
+                }}>
+
+                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '2vw' }}>
+                    {[
+                      { name: 'Python', icon: '🐍', desc: 'Programming language', link: 'https://www.python.org/', details: 'Beginner-friendly language perfect for data science, AI, and web development' },
+                      { name: 'Pandas', icon: '📊', desc: 'Data manipulation', link: 'https://pandas.pydata.org/', details: 'Powerful data analysis library for working with structured data and time series' },
+                      { name: 'TensorFlow', icon: '🧠', desc: 'ML framework', link: 'https://www.tensorflow.org/', details: 'Google\'s open-source platform for machine learning and neural networks' },
+                      { name: 'Jupyter', icon: '📓', desc: 'Interactive computing', link: 'https://jupyter.org/', details: 'Create and share documents with live code, equations, visualizations, and text' },
+                      { name: 'Google Colab', icon: '☁️', desc: 'Cloud notebooks', link: 'https://colab.research.google.com/', details: 'Free cloud-based Jupyter notebooks with GPU support for machine learning' },
+                      { name: 'Scikit-learn', icon: '🔬', desc: 'Machine learning', link: 'https://scikit-learn.org/', details: 'Simple and efficient tools for data mining and data analysis' }
+                    ].map((tool, index) => (
+                      <div key={index} style={{
+                        backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                        borderRadius: '12px',
+                        padding: '2vw',
+                        border: '1px solid rgba(255, 255, 255, 0.2)',
+                        cursor: 'pointer',
+                        transition: 'all 0.3s ease',
+                        position: 'relative',
+                        overflow: 'hidden'
+                      }} onMouseEnter={(e) => {
+                        e.currentTarget.style.transform = 'translateY(-5px)';
+                        e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.15)';
+                        e.currentTarget.style.boxShadow = '0 8px 25px rgba(255, 255, 255, 0.1)';
+                      }} onMouseLeave={(e) => {
+                        e.currentTarget.style.transform = 'translateY(0)';
+                        e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+                        e.currentTarget.style.boxShadow = 'none';
+                      }}>
+                        <a href={tool.link} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
+                          <div style={{ textAlign: 'center', marginBottom: '1vw' }}>
+                            <h5 style={{ 
+                              color: '#fff', 
+                              fontWeight: 600, 
+                              margin: '0 0 0.5vw 0',
+                              fontSize: 'clamp(1rem, 1.2vw, 1.3rem)'
+                            }}>{tool.name}</h5>
+                            <p style={{ 
+                              color: 'rgba(255, 255, 255, 0.8)', 
+                              margin: 0,
+                              fontSize: 'clamp(0.8rem, 1vw, 1.1rem)'
+                            }}>{tool.desc}</p>
+                          </div>
+                          <div style={{
+                            position: 'absolute',
+                            top: 0,
+                            left: 0,
+                            right: 0,
+                            bottom: 0,
+                            backgroundColor: 'rgba(0, 0, 0, 0.9)',
+                            color: '#fff',
+                            padding: '2vw',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            textAlign: 'center',
+                            opacity: 0,
+                            transition: 'opacity 0.3s ease',
+                            fontSize: 'clamp(0.8rem, 1vw, 1.1rem)',
+                            lineHeight: '1.4'
+                          }} onMouseEnter={(e) => {
+                            e.currentTarget.style.opacity = '1';
+                          }} onMouseLeave={(e) => {
+                            e.currentTarget.style.opacity = '0';
+                          }}>
+                            {tool.details}
+                          </div>
+                        </a>
+                      </div>
+                    ))}
                   </div>
-                  <span style={{ fontSize: 'clamp(1rem, 1.2vw, 1.3rem)', color: '#fff' }}><span style={{ fontWeight: 'bold', color: '#fff' }}>GitHub</span> for saving and sharing your project</span>
                 </div>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '1vw' }}>
-                  <div 
-                    onClick={() => setCheckedTools(prev => ({ ...prev, slack: !prev.slack }))}
-                    className={`tool-checkbox ${checkedTools.slack ? 'checked' : ''}`}
-                  >
-                    {checkedTools.slack ? '✓' : ''}
-                  </div>
-                  <span style={{ fontSize: 'clamp(1rem, 1.2vw, 1.3rem)', color: '#fff' }}>Join a <span style={{ fontWeight: 'bold', color: '#fff' }}>Slack</span> community and introduce yourself</span>
-                </div>
-              </div>
+              )}
             </div>
           </div>
         );
@@ -445,16 +785,17 @@ export default function Resources() {
         return (
           <div>
             <h3 style={{
-              fontSize: 'clamp(1.3rem, 2.5vw, 2rem)',
-              color: '#FFD700',
-              marginBottom: '3vw',
-              fontWeight: 600,
+              fontSize: 'clamp(1.5rem, 3vw, 2.5rem)',
+              color: '#fff',
+              marginBottom: '2vw',
+              fontWeight: 900,
+              fontFamily: "'Lato', sans-serif",
               textAlign: 'center'
             }}>
               TRY BEGINNER-FRIENDLY PROJECT TEMPLATES
             </h3>
-            <div style={{ fontSize: 'clamp(1vw, 1.2vw, 1.5vw)', color: '#fff', lineHeight: '1.6' }}>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '3vw' }}>
+            <div style={{ fontSize: 'clamp(1.2vw, 1.5vw, 1.8vw)', color: '#fff', lineHeight: '1.6' }}>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '2vw' }}>
                 {/* Resource 1 */}
                 <div style={{
                   backgroundColor: 'rgba(255, 255, 255, 0.08)',
@@ -462,14 +803,6 @@ export default function Resources() {
                   padding: '2.5vw',
                   border: '1px solid rgba(255, 255, 255, 0.2)'
                 }}>
-                  <h4 style={{
-                    fontSize: 'clamp(1.1rem, 1.5vw, 1.4rem)',
-                    color: '#fff',
-                    marginBottom: '1.5vw',
-                    fontWeight: 600
-                  }}>
-                    Resource 1
-                  </h4>
                   <div style={{ marginBottom: '1.5vw' }}>
                     <a href="https://codesandbox.io/p/sandbox/hackathon-website-template-jnoizb" target="_blank" rel="noopener noreferrer" style={{ 
                       color: '#fff', 
@@ -507,14 +840,6 @@ export default function Resources() {
                   padding: '2.5vw',
                   border: '1px solid rgba(255, 255, 255, 0.2)'
                 }}>
-                  <h4 style={{
-                    fontSize: 'clamp(1.1rem, 1.5vw, 1.4rem)',
-                    color: '#fff',
-                    marginBottom: '1.5vw',
-                    fontWeight: 600
-                  }}>
-                    Resource 2
-                  </h4>
                   <div style={{ marginBottom: '1.5vw' }}>
                     <a href="https://codesandbox.io/p/sandbox/mlh-mlh-hackathon-flask-starter-20rlor" target="_blank" rel="noopener noreferrer" style={{ 
                       color: '#fff', 
@@ -553,25 +878,26 @@ export default function Resources() {
         return (
           <div>
             <h3 style={{
-              fontSize: 'clamp(1.3rem, 2.5vw, 2rem)',
-              color: '#FFD700',
-              marginBottom: '3vw',
-              fontWeight: 600,
+              fontSize: 'clamp(1.5rem, 3vw, 2.5rem)',
+              color: '#fff',
+              marginBottom: '2vw',
+              fontWeight: 900,
+              fontFamily: "'Lato', sans-serif",
               textAlign: 'center'
             }}>
-              PAST PROJECTS
+              DIVHACKS 2024
             </h3>
-            <div style={{ fontSize: 'clamp(1vw, 1.2vw, 1.5vw)', color: '#fff', lineHeight: '1.6' }}>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '3vw' }}>
+            <div style={{ fontSize: 'clamp(1.2vw, 1.5vw, 1.8vw)', color: '#fff', lineHeight: '1.6' }}>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '2vw' }}>
                 
                 {/* Project 1 */}
                 <div style={{ display: 'flex', gap: '2vw', alignItems: 'flex-start' }}>
                   {/* Left Column - Video */}
                   <div style={{ flex: '1', minWidth: '0' }}>
                     <h4 style={{
-                      fontSize: 'clamp(1.1rem, 1.5vw, 1.4rem)',
+                      fontSize: 'clamp(1.3rem, 1.8vw, 1.6rem)',
                       color: '#fff',
-                      marginBottom: '1.5vw',
+                      marginBottom: '1vw',
                       fontWeight: 600
                     }}>
                       StrokePlayAR
@@ -607,8 +933,8 @@ export default function Resources() {
                         boxShadow: '0 2px 8px rgba(255, 215, 0, 0.4)',
                         border: '2px solid #FFA500',
                         marginBottom: '1vw'
-                      }}>
-                        🏆 1st Place Overall Winner
+                                              }}>
+                        1st Place Overall Winner
                       </div>
                       <div className="resource-box" style={{ flex: '1' }}>
                         <div className="resource-description">
@@ -619,7 +945,7 @@ export default function Resources() {
                         <a href="https://github.com/cheersanimesh/StrokePlayAR" target="_blank" rel="noopener noreferrer" className="resource-link">
                           <div className="resource-box">
                             <div className="resource-description">
-                              💻 GitHub Link
+                              GitHub Link
                             </div>
                           </div>
                         </a>
@@ -633,9 +959,9 @@ export default function Resources() {
                   {/* Left Column - Video */}
                   <div style={{ flex: '1', minWidth: '0' }}>
                     <h4 style={{
-                      fontSize: 'clamp(1.1rem, 1.5vw, 1.4rem)',
+                      fontSize: 'clamp(1.3rem, 1.8vw, 1.6rem)',
                       color: '#fff',
-                      marginBottom: '1.5vw',
+                      marginBottom: '1vw',
                       fontWeight: 600
                     }}>
                       Penny Pals
@@ -671,8 +997,8 @@ export default function Resources() {
                         boxShadow: '0 2px 8px rgba(205, 127, 50, 0.4)',
                         border: '2px solid #B8860B',
                         marginBottom: '1vw'
-                      }}>
-                        🥉 3rd Place Overall + 🏆 Capital One Track Winner
+                                              }}>
+                        3rd Place Overall + Capital One Track Winner
                       </div>
                       <div className="resource-box" style={{ flex: '1' }}>
                         <div className="resource-description">
@@ -683,7 +1009,7 @@ export default function Resources() {
                         <a href="https://github.com/ld0rn76/PennyPals" target="_blank" rel="noopener noreferrer" className="resource-link">
                           <div className="resource-box">
                             <div className="resource-description">
-                              💻 GitHub Link
+                              GitHub Link
                             </div>
                           </div>
                         </a>
@@ -697,9 +1023,9 @@ export default function Resources() {
                   {/* Left Column - Video */}
                   <div style={{ flex: '1', minWidth: '0' }}>
                     <h4 style={{
-                      fontSize: 'clamp(1.1rem, 1.5vw, 1.4rem)',
+                      fontSize: 'clamp(1.3rem, 1.8vw, 1.6rem)',
                       color: '#fff',
-                      marginBottom: '1.5vw',
+                      marginBottom: '1vw',
                       fontWeight: 600
                     }}>
                       Pothos
@@ -735,8 +1061,8 @@ export default function Resources() {
                         boxShadow: '0 2px 8px rgba(50, 205, 50, 0.4)',
                         border: '2px solid #228B22',
                         marginBottom: '1vw'
-                      }}>
-                        🌱 Environment Track Winner
+                                              }}>
+                        Environment Track Winner
                       </div>
                       <div className="resource-box" style={{ flex: '1' }}>
                         <div className="resource-description">
@@ -747,7 +1073,7 @@ export default function Resources() {
                         <a href="https://github.com/enano1/divhacks-2024?tab=readme-ov-file" target="_blank" rel="noopener noreferrer" className="resource-link">
                           <div className="resource-box">
                             <div className="resource-description">
-                              💻 GitHub Link
+                              GitHub Link
                             </div>
                           </div>
                         </a>
@@ -771,7 +1097,7 @@ export default function Resources() {
   return (
     <section className="resources-page">
       {/* Work in Progress Marker */}
-      <div style={{
+      {/* <div style={{
         position: 'absolute',
         background: '#ffce2d',
         color: '#000000',
@@ -786,8 +1112,8 @@ export default function Resources() {
         width: '25vw',
         zIndex: 10
       }}>
-        🚧 WORK IN PROGRESS 🚧
-      </div>
+        WORK IN PROGRESS
+      </div> */}
 
       {/* Header */}
       <div style={{ textAlign: 'center', marginBottom: '-3vw' }}>
@@ -803,6 +1129,25 @@ export default function Resources() {
         />
       </div>
 
+      {/* Page Description */}
+      <div style={{
+        maxWidth: '800px',
+        margin: '0 auto 2vw auto',
+        textAlign: 'center'
+      }}>
+        <p style={{
+          color: '#fff',
+          fontSize: 'clamp(1.2rem, 1.5vw, 1.6rem)',
+          lineHeight: '1.6',
+          margin: '0',
+          fontWeight: 500,
+          opacity: 0.9
+        }}>
+          Welcome to your hackathon toolkit! Use the navigation on the left to explore different resources. 
+          Whether you're a first-time hacker or a seasoned developer, there's something here for everyone!
+        </p>
+      </div>
+
       {/* Two Column Layout */}
       <div className="resources-layout">
         {/* Left Column - Navigation */}
@@ -812,34 +1157,25 @@ export default function Resources() {
           padding: '2vw',
           backdropFilter: 'blur(10px)',
           border: '1px solid rgba(255, 255, 255, 0.2)',
-          height: 'fit-content'
+          height: 'fit-content',
         }}>
-          <h3 style={{
-            fontSize: 'clamp(1rem, 1.3vw, 1.8rem)',
-            color: '#FFD700',
-            marginBottom: 'clamp(1.5vw, 2vw, 2.5vw)',
-            fontWeight: 900,
-            textAlign: 'center'
-          }}>
-            Navigation
-          </h3>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1vw' }}>
             {sections.map((section) => (
               <button
                 key={section.id}
                 onClick={() => setActiveSection(section.id)}
                 style={{
-                  backgroundColor: activeSection === section.id ? 'rgba(255, 215, 0, 0.2)' : 'transparent',
+                  backgroundColor: activeSection === section.id ? 'rgba(255, 255, 255, 0.2)' : 'transparent',
                   color: '#fff',
                   border: 'none',
-                  padding: 'clamp(0.5vw, 1vw, 1.5vw) clamp(0.8vw, 1.5vw, 2vw)',
+                  padding: 'clamp(0.8vw, 1.2vw, 1.8vw) clamp(1vw, 1.8vw, 2.5vw)',
                   borderRadius: '8px',
                   cursor: 'pointer',
-                  fontSize: 'clamp(0.8rem, 1vw, 1.3rem)',
-                  fontWeight: activeSection === section.id ? 600 : 400,
+                  fontSize: 'clamp(1rem, 1.2vw, 1.3rem)',
+                  fontWeight: 600,
                   textAlign: 'left',
                   transition: 'all 0.3s ease',
-                  borderLeft: activeSection === section.id ? '4px solid #FFD700' : '4px solid transparent'
+                  borderLeft: activeSection === section.id ? '4px solid #fff' : '4px solid transparent'
                 }}
               >
                 {section.title}
@@ -880,9 +1216,9 @@ export default function Resources() {
           border: '1px solid rgba(255, 255, 255, 0.2)',
           maxWidth: '600px',
           margin: '0 auto',
-          fontSize: 'clamp(1.2rem, 1.5vw, 1.8rem)',
+          fontSize: 'clamp(1.5rem, 2vw, 2.5rem)',
           color: '#fff',
-          fontWeight: 500,
+          fontWeight: 900,
           textAlign: 'center',
         }}>
           MORE INFO COMING SOON...
