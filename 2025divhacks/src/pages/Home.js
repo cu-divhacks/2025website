@@ -14,6 +14,12 @@ import tracks from '../assets/tracks.png';
 import tavilyLogo from '../assets/tavily-logo.png';
 import rippleLogo from '../assets/ripple-logo.png';
 import cognitive3dLogo from '../assets/cog-logo.png';
+import nordvpnLogo from '../assets/nordvpn-logo.png';
+import nordpassLogo from '../assets/nordpass-logo.png';
+import nordprotectLogo from '../assets/nordprotect-logo.png';
+import nexosAiLogo from '../assets/nexos-ai-logo.png';
+import incogniLogo from '../assets/incogni-logo.png';
+import sailyLogo from '../assets/saily-logo.png';
 import train1 from '../assets/train1.png';
 import train2 from '../assets/train2.png';
 import train3 from '../assets/train3.png';
@@ -268,12 +274,24 @@ export default function Home() {
         <div className="sponsors-section">
           <img className="sponsors" src={sponsors} alt="Sponsors" />
           <div className="sponsors-logos">
-            <img src={tavilyLogo} alt="Tavily" className="sponsor-logo" />
-            <img src={rippleLogo} alt="Ripple" className="sponsor-logo" />
-            <img src={cognitive3dLogo} alt="Cognitive3D" className="sponsor-logo" />
-          </div>
-          <div className="more-sponsors-text">
-            <h3>and more to come...</h3>
+            {/* Platinum */}
+            <img src={rippleLogo} alt="Ripple" className="sponsor-logo tier-platinum" />
+            {/* Silver */}
+            <img src={tavilyLogo} alt="Tavily" className="sponsor-logo tier-silver" />
+            {/* Bronze */}
+            <img src={cognitive3dLogo} alt="Cognitive3D" className="sponsor-logo tier-bronze" />
+            {/* Bronze group - Nord Security family */}
+            <div className="sponsor-group nord">
+              <img src={nordvpnLogo} alt="NordVPN" className="sponsor-logo tier-bronze group-item" />
+              <img src={nordpassLogo} alt="NordPass" className="sponsor-logo tier-bronze group-item" />
+              <img src={nordprotectLogo} alt="NordProtect" className="sponsor-logo tier-bronze group-item" />
+              <img src={nexosAiLogo} alt="nexos.ai" className="sponsor-logo tier-bronze group-item" />
+              <img src={incogniLogo} alt="Incogni" className="sponsor-logo tier-bronze group-item" />
+              <img src={sailyLogo} alt="Saily" className="sponsor-logo tier-bronze group-item" />
+            </div>
+            <div className="more-sponsors-text">
+              <h3>and more to come...</h3>
+            </div>
           </div>
         </div>
         {/*/Tracks Section*/}
