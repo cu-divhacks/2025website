@@ -900,10 +900,13 @@ html, body, #root {
 
 .sponsors-section .more-sponsors-text {
   grid-column: 1 / -1;
-  align-self: start;
+  align-self: end;
   justify-self: center;
   text-align: center;
-  margin-top: 0.5vw;
+  width: 100%;
+  margin-top: 2vw;
+  position: relative;
+  z-index: 10005;
 }
 
 .sponsors-section .more-sponsors-text h3 {
@@ -1830,9 +1833,18 @@ html, body, #root {
     max-width: 70vw;
     left: 5%;
   }
-  .sponsors-section .coming-soon-text {
-    transform: translate(10vw, 300vw);
+  /* Ensure the "more to come" text is visible and centered under logos on mobile */
+  .sponsors-section .more-sponsors-text {
+    position: absolute;
+    top: 0%;
+    left: 5%;
+    transform: translate(0, 43vw);
+    width: 90vw;
+    text-align: center;
+    z-index: 101000;
+    margin-top: 0;
   }
+
   
   .sponsors-section .sponsor-logo {
     height: 12vw !important;
