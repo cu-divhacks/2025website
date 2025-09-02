@@ -819,7 +819,6 @@ html, body, #root {
   width: 100vw; /* or a fixed width if you want */
   height: auto; 
   transform: translate(0, 460%); /* match the sponsors sign vertical position */
-  z-index: 2;
   pointer-events: none; /* so it doesn't block anything */
 }
 
@@ -834,7 +833,7 @@ html, body, #root {
   position: absolute;
   top: 0%;
   left: 10%;
-  transform: translate(10vw, 340vw);
+  transform: translate(10vw, 330vw);
   z-index: 2;
   text-align: left;
   width: 100%;
@@ -844,13 +843,15 @@ html, body, #root {
   position: absolute;
   top: 0%;
   left: 10%;
-  transform: translate(0, 330vw);
-  z-index: 2;
-  display: flex;
-  gap: 4vw;
+  transform: translate(0, 315vw);
+  z-index: 10003;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-auto-rows: auto;
+  column-gap: 4vw;
+  row-gap: 2.5vw;
   align-items: center;
-  justify-content: flex-start;
-  flex-wrap: wrap;
+  justify-content: start;
   max-width: 40vw;
   width: 100%;
 }
@@ -867,6 +868,28 @@ html, body, #root {
   right: auto !important;
 }
 
+/* Tier scaling */
+.sponsors-section .tier-diamond { height: 10vw !important; max-width: 28vw !important; }
+.sponsors-section .tier-platinum { height: 9vw !important; max-width: 24vw !important; }
+.sponsors-section .tier-gold { height: 8.5vw !important; max-width: 22vw !important; }
+.sponsors-section .tier-silver { height: 8vw !important; max-width: 20vw !important; }
+.sponsors-section .tier-bronze { height: 7vw !important; max-width: 18vw !important; }
+
+/* Grouped sponsors (Nord family) */
+.sponsors-section .sponsor-group.nord {
+  display: flex;
+  gap: 1.5vw;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0.5vw 1vw;
+  border-radius: 0.6vw;
+  grid-column: 1 / -1; /* span full width of the grid */
+}
+.sponsors-section .sponsor-group.nord .group-item {
+  height: 5.8vw !important;
+  max-width: 14vw !important;
+}
+
 .sponsors-section .sponsor-logo:hover {
   transform: scale(1.05);
 }
@@ -876,13 +899,11 @@ html, body, #root {
 }
 
 .sponsors-section .more-sponsors-text {
-  position: absolute;
-  top: 0%;
-  left: 10%;
-  transform: translate(30vw, 350vw);
-  z-index: 2;
-  text-align: left;
-  width: 100%;
+  grid-column: 1 / -1;
+  align-self: start;
+  justify-self: center;
+  text-align: center;
+  margin-top: 0.5vw;
 }
 
 .sponsors-section .more-sponsors-text h3 {
@@ -1804,10 +1825,13 @@ html, body, #root {
 /* Mobile responsive styles for sponsors section */
 @media (max-width: 799px) {
   .sponsors-section .sponsors-logos {
-    transform: translate(0, 320vw);
+    transform: translate(0, 315vw);
     gap: 3vw;
-    max-width: 80vw;
+    max-width: 70vw;
     left: 5%;
+  }
+  .sponsors-section .coming-soon-text {
+    transform: translate(10vw, 300vw);
   }
   
   .sponsors-section .sponsor-logo {
@@ -1817,15 +1841,15 @@ html, body, #root {
     left: auto !important;
     right: auto !important;
   }
-  
-  .sponsors-section .more-sponsors-text {
-    transform: translate(0, 340vw);
-    left: 5%;
-  }
-  
-  .sponsors-section .more-sponsors-text h3 {
-    font-size: 3.5vw;
-  }
+  /* Mobile tier overrides */
+  .sponsors-section .tier-diamond { height: 12vw !important; max-width: 28vw !important; }
+  .sponsors-section .tier-platinum { height: 11vw !important; max-width: 24vw !important; }
+  .sponsors-section .tier-gold { height: 10.5vw !important; max-width: 20vw !important; }
+  .sponsors-section .tier-silver { height: 10vw !important; max-width: 16vw !important; }
+  .sponsors-section .tier-bronze { height: 9vw !important; max-width: 12vw !important; }
+  .sponsors-section .sponsor-group.nord .group-item { height: 9vw !important; max-width: 20vw !important; }
+  /* more-sponsors-text stays centered in grid; no transform on mobile */
+  .sponsors-section .more-sponsors-text h3 { font-size: 3.5vw; }
 }
 
 /* Resources Page Responsive Layout */
