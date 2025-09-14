@@ -217,10 +217,6 @@ export default function Home() {
               </ul>
             </div>
           </div>
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSccOAZWWRA-xYgHwT3dKArwrR5gktoSJJlt7yGfaIG9QTRNPA/viewform?usp=dialog" target="_blank" rel="noopener noreferrer">
-            <button className="cta">Apply Now</button>
-          </a>
-          <p className="deadline-text">Deadline: Sept 7th</p>
         </div>
         
         {/* About section */}
