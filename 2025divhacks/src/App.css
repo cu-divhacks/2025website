@@ -819,7 +819,7 @@ html, body, #root {
   width: 100vw; /* or a fixed width if you want */
   height: auto; 
   transform: translate(0, 460%); /* match the sponsors sign vertical position */
-  pointer-events: none; /* so it doesn't block anything */
+  pointer-events: none; /* disable clicks on the section itself */
 }
 
 .sponsors-section .sponsors {
@@ -827,6 +827,7 @@ html, body, #root {
   left: 0%;
   height: auto;
   width: 100%;
+  pointer-events: none; /* background image should not capture clicks */
 }
 
 .sponsors-section .coming-soon-text {
@@ -840,20 +841,21 @@ html, body, #root {
 }
 
 .sponsors-section .sponsors-logos {
-  position: absolute;
+  position: fixed;
   top: 0%;
   left: 10%;
-  transform: translate(0, 315vw);
+  transform: translate(0, 311vw);
   z-index: 10003;
   display: grid;
-  grid-template-columns: repeat(2, auto);
+  grid-template-columns: repeat(3, auto);
   grid-auto-rows: auto;
-  column-gap: 4vw;
-  row-gap: 2.5vw;
+  column-gap: 3vw;
+  row-gap: 2vw;
   align-items: center;
   justify-content: start;
-  max-width: 40vw;
+  max-width: 55vw;
   width: 100%;
+  pointer-events: auto; /* Enable pointer events for sponsor logos */
 }
 
 .sponsors-section .sponsor-logo {
@@ -868,12 +870,15 @@ html, body, #root {
   right: auto !important;
 }
 
-/* Tier scaling */
-.sponsors-section .tier-diamond { height: 10vw !important; max-width: 28vw !important; }
-.sponsors-section .tier-platinum { height: 9vw !important; max-width: 24vw !important; }
-.sponsors-section .tier-gold { height: 8.5vw !important; max-width: 22vw !important; }
-.sponsors-section .tier-silver { height: 8vw !important; max-width: 20vw !important; }
-.sponsors-section .tier-bronze { height: 7vw !important; max-width: 18vw !important; }
+/* Tier scaling (even smaller logos) */
+.sponsors-section .tier-diamond { height: 7vw !important; max-width: 20vw !important; }
+.sponsors-section .tier-platinum { height: 6.5vw !important; max-width: 18vw !important; }
+.sponsors-section .tier-gold { height: 6vw !important; max-width: 16vw !important; }
+.sponsors-section .tier-silver { height: 5.5vw !important; max-width: 14vw !important; }
+.sponsors-section .tier-bronze { height: 5vw !important; max-width: 12vw !important; }
+
+/* LangChain logo - adjusted for smaller base size */
+.sponsors-section .langchain-logo { height: 13vw !important; max-width: 36vw !important; }
 
 /* Grouped sponsors (Nord family) */
 .sponsors-section .sponsor-group.nord {
@@ -886,12 +891,44 @@ html, body, #root {
   grid-column: 1 / -1; /* span full width of the grid */
 }
 .sponsors-section .sponsor-group.nord .group-item {
-  height: 5.8vw !important;
-  max-width: 14vw !important;
+  height: 5.4vw !important;
+  max-width: 12vw !important;
 }
 
 .sponsors-section .sponsor-logo:hover {
   transform: scale(1.05);
+}
+
+/* Sponsor logo links styling */
+.sponsors-section a {
+  text-decoration: none;
+  border: none;
+  outline: none;
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  z-index: 99999; /* Very high z-index to ensure links are on top */
+  /* Force the link to be clickable */
+  pointer-events: auto !important;
+  user-select: none;
+}
+
+.sponsors-section a:hover {
+  text-decoration: none;
+  outline: none;
+  border: none;
+}
+
+.sponsors-section a:focus {
+  text-decoration: none;
+  border: none;
+  outline: none;
+}
+
+.sponsors-section a:visited {
+  text-decoration: none;
+  border: none;
+  outline: none;
 }
 
 .sponsors-section .sponsor-logo:nth-child(3) {
