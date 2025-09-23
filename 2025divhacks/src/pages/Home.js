@@ -33,6 +33,7 @@ import train6 from '../assets/train6.png';
 import train7 from '../assets/train7.png';
 import train8 from '../assets/train8.png';
 import train9 from '../assets/train9.png';
+import train10 from '../assets/train10.png';
 import trainComingSoon from '../assets/trainComingSoon.png';
 import track1img from '../assets/track1.png';
 import track2img from '../assets/track2.png';
@@ -72,7 +73,7 @@ export default function Home() {
     }
   ];
   const aboutSectionRef = useRef(null);
-  const judgesTrains = [train1, train2, train3, train4, train5, train6, train7, train8, train9];
+  const judgesTrains = [train1, train2, train3, train4, train5, train6, train7, train8, train9, train10];
   const speakersTrains = [trainComingSoon]; // Only the coming soon train for speakers
   const [currentTrainSet, setCurrentTrainSet] = useState('judges'); // 'judges' or 'speakers'
   const [currentTrain, setCurrentTrain] = useState(0);
