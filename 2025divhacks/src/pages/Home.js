@@ -24,6 +24,11 @@ import cometLogo from '../assets/Comet-Primary.png';
 import capitalOneLogo from '../assets/capital-one-logo.svg';
 import langchainLogo from '../assets/langchain-logo.png';
 import quotientAiLogo from '../assets/quotientai logo.png';
+import fluzLogo from '../assets/Fluz-dark.png';
+import blackrockLogo from '../assets/BlackRock-1.png';
+import meritLogo from '../assets/Merit Assets_Merit Horizontal Logo Dark (2).png';
+import redBullLogo from '../assets/Red Bull logo-Photoroom.png';
+import nongshimLogo from '../assets/nongshim.png';
 import train1 from '../assets/train1.png';
 import train2 from '../assets/train2.png';
 import train3 from '../assets/train3.png';
@@ -275,53 +280,86 @@ export default function Home() {
         <div className="sponsors-section">
           <img className="sponsors" src={sponsors} alt="Sponsors" />
           <div className="sponsors-logos">
-            {/* Diamond */}
-            <a href="https://www.comet.com" target="_blank" rel="noopener noreferrer">
-              <img src={cometLogo} alt="Comet" className="sponsor-logo tier-diamond" />
-            </a>
-            {/* Platinum */}
-            <a href="https://ripple.com" target="_blank" rel="noopener noreferrer">
-              <img src={rippleLogo} alt="Ripple" className="sponsor-logo tier-platinum" />
-            </a>
-            {/* Gold */}
-            <a href="https://www.capitalone.com" target="_blank" rel="noopener noreferrer">
-              <img src={capitalOneLogo} alt="Capital One" className="sponsor-logo tier-gold" />
-            </a>
-            {/* Silver */}
-            <a href="https://tavily.com" target="_blank" rel="noopener noreferrer">
-              <img src={tavilyLogo} alt="Tavily" className="sponsor-logo tier-silver" />
-            </a>
-            {/* Bronze */}
-            <a href="https://cognitive3d.com" target="_blank" rel="noopener noreferrer">
-              <img src={cognitive3dLogo} alt="Cognitive3D" className="sponsor-logo tier-bronze" />
-            </a>
-            {/* Bronze */}
-            <a href="https://www.langchain.com" target="_blank" rel="noopener noreferrer">
-              <img src={langchainLogo} alt="LangChain" className="sponsor-logo tier-bronze langchain-logo" />
-            </a>
-            {/* Bronze */}
-            <a href="https://www.quotientai.com" target="_blank" rel="noopener noreferrer">
-              <img src={quotientAiLogo} alt="Quotient AI" className="sponsor-logo tier-bronze" />
-            </a>
-            {/* Bronze group - Nord Security family */}
-            <div className="sponsor-group nord">
+            {/* Row 1: Comet centered large */}
+            <div className="sponsor-row">
+              <a href="https://www.comet.com" target="_blank" rel="noopener noreferrer">
+                <img src={cometLogo} alt="Comet" className="sponsor-logo tier-diamond comet-centered" />
+              </a>
+            </div>
+
+            {/* Row 2: Merit, Capital One semi-large */}
+            <div className="sponsor-row">
+              <a href="https://meritsystems.com" target="_blank" rel="noopener noreferrer">
+                <img src={meritLogo} alt="Merit Systems" className="sponsor-logo tier-platinum" />
+              </a>
+              <a href="https://www.capitalone.com" target="_blank" rel="noopener noreferrer">
+                <img src={capitalOneLogo} alt="Capital One" className="sponsor-logo tier-gold" />
+              </a>
+            </div>
+
+            {/* Row 3: Fluz, Tavily medium sized */}
+            <div className="sponsor-row">
+              <a href="https://fluz.app" target="_blank" rel="noopener noreferrer">
+                <img src={fluzLogo} alt="Fluz" className="sponsor-logo tier-silver fluz-logo" />
+              </a>
+              <a href="https://tavily.com" target="_blank" rel="noopener noreferrer">
+                <img src={tavilyLogo} alt="Tavily" className="sponsor-logo tier-silver" />
+              </a>
+            </div>
+
+            {/* Row 4: BlackRock, Cognitive medium sized */}
+            <div className="sponsor-row">
+              <a href="https://www.blackrock.com" target="_blank" rel="noopener noreferrer">
+                <img src={blackrockLogo} alt="BlackRock" className="sponsor-logo tier-silver" />
+              </a>
+              <a href="https://cognitive3d.com" target="_blank" rel="noopener noreferrer">
+                <img src={cognitive3dLogo} alt="Cognitive" className="sponsor-logo tier-silver" />
+              </a>
+            </div>
+
+            {/* Row 5: LangChain, Quotient AI small to medium sized */}
+            <div className="sponsor-row">
+              <a href="https://www.langchain.com" target="_blank" rel="noopener noreferrer">
+                <img src={langchainLogo} alt="LangChain" className="sponsor-logo tier-bronze langchain-logo" />
+              </a>
+              <a href="https://www.quotientai.com" target="_blank" rel="noopener noreferrer">
+                <img src={quotientAiLogo} alt="Quotient AI" className="sponsor-logo tier-bronze" />
+              </a>
+            </div>
+
+            {/* Row 6: NordVPN, NordPass, NordProtect small */}
+            <div className="sponsor-row">
               <a href="https://nordvpn.com" target="_blank" rel="noopener noreferrer">
-                <img src={nordvpnLogo} alt="NordVPN" className="sponsor-logo tier-bronze group-item" />
+                <img src={nordvpnLogo} alt="NordVPN" className="sponsor-logo tier-bronze nord-small" />
               </a>
               <a href="https://nordpass.com" target="_blank" rel="noopener noreferrer">
-                <img src={nordpassLogo} alt="NordPass" className="sponsor-logo tier-bronze group-item" />
+                <img src={nordpassLogo} alt="NordPass" className="sponsor-logo tier-bronze nord-small" />
               </a>
               <a href="https://nordprotect.com" target="_blank" rel="noopener noreferrer">
-                <img src={nordprotectLogo} alt="NordProtect" className="sponsor-logo tier-bronze group-item" />
+                <img src={nordprotectLogo} alt="NordProtect" className="sponsor-logo tier-bronze nord-small" />
               </a>
+            </div>
+
+            {/* Row 7: NexosAI, Incogni, Saily small */}
+            <div className="sponsor-row">
               <a href="https://nexos.ai" target="_blank" rel="noopener noreferrer">
-                <img src={nexosAiLogo} alt="nexos.ai" className="sponsor-logo tier-bronze group-item" />
+                <img src={nexosAiLogo} alt="nexos.ai" className="sponsor-logo tier-bronze nord-small" />
               </a>
               <a href="https://incogni.com" target="_blank" rel="noopener noreferrer">
-                <img src={incogniLogo} alt="Incogni" className="sponsor-logo tier-bronze group-item" />
+                <img src={incogniLogo} alt="Incogni" className="sponsor-logo tier-bronze nord-small" />
               </a>
               <a href="https://saily.com" target="_blank" rel="noopener noreferrer">
-                <img src={sailyLogo} alt="Saily" className="sponsor-logo tier-bronze group-item" />
+                <img src={sailyLogo} alt="Saily" className="sponsor-logo tier-bronze nord-small" />
+              </a>
+            </div>
+
+            {/* Row 8: Red Bull, Nongshim */}
+            <div className="sponsor-row">
+              <a href="https://www.redbull.com" target="_blank" rel="noopener noreferrer">
+                <img src={redBullLogo} alt="Red Bull" className="sponsor-logo tier-bronze nord-small" />
+              </a>
+              <a href="https://www.nongshim.com" target="_blank" rel="noopener noreferrer">
+                <img src={nongshimLogo} alt="Nongshim" className="sponsor-logo tier-bronze nord-small" />
               </a>
             </div>
           </div>
